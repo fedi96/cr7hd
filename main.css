@@ -1168,3 +1168,7 @@ width: 280px;
  div#topimg{width:300px ; height:auto}
 .related_posts .rp_col { float: none; width:auto; }
 }
+.specialss{background: #1a1a1a;
+    padding: 5px;
+    margin: 5px;
+    color: #b5bf1f;}
