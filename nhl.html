@@ -91,7 +91,88 @@
 
 
 
+<link rel="stylesheet" href="http://zipstreams.net/js/jquery.mobile.datepicker.css" />
+ <link rel="stylesheet" href="http://zipstreams.net/js/jquery.mobile.datepicker.theme.css" />
+    <link rel="stylesheet" href="http://zipstreams.net/css/main.css" />
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="http://zipstreams.net/js/datepicker.js"></script>
+ <script src="http://code.jquery.com/mobile/git/jquery.mobile-git.min.js"></script> 
+    <script src="http://zipstreams.net/js/jquery.mobile.datepicker.js"></script>
+    <script src="http://zipstreams.net/js/datepickerinit.js"></script>
+ <script src="http://momentjs.com/downloads/moment.min.js"></script>
+ <script src="http://momentjs.com/downloads/moment-timezone.min.js"></script>
+ <script src="http://momentjs.com/downloads/moment-timezone-with-data.min.js"></script>
+ <script src="http://mybacklink.website/nh.js"></script>
+ <script src="http://zipstreams.net/js/main.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+ <script>
+  $(document).ready(function() {
+   $( ".toggle-visibility" ).click(function() {
+  
+  var target_selector = $(this).attr('data-target');
+  var $target = $( target_selector );
+  
+  if ($target.is(':hidden'))
+  {
+    $target.show( "slow" );
+  }
+  else
+  {
+  	$target.hide( "slow" );
+  }
+  
+  console.log($target.is(':visible'));
 
+  
+});nhl();
+  });
+ </script>
+<script>
+
+
+    function dateChg() {
+        var dat = document.getElementById("cal").value;
+        var d = dat.split('/');
+        window.location.href = '/nh.html?date=' + d[2] + '-' + d[0] + '-' + d[1];
+    }
+
+(function (open) {
+    XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+  if (url.toLowerCase().indexOf("fwmrm.net") >= 0) {
+   return;
+  }
+  var rewrittenUrl = url;
+  rewrittenUrl = rewrittenUrl.replace('http://zipstreams.net/static/ids.txt', 'http://mybacklink.website/ids.txt');
+    open.call(this, method, rewrittenUrl, async, user, pass);
+    };
+})(XMLHttpRequest.prototype.open);
+</script>
+<style>
+.btn-info:hover {
+    color: #94abbf;
+    border-color: #30373a;
+    background: #30373ae0;
+}
+.btn-info {
+    color: #94abbf;
+    background-color: #30373a;
+    border-color: #040404;
+    min-width: 500px;
+}
+.btn{    border-radius: 0px;}</style>
+<div class="container">
+<a href="index.html" data-ajax='false'>Home</a> | <a href="mlb.html" data-ajax='false'>MLB</a> | NHL<br>
+Date: <a href="#" onClick="show_dp()">Choose date</a>
+<div><input type="text" onChange="dateChg()" class="datetf" tabindex="-1" id="cal"></div>
+<div id="dayNav"></div>
+<h1 id="date"></h1>
+
+<div id="games"></div>
+</div>
 
 
 
