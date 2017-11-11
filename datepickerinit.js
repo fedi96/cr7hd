@@ -1,0 +1,1 @@
+$(function(){$("#cal").datepicker();});function show_dp(){$("#cal").datepicker('show');}
