@@ -51,7 +51,7 @@ case 'NJD':
         logohome = "vgs";
 }
 
-				var gameTitle = '<div class="btn btn-info" data-toggle="collapse" data-target="#'+ pk +'">' + away + " at " + home + " - " + time + '<img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logoaway + '.png&amp;h=55&amp;w=55"><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div><br/><br/><div id="'+ pk +'" class="collapse">';
+				var gameTitle = '<div class="btn btn-info" data-toggle="collapse" data-target="#'+ pk +'">' + away + " at " + home + " - " + time + '<img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logoaway + '.png&amp;h=55&amp;w=55"><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"><br/><br/><div id="'+ pk +'" class="collapse">';
 				var gameLinks = "";
 				$.each(game.content.media.epg, function (j, media) {
 					if (media.title === "NHLTV") {
@@ -69,7 +69,7 @@ case 'NJD':
 						});
 					}
 				});
-				gameLinks = gameLinks + "</div><br />";
+				gameLinks = gameLinks + "</div></div><br />";
 				$("#games").append(gameTitle + gameLinks);
 			});
 		} else {
