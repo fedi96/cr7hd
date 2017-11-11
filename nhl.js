@@ -14,6 +14,42 @@ function getNHLGames(date) {
 				var home = game.teams.home.team.name;
 				var logoaway = game.teams.away.team.abbreviation;
 				var logohome = game.teams.home.team.abbreviation;
+switch (logoaway) {
+    default: 
+        break;
+    case 'LAK':
+        logoaway = "la";
+        break; 
+  case 'TBL':
+        logoaway = "tb";
+        break;
+  case 'NJD':
+        logoaway = "nj";
+        break;  
+  case 'SJS':
+        logoaway = "sj";
+        break; 
+    case 'VGK':
+        logoaway = "vgs";
+}
+switch (logohome) {
+    default: 
+        break;
+    case 'LAK':
+        logohome = "la";
+        break; 
+  case 'TBL':
+        logohome = "tb";
+        break; 
+  case 'SJS':
+        logohome = "sj";
+        break;
+case 'NJD':
+        logohome = "nj";
+        break;  
+    case 'VGK':
+        logohome = "vgs";
+}
 
 				var gameTitle = '<div class="btn btn-info" data-toggle="collapse" data-target="#'+ pk +'"><img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logoaway + '.png&amp;h=55&amp;w=55">' + away + " at " + home + " - " + time + '<img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div><br/><br/><div id="'+ pk +'" class="collapse">';
 				var gameLinks = "";
