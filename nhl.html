@@ -248,8 +248,10 @@ width: 280px;
 }
 .btn{    border-radius: 0px;}</style>
 <div class="container">
-<a style="none;" href="#" onClick="show_dp()"></a>
-<div><input type="text" onchange="dateChg()" class="datetf hasDatepicker" tabindex="-1" id="cal" style="width: 288;text-align: center;"></div>
+<a href="index.html" data-ajax='false'>Home</a> | <a href="mlb.html" data-ajax='false'>MLB</a> | NHL<br>
+<a href="#" style="display:none;" onClick="show_dp()"></a>
+<div><input type="text" onChange="dateChg()" class="datetf" style="width: 288;text-align: center;" tabindex="-1" id="cal"></div>
+<div id="dayNav"></div>
 <h1 id="date"></h1>
 <div id="games"></div>
 </div>
