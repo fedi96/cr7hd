@@ -3,7 +3,7 @@ $("#date").append(date);document.title="Games for "+ date;var gd=date.split("-")
 function getToday(){return moment.tz(new Date(),"America/Los_Angeles").format("YYYY-MM-DD");}
 function idExists(id,lg){if(ids.length===0){fillIDs(lg);}
 return ids.includes(id);}
-function fillIDs(lg){var idurl;if(lg==="NHL"){idurl="http://zipstreams.net/static/ids.txt";}else{idurl="http://zipstreams.net/static/mlbids.txt";}
+function fillIDs(lg){var idurl;if(lg==="NHL"){idurl="/nhlids.txt";}else{idurl="http://zipstreams.net/static/mlbids.txt";}
 jQuery.ajax({url:idurl,success:function(html){ids=html.replace(/akc/g,"").replace(/l3c/g,"").split("\n");;},async:false});}
 function createUrl(lg,date,id,title,pk,time){var ms=(new Date(time)- new Date());var min=Math.floor(ms/60000);if(min>35||!idExists(id,lg)){return title+" | ";}
 return"<a href='play.html?league="+ lg+"&date="+ date+"&id="+ id+"&pk="+ pk+"' data-ajax='false'>"+ title+"</a> | ";}
