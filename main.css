@@ -1,12 +1,4 @@
 <!--
-/*
------------------------------------------------
-Blogger Template Style
-Name:        Straight Responsive Blogger Template
-Designer:    Themexpose
-Designer url : http://www.themexpose.com/
-License:     Full version
------------------------------------------------ */
 body#layout .header_right,.status-msg-wrap,body#layout .socials,#navbar,.date-header,.feed-links,.post-location,.post-icons{display: none !important;}
 body#layout #header-wrapper {
 min-height: 0px;
