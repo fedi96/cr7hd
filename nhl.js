@@ -51,7 +51,7 @@ case 'NJD':
         logohome = "vgs";
 }
 
-				var gameTitle = '<div class="btn btn-info" data-toggle="collapse" data-target="#'+ pk +'">' + away + " at " + home + " - " + time + '<img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logoaway + '.png&amp;h=55&amp;w=55"><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"><br/><br/><div id="'+ pk +'" class="collapse">';
+var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-delay: '+.4+.07*i+'s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">' + away + " at " + home + '</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/'+ logoaway + '.png&amp;h=55&amp;w=55"><div class="xs hint--rounded hint--bounce" style="margin-top: 20px;"><button class="bttn-material-flat bttn-xs bttn-warning bttn-no-outline">'+ time + '</button></div><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nhl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div>';
 				var gameLinks = "";
 				$.each(game.content.media.epg, function (j, media) {
 					if (media.title === "NHLTV") {
@@ -69,7 +69,7 @@ case 'NJD':
 						});
 					}
 				});
-				gameLinks = gameLinks + "</div></div><br /><br />";
+				gameLinks = gameLinks + "</div></div>";
 				$("#games").append(gameTitle + gameLinks);
 			});
 		} else {
