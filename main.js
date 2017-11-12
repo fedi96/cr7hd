@@ -5,7 +5,7 @@ function idExists(id,lg){if(ids.length===0){fillIDs(lg);}
 return ids.includes(id);}
 function fillIDs(lg){var idurl;if(lg==="NHL"){idurl="/ids.txt";}else{idurl="http://zipstreams.net/static/mlbids.txt";}
 jQuery.ajax({url:idurl,success:function(html){ids=html.replace(/akc/g,"").replace(/l3c/g,"").split("\n");;},async:false});}
-function createUrl(lg,date,id,title,pk,time){var ms=(new Date(time)- new Date());var min=Math.floor(ms/60000);if(min>35||!idExists(id,lg)){return title;}
+function createUrl(lg,date,id,title,pk,time){var ms=(new Date(time)- new Date());var min=Math.floor(ms/60000);if(min>35||!idExists(id,lg)){return"<a class='specialss' href='#' data-ajax='false'><s>"+ title+"</s></a>";}
 return"<a class='specialss' href='play.html?league="+ lg+"&date="+ date+"&id="+ id+"&pk="+ pk+"' data-ajax='false'>"+ title+"</a>";}
 function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
