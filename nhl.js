@@ -69,7 +69,7 @@ case 'NJD':
 						});
 					}
 				});
-				gameLinks = gameLinks + "</div></div><br />";
+				gameLinks = gameLinks + "</div></div><br /><br />";
 				$("#games").append(gameTitle + gameLinks);
 			});
 		} else {
