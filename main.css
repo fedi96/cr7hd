@@ -93,7 +93,7 @@ z-index: 10;
 }
 #top_menu span.nav_select {
 -moz-box-sizing: border-box;
-background: url("https://lh3.googleusercontent.com/-kuwjHwxHU5M/UcPx9Rf6hYI/AAAAAAAAB5s/kBvMLWkeLz4/s32/button_gray.png") repeat-x scroll center bottom #FFFFFF;
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-kuwjHwxHU5M/UcPx9Rf6hYI/AAAAAAAAB5s/kBvMLWkeLz4/s32/button_gray.png") repeat-x scroll center bottom #FFFFFF;
 border-radius: 2px;
 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 display: none;
@@ -109,7 +109,7 @@ width: 100%;
 z-index: 1;
 }
 #top_menu span.nav_select span.menu_icon_wrapper {
-background: url("https://lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom #E74C3C;
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom #E74C3C;
 border-bottom-right-radius: 2px;
 border-top-right-radius: 2px;
 font-size: 12px;
@@ -121,7 +121,7 @@ width: 3em;
 display:none;
 }
 #top_menu span.nav_select span.menu_icon_wrapper span.menu_icon {
-background: url("https://lh6.googleusercontent.com/-pQJha9_ywEA/UcPyAHqGh9I/AAAAAAAAB7A/O0_qVLEac8g/s15/menu_icon.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-pQJha9_ywEA/UcPyAHqGh9I/AAAAAAAAB7A/O0_qVLEac8g/s15/menu_icon.png") no-repeat scroll center center rgba(0, 0, 0, 0);
 height: 100%;
 left: 0;
 position: absolute;
@@ -136,7 +136,7 @@ margin-left: 5px;
 padding-top: 5px;
 }
 .header_search .search_zoom {
-background: url(http://2.bp.blogspot.com/-ZD7fvpp4ks0/U5oONzA2ByI/AAAAAAAAAbY/WE2fXMgG5P8/s1600/search-icon.png) 4px center no-repeat;
+background: url(https://i2.wp.com/2.bp.blogspot.com/-ZD7fvpp4ks0/U5oONzA2ByI/AAAAAAAAAbY/WE2fXMgG5P8/s1600/search-icon.png) 4px center no-repeat;
 cursor: pointer;
 float: right;
 height: 28px;
@@ -264,7 +264,7 @@ box-shadow: none;
 color: #F4836A;
 }
 .sf-menu li li:hover, .sf-menu li li.sfHover {
-background: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 #F9F9F9;
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 #F9F9F9;
 }
 .sf-menu li li:hover a, .sf-menu li li.sfHover a {
 color: #333333;
@@ -274,7 +274,7 @@ min-width: 1px;
 padding-right: 1.7em;
 }
 .sf-sub-indicator {
-background: url("https://lh5.googleusercontent.com/-_c7cDyImAGY/UcPx8wd-mlI/AAAAAAAAB5c/EjJte4q0gF4/s110/arrows-ffffff.png") no-repeat scroll -10px -100px rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh5.googleusercontent.com/-_c7cDyImAGY/UcPx8wd-mlI/AAAAAAAAB5c/EjJte4q0gF4/s110/arrows-ffffff.png") no-repeat scroll -10px -100px rgba(0, 0, 0, 0);
 display: block;
 height: 10px;
 overflow: hidden;
@@ -301,7 +301,7 @@ background-position: 0 0;
 background-position: -10px 0;
 }
 .sf-shadow ul {
-background: url("https://lh6.googleusercontent.com/-Lgz04nY7ppo/UcPx_Vf5SpI/AAAAAAAAB6w/frKzD2hMyEg/s19/menu_arrow.png") no-repeat scroll 20px 0 rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-Lgz04nY7ppo/UcPx_Vf5SpI/AAAAAAAAB6w/frKzD2hMyEg/s19/menu_arrow.png") no-repeat scroll 20px 0 rgba(0, 0, 0, 0);
 border-radius: 4px;
 padding-top: 8px;
 }
@@ -309,7 +309,7 @@ padding-top: 8px;
 background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
 }
 .sf-shadow ul ul {
-background: url("https://lh3.googleusercontent.com/-fxXY1gczTns/UcPx_lhxt8I/AAAAAAAAB60/KbQkNrcw-jE/s19/menu_arrow_sub.png") no-repeat scroll 0 10px rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-fxXY1gczTns/UcPx_lhxt8I/AAAAAAAAB60/KbQkNrcw-jE/s19/menu_arrow_sub.png") no-repeat scroll 0 10px rgba(0, 0, 0, 0);
 padding: 0 0 0 8px;
 }
 input[type="text"], input[type="password"], input[type="email"], textarea, select {
@@ -436,15 +436,15 @@ padding: 5px 0;
 white-space: nowrap;
 }
 .post_meta span.user {
-background: url("https://lh5.googleusercontent.com/-Qluew9h2rng/UcPyAuOTbeI/AAAAAAAAB7c/l4QJSdazCOA/s16/meta_user.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh5.googleusercontent.com/-Qluew9h2rng/UcPyAuOTbeI/AAAAAAAAB7c/l4QJSdazCOA/s16/meta_user.png") no-repeat scroll left center rgba(0, 0, 0, 0);
 padding-left: 18px;
 }
 .post_meta span.time {
-background: url("https://lh6.googleusercontent.com/--Swg3CGdbU8/UcPyAEV2cUI/AAAAAAAAB7M/0eEnNgsMq2c/s16/meta_time.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh6.googleusercontent.com/--Swg3CGdbU8/UcPyAEV2cUI/AAAAAAAAB7M/0eEnNgsMq2c/s16/meta_time.png") no-repeat scroll left center rgba(0, 0, 0, 0);
 padding-left: 20px;
 }
 .post_meta span.comment {
-background: url("https://lh5.googleusercontent.com/-kfxAAytuHik/UcPyAHbhsxI/AAAAAAAAB7E/h9hMrLZPz3g/s16/meta_comment.png") no-repeat scroll left center rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh5.googleusercontent.com/-kfxAAytuHik/UcPyAHbhsxI/AAAAAAAAB7E/h9hMrLZPz3g/s16/meta_comment.png") no-repeat scroll left center rgba(0, 0, 0, 0);
 padding-left: 20px;
 }
 .post_item_inner {
@@ -459,7 +459,7 @@ font-family: 'Merienda One', cursive;
 background-color: #E74C3C;
 }
 .button, .post_tag a, .letter_submit {
-background: url("https://lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom rgba(0, 0, 0, 0);
 border-radius: 2px;
 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 color: #FFFFFF !important;
@@ -477,12 +477,12 @@ text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
 opacity: 0.8;
 }
 .like_post {
-background: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat scroll 0 0 #F7F7F7;
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat scroll 0 0 #F7F7F7;
 border-radius: 2px;
 float: right;
 }
 .post blockquote {
-background: url("https://lh3.googleusercontent.com/-oaTPjCsZXq8/UcPyCOOfHpI/AAAAAAAAB8E/H_lmDI9_W8A/s19/quote.png") no-repeat scroll 25px 20px #34495E;
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-oaTPjCsZXq8/UcPyCOOfHpI/AAAAAAAAB8E/H_lmDI9_W8A/s19/quote.png") no-repeat scroll 25px 20px #34495E;
 color: #FFFFFF;
 padding: 10px;
 position: relative;
@@ -494,7 +494,7 @@ padding-top: 20px;
 }
 .post_tag a {
 background-color: #EDEDED;
-background-image: url("https://lh3.googleusercontent.com/-kuwjHwxHU5M/UcPx9Rf6hYI/AAAAAAAAB5s/kBvMLWkeLz4/s32/button_gray.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-kuwjHwxHU5M/UcPx9Rf6hYI/AAAAAAAAB5s/kBvMLWkeLz4/s32/button_gray.png");
 box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 color: #666666 !important;
 font-weight: normal;
@@ -515,7 +515,7 @@ box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
 margin-bottom: 30px;
 }
 .sidebar h2 {
-background: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
 border-bottom: 1px solid #DEDEDE;
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
@@ -525,7 +525,7 @@ padding: 10px 20px;
 text-shadow: 0 1px 1px #FFFFFF;
 }
 .sidebar ul li {
-background: url("https://lh6.googleusercontent.com/-f2lypDf_T0U/UcPx-Q4Bo1I/AAAAAAAAB6U/oiviAxpGje0/s16/folder.png") no-repeat scroll 20px center rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-f2lypDf_T0U/UcPx-Q4Bo1I/AAAAAAAAB6U/oiviAxpGje0/s16/folder.png") no-repeat scroll 20px center rgba(0, 0, 0, 0);
 border-bottom: 1px solid #EEEEEE;
 padding: 15px 20px 15px 45px;
 }
@@ -610,7 +610,7 @@ padding: 0;
 width: 100%;
 }
 .comments .comments-content .icon.blog-author {
-background-image: url("https://lh3.googleusercontent.com/-s2RfYvCPTEs/UcPAX8GIW3I/AAAAAAAAB44/p9wq9yXuULE/s36/author.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-s2RfYvCPTEs/UcPAX8GIW3I/AAAAAAAAB44/p9wq9yXuULE/s36/author.png");
 height: 36px;
 margin: 0;
 position: absolute;
@@ -740,7 +740,7 @@ margin-left: 46px;
 margin-top: 20px;
 }
 .post_author {
-background: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 #FFFFFF;
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 #FFFFFF;
 border-top: 1px solid #EDEDED;
 margin-bottom: 30px;
 padding: 20px;
@@ -813,7 +813,7 @@ opacity: 0.7;
 margin-right: 0;
 }
 .heading-border {
-background: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
+background: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);
 border-bottom: 1px solid #DEDEDE;
 border-top-left-radius: 4px;
 border-top-right-radius: 4px;
@@ -824,7 +824,7 @@ text-shadow: 0 1px 1px #FFFFFF;
 }
 .FollowByEmail {
 background-color: #E74C3C !important;
-background-image: url("https://lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-1QB3XFmdlYY/UcPyBWfyb4I/AAAAAAAAB74/ITrfhAVjwNI/s67/pattern.png");
 background-repeat: repeat-x;
 border: 5px solid #FFFFFF;
 color: #FFFFFF;
@@ -850,7 +850,7 @@ margin-bottom: 10px;
 width: 62%;
 }
 .FollowByEmail .letter_submit {
-background: url("https://lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom #666666;
+background: url("https://i2.wp.com/lh6.googleusercontent.com/-VHd-MUXwJmQ/UcPx8zFDwjI/AAAAAAAAB5Y/qY_VtSSDbT8/s32/button.png") repeat-x scroll center bottom #666666;
 border: medium none;
 margin: 0;
 }
@@ -885,51 +885,51 @@ background-color: #666666 !important;
 }
 .widget_socials a.facebook {
 background-color: #6F85AE;
-background-image: url("https://lh3.googleusercontent.com/-ifDeD3iKioY/UcPx90L45OI/AAAAAAAAB6A/ObECkCist50/s24/facebook.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-ifDeD3iKioY/UcPx90L45OI/AAAAAAAAB6A/ObECkCist50/s24/facebook.png");
 }
 .widget_socials a.twitter {
 background-color: #23B6C6;
-background-image: url("https://lh5.googleusercontent.com/-ORgZZWh5n_I/UcPyEBWt1tI/AAAAAAAAB9E/YCY8K1egwSs/s24/twitter.png");
+background-image: url("https://i2.wp.com/lh5.googleusercontent.com/-ORgZZWh5n_I/UcPyEBWt1tI/AAAAAAAAB9E/YCY8K1egwSs/s24/twitter.png");
 }
 .widget_socials a.flickr {
 background-color: #FF0084;
-background-image: url("https://lh3.googleusercontent.com/-H4N0uYEwjBk/UcPx95Y8SII/AAAAAAAAB6E/ciYk7tJP6K0/s24/flickr.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-H4N0uYEwjBk/UcPx95Y8SII/AAAAAAAAB6E/ciYk7tJP6K0/s24/flickr.png");
 }
 .widget_socials a.dribbble {
 background-color: #C6376D;
-background-image: url("https://lh6.googleusercontent.com/-DHQ25c_6w_E/UcPx9kiYk7I/AAAAAAAAB54/6-4jSV0gsFY/s24/dribbble.png");
+background-image: url("https://i2.wp.com/lh6.googleusercontent.com/-DHQ25c_6w_E/UcPx9kiYk7I/AAAAAAAAB54/6-4jSV0gsFY/s24/dribbble.png");
 }
 .widget_socials a.vimeo {
 background-color: #20B9EB;
-background-image: url("https://lh5.googleusercontent.com/-kI8F8zOCSSA/UcPyEbKEGcI/AAAAAAAAB9U/8Ancbp9MIMM/s24/vimeo.png");
+background-image: url("https://i2.wp.com/lh5.googleusercontent.com/-kI8F8zOCSSA/UcPyEbKEGcI/AAAAAAAAB9U/8Ancbp9MIMM/s24/vimeo.png");
 }
 .widget_socials a.tumblr {
 background-color: #2E4B68;
-background-image: url("https://lh3.googleusercontent.com/-Dtw42nPOLhY/UcPyDjtZmgI/AAAAAAAAB84/djpN4lQZdPE/s24/tumblr.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-Dtw42nPOLhY/UcPyDjtZmgI/AAAAAAAAB84/djpN4lQZdPE/s24/tumblr.png");
 }
 .widget_socials a.rss {
 background-color: #FA7204;
-background-image: url("https://lh4.googleusercontent.com/-EbEXnpN-RIs/UcPyCZPXClI/AAAAAAAAB8Q/IDEpJmzqkuU/s24/rss.png");
+background-image: url("https://i2.wp.com/lh4.googleusercontent.com/-EbEXnpN-RIs/UcPyCZPXClI/AAAAAAAAB8Q/IDEpJmzqkuU/s24/rss.png");
 }
 .widget_socials a.linkedin {
 background-color: #006699;
-background-image: url("https://lh5.googleusercontent.com/-gAsnBv-K_hk/UcPx_FpxF2I/AAAAAAAAB6o/l07Bq86UHSE/s24/linkedin.png");
+background-image: url("https://i2.wp.com/lh5.googleusercontent.com/-gAsnBv-K_hk/UcPx_FpxF2I/AAAAAAAAB6o/l07Bq86UHSE/s24/linkedin.png");
 }
 .widget_socials a.youtube {
 background-color: #DD3D3D;
-background-image: url("https://lh6.googleusercontent.com/-aVPy7jN4T7Q/UcPyEV_ljFI/AAAAAAAAB9Q/cVUbI1P1FTg/s24/youtube.png");
+background-image: url("https://i2.wp.com/lh6.googleusercontent.com/-aVPy7jN4T7Q/UcPyEV_ljFI/AAAAAAAAB9Q/cVUbI1P1FTg/s24/youtube.png");
 }
 .widget_socials a.google_plus {
 background-color: #DD3D3D;
-background-image: url("https://lh3.googleusercontent.com/-H8fbtEHl9yw/UcPx-RGuARI/AAAAAAAAB6Q/7j9H_Ry5_m4/s24/google%252B.png");
+background-image: url("https://i2.wp.com/lh3.googleusercontent.com/-H8fbtEHl9yw/UcPx-RGuARI/AAAAAAAAB6Q/7j9H_Ry5_m4/s24/google%252B.png");
 }
 .widget_socials a.pinterest {
 background-color: #C9242D;
-background-image: url("https://lh5.googleusercontent.com/-pGslChgpGfU/UcPyB_-yhgI/AAAAAAAAB8A/H8IyIF4IDG8/s24/pinterest.png");
+background-image: url("https://i2.wp.com/lh5.googleusercontent.com/-pGslChgpGfU/UcPyB_-yhgI/AAAAAAAAB8A/H8IyIF4IDG8/s24/pinterest.png");
 }
 .widget_socials a.instagram {
 background-color: #1B577D;
-background-image: url("https://lh6.googleusercontent.com/-eIdoWi7bEVc/UcPx-5tP-cI/AAAAAAAAB6g/OLK97uwHujA/s24/instagram.png");
+background-image: url("https://i2.wp.com/lh6.googleusercontent.com/-eIdoWi7bEVc/UcPx-5tP-cI/AAAAAAAAB6g/OLK97uwHujA/s24/instagram.png");
 }
 div.img_wrapper:before {
 content: "";
@@ -1074,7 +1074,7 @@ color: #fff;
 height: 50px;
 width: 23px;
 margin-top: 0;
-background: url(http://3.bp.blogspot.com/-h-x1pzE69JE/U5sUcTyNfAI/AAAAAAAAAdg/PYKJ6twHM1M/s1600/search-icon.png) 2px center no-repeat;
+background: url(https://i2.wp.com/3.bp.blogspot.com/-h-x1pzE69JE/U5sUcTyNfAI/AAAAAAAAAdg/PYKJ6twHM1M/s1600/search-icon.png) 2px center no-repeat;
 text-indent: 9999px;
 position: relative;
 }
