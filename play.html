@@ -143,7 +143,9 @@ body {
     font-size: 17px;
 }</style>
      <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script> 
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+	 <script src="/nhl.js"></script>
+ <script src="/main.js"></script>
 <body style="opacity:1">
 <div class="top_wrapper">
 <div id="header-wrapper">
@@ -273,7 +275,9 @@ rjh
          <div class="fancy-box-wrapper animated fadeInUp">
             <div id="games" class="box-wrapper animated fadeInUp">
 <center>
-  <select id="cdn" onchange="cdnChange()">
+<select id="cdn" onchange="cdnChange()">
+		<option value="akc">Akamai</option>
+        <option value="l3c">Level 3</option>
   </select>
   <select id="feed" onchange="feedChange()">
   </select>
