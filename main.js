@@ -3,7 +3,7 @@ $("#date").append(date);document.title="Games for "+ date;var gd=date.split("-")
 function getToday(){return moment.tz(new Date(),"America/Los_Angeles").format("YYYY-MM-DD");}
 function idExists(id,lg){if(ids.length===0){fillIDs(lg);}
 return ids.includes(id);}
-function fillIDs(lg){var idurl;if(lg==="NHL"){idurl="/ids.txt";}else{idurl="http://zipstreams.net/static/mlbids.txt";}
+function fillIDs(lg){var idurl;if(lg==="NHL"){idurl="/ids.txt";}else{idurl="/mlbids.txt";}
 jQuery.ajax({url:idurl,success:function(html){ids=html.replace(/akc/g,"").replace(/l3c/g,"").split("\n");;},async:false});}
 function createUrl(lg,date,id,title,pk,time){var ms=(new Date(time)- new Date());var min=Math.floor(ms/60000);if(min>35||!idExists(id,lg)){return"<a href='play.html?league="+ lg+"&date="+ date+"&id="+ id+"&pk="+ pk+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>"+ title+"</button></a>";}
 return"<a href='play.html?league="+ lg+"&date="+ date+"&id="+ id+"&pk="+ pk+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>"+ title+"</button></a>";}
@@ -15,5 +15,5 @@ function mlb(){var date=$_GET("date");date=setUp(date);var d=moment(date);if(d.f
 getMLBGames(date);}
 function play(){if($_GET("league")==="NHL"){getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}else{getMLBGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}}
 function buildClappr(id,cdn,date){var url;if(cdn===null){cdn="akc";}
-if($_GET("league")==="NHL"){url="http://zipstreams.net/m3u8/"+ date+"/"+ id+ cdn;}else{url="http://zipstreams.net/mlb/m3u8/"+ date+"/"+ id+ cdn;}
-$.get(url,function(data){var player=new Clappr.Player({source:"http://zipstreams.net/ha.m3u8?url="+ data,plugins:[Clappr.HLS,LevelSelector],parentId:"#player"});},'text');}
+if($_GET("league")==="NHL"){url="http://key.rjh.fun/m3u8/"+ date+"/"+ id+ cdn;}else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;}
+$.get(url,function(data){var player=new Clappr.Player({source:"http://key.rjh.fun/ha.m3u8?url="+ data,plugins:[Clappr.HLS,LevelSelector],parentId:"#player"});},'text');}
