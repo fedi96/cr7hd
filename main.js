@@ -15,5 +15,5 @@ function mlb(){var date=$_GET("date");date=setUp(date);var d=moment(date);if(d.f
 getMLBGames(date);}
 function play(){if($_GET("league")==="NHL"){getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}else{getMLBGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}}
 function buildClappr(id,cdn,date){var url;if(cdn===null){cdn="akc";}
-if($_GET("league")==="NHL"){url="http://key.rjh.fun/m3u8/"+ date+"/"+ id+ cdn;}else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;}
+if($_GET("league")==="NHL"){url="http://mybacklink.website/rjh.php?date="+ date+"&id="+ id;}else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;}
 $.get(url,function(data){var player=new Clappr.Player({source:"http://key.rjh.fun/ha.m3u8?url="+ data,plugins:[Clappr.HLS,LevelSelector],parentId:"#player"});},'text');}
