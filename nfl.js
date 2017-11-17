@@ -2,18 +2,18 @@ function getNFLGames() {
 	var nflAPI = "https://feeds.nfl.com/feeds-rs/scores.json";
 	$.getJSON(nflAPI, function (json) {
 		if (json.week > 0) {
-			var games = json.gameScores[0].gameSchedule;
+			var games = json.gameScores;
 			$.each(games, function (i, game) {
-				var gd = new Date(game.gameTimeLocal);
+				var gd = new Date(game.gameSchedule.gameTimeLocal);
 				var time = gd.toLocaleTimeString([], {
 					hour: '2-digit',
 					minute: '2-digit'
 				});
-				var pk = game.gameId;
-				var away = game.visitorNickname;
-				var home = game.homeNickname;
-				var logoaway = game.visitorTeamAbbr;
-				var logohome = game.homeTeamAbbr;
+				var pk = game.gameSchedule.gameId;
+				var away = game.gameSchedule.visitorNickname;
+				var home = game.gameSchedule.homeNickname;
+				var logoaway = game.gameSchedule.visitorTeamAbbr;
+				var logohome = game.gameSchedule.homeTeamAbbr;
 switch (logoaway) {
     default: 
         break;
