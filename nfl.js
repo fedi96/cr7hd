@@ -1,4 +1,4 @@
-function getNFLGames(date) {
+function getNFLGames() {
 	var nflAPI = "https://feeds.nfl.com/feeds-rs/scores.json";
 	$.getJSON(nflAPI, function (json) {
 		if (json.week > 0) {
