@@ -4,7 +4,7 @@ function getNFLGames() {
 		if (json.week > 0) {
 			var games = json.gameScores;
 			$.each(games, function (i, game) {
-				var gd = new Date(game.gameSchedule.gameTimeLocal);
+				var gd = new Date(game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"T"+game.gameSchedule.gameTimeLocal+"Z");
 				var time = gd.toLocaleTimeString([], {
 					hour: '2-digit',
 					minute: '2-digit'
