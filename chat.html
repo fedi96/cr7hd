@@ -62,7 +62,7 @@ location.replace("http://rjh.fun/chat.html");
 function checkCookie() {
 var user=getCookie("user");
 if(user != ""){
-document.getElementById("userw371").innerHTML = '<div ng-app="BasicChat"><div class="chat-container" ng-controller="BasicController"><div class="chat-messages"><div ng-repeat="message in messages"><div class="sent-message" ng-class="{me: message.user.name == me.name}"><span class="username">{{ message.user.name }}:</span>{{ message.data }}</div><div class="clear"></div></div></div><form ng-submit="send()" class="chat-input"><input type="text" ng-model="textbox" autofocus><input type="submit" class="send-icon" value=" "><input type="submit" value=" " class="sent-indicator {{ status }}"></form></div></div>
+document.getElementById("userw371").innerHTML = '<div ng-app="BasicChat"><div class="chat-container" ng-controller="BasicController"><div class="chat-messages"><div ng-repeat="message in messages"><div class="sent-message" ng-class="{me: message.user.name == me.name}"><span class="username">{{ message.user.name }}:</span>{{ message.data }}</div><div class="clear"></div></div></div><form ng-submit="send()" class="chat-input"><input type="text" ng-model="textbox" autofocus><input type="submit" class="send-icon" value=" "><input type="submit" value=" " class="sent-indicator {{ status }}"></form></div></div>';
 }else{
 document.getElementById("userw371").innerHTML = 'Username<input id="numb" style="border: 1px solid;"><button type="button" onclick="myFunction()">Submit</button>';
 }
