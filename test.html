@@ -7,28 +7,6 @@
 <div id="userw371">
 </div>
 <script>
-function checkCookie() {
-var user=getCookie("username");
-var cors_api_url = "";
-  function doCORSRequest(options, printResult) {
-    var x = new XMLHttpRequest();
-    x.open(options.method, cors_api_url + options.url);
-    x.onload = x.onerror = function() {
-      printResult(x.responseText);
-    };
-    x.send(options.data);
-  }
-
-  // Bind event
-  (function load() {
-    doCORSRequest({
-        method: "GET",
-        url: "https://rjh.fun/chat.html",
-      }, function printResult(result) {
-postscribe("#user", result);
-      });
-  })();
-}
 function setCookie(cname,cvalue,exdays) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000*365));
@@ -54,26 +32,15 @@ function myFunction() {
     var user, text;
 user = document.getElementById("numb").value;
 setCookie("username", user, 3);
-
 }
-
-
-
-var getQueryString = function ( field, url ) {
-    var href = url ? url : window.location.href;
-    var reg = new RegExp( '[?&]' + field + '=([^&?#]*)', 'i' );
-    var string = reg.exec(href);
-    return string ? string[1] : null;
-};
-var ok = getQueryString('ok');
-if(ok == "on"){
+function checkCookie() {
+var user=getCookie("user");
+if(ok != ""){
 location.replace("http://rjh.fun/chat.html");
 }else{
-
 document.getElementById("userw371").innerHTML = '<input id="numb"><button type="button" onclick="myFunction()">Submit</button>';
-
 }
-
+}
 </script>
 </body>
 </html>
