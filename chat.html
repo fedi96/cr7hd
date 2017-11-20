@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/style.css"/>
+<script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/bower_components/angular/angular.js"></script>
+<script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/bower_components/rltm/web/rltm.js"></script>
+<script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/bower_components/angular-chat/angular-chat.js"></script>
+<script>
+'use strict';
+// Return a Silly Name
+function sillyname() {
+var cname="user";
+var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+</script>
+    <script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/app.js"></script>
+    <div ng-app="BasicChat">
+        <div class="chat-container" ng-controller="BasicController">
+
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- Chat Messages -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <div class="chat-messages">
+                <div ng-repeat="message in messages">
+
+                    <div class="sent-message" ng-class="{me: message.user.name == me.name}">
+                        <span class="username">{{ message.user.name }}:</span>
+                        {{ message.data }}
+                    </div>
+
+                    <div class="clear"></div>
+
+                </div>
+            </div>
+
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <!-- User Input -->
+            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
+            <form ng-submit="send()" class="chat-input">
+                <input type="text" ng-model="textbox" autofocus>
+                <input type="submit" class="send-icon" value=" ">
+                <input type="submit" value=" "
+                    class="sent-indicator {{ status }}">
+            </form>
+
+        </div>
+    </div>
