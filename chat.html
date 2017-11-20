@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html>
+<head>
 <link rel="stylesheet" href="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/style.css"/>
 <script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/bower_components/angular/angular.js"></script>
 <script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/bower_components/rltm/web/rltm.js"></script>
@@ -22,35 +25,49 @@ var name = cname + "=";
     return "";
 }
 </script>
-    <script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/app.js"></script>
-    <div ng-app="BasicChat">
-        <div class="chat-container" ng-controller="BasicController">
-
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-            <!-- Chat Messages -->
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-            <div class="chat-messages">
-                <div ng-repeat="message in messages">
-
-                    <div class="sent-message" ng-class="{me: message.user.name == me.name}">
-                        <span class="username">{{ message.user.name }}:</span>
-                        {{ message.data }}
-                    </div>
-
-                    <div class="clear"></div>
-
-                </div>
-            </div>
-
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-            <!-- User Input -->
-            <!-- =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-= -->
-            <form ng-submit="send()" class="chat-input">
-                <input type="text" ng-model="textbox" autofocus>
-                <input type="submit" class="send-icon" value=" ">
-                <input type="submit" value=" "
-                    class="sent-indicator {{ status }}">
-            </form>
-
-        </div>
-    </div>
+<script src="http://angularjs.chat/tutorials/angularjs-basic-chat-module/app/app.js"></script>
+    
+</head>
+<body>
+<div id="userw371">
+</div>
+<script>
+function setCookie(cname,cvalue,exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000*365));
+    var expires = "expires=" + d.toGMTString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+function myFunction() {
+var user, text;
+user = document.getElementById("numb").value;
+setCookie("user", user, 3);
+location.replace("http://rjh.fun/chat.html");
+}
+function checkCookie() {
+var user=getCookie("user");
+if(user != ""){
+document.getElementById("userw371").innerHTML = '<div ng-app="BasicChat"><div class="chat-container" ng-controller="BasicController"><div class="chat-messages"><div ng-repeat="message in messages"><div class="sent-message" ng-class="{me: message.user.name == me.name}"><span class="username">{{ message.user.name }}:</span>{{ message.data }}</div><div class="clear"></div></div></div><form ng-submit="send()" class="chat-input"><input type="text" ng-model="textbox" autofocus><input type="submit" class="send-icon" value=" "><input type="submit" value=" " class="sent-indicator {{ status }}"></form></div></div>
+}else{
+document.getElementById("userw371").innerHTML = 'Username<input id="numb" style="border: 1px solid;"><button type="button" onclick="myFunction()">Submit</button>';
+}
+}
+checkCookie();
+</script>
+</body>
+</html>
