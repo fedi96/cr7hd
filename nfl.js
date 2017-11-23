@@ -23,7 +23,10 @@ function getNFLGames() {
 				var gameLinks = "";
 				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NFL&pk="+pk+"&date="+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"&cdn="+fullnh+"-vs-"+fullnv+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>WATCH</button></a>";
 				gameLinks = gameLinks + "</div></div>";
+				var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+'" id="cal"/><br>'
 				$("#games").append(gameTitle + gameLinks);
+				$("#time").append(gamedatec);
+
 			});
 		} else {
 			$("#games").append("No games.");
