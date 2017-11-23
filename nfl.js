@@ -23,18 +23,18 @@ function getNFLGames() {
 				var gameLinks = "";
 				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NFL&pk="+pk+"&date="+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"&cdn="+fullnh+"-vs-"+fullnv+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>WATCH</button></a>";
 				gameLinks = gameLinks + "</div></div>";
-				//var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+'" id="cal"/><br>'
-				//$("#time").append(gamedatec);
+				
 				$("#games").append(gameTitle + gameLinks);
 				
 
 			});
+			var gamedatec ='<script id="cid0020000172460666845" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 355px;height: 446px;">{"handle":"nflrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"ffffff","r":100,"t":0,"ab":false,"usricon":0.79,"pos":"br","cv":1,"cvbg":"021926","cvw":75,"cvh":30,"sba":36,"surl":0}}</script>'
+			$("#time").append(gamedatec);
 		} else {
 			$("#games").append("No games.");
 		}
 	});
 }
-
 function getNFLGameInfo(cdn, pk, id, date) {
 	var nhlAPI = "https://statsapi.web.nhl.com/api/v1/schedule?gamePk=" + pk + "&expand=schedule.teams,schedule.linescore,schedule.broadcasts,schedule.ticket,schedule.game.content.media.epg&leaderCategories=&site=en_nhl&teamId=";
 	var gameTitle;
