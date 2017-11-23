@@ -247,15 +247,6 @@ rjh
 });nfl();
   });
  </script>
-<script>
-
-
-    function dateChg() {
-        var dat = document.getElementById("cal").value;
-        var d = dat.split('/');
-        window.location.href = '/nhl.html?date=' + d[2] + '-' + d[0] + '-' + d[1];
-    }
-</script>
 <!--<style>
 .btn-info:hover {
     color: #94abbf;
@@ -270,8 +261,7 @@ rjh
 }
 .btn{    border-radius: 0px;}</style>-->
 
-<a href="#" style="display:none;" onClick="show_dp()"></a>
-<div style="text-align: center;"><input type="text" onChange="dateChg()" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" id="cal"></div>
+<div id="time" style="text-align: center;"><input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="" id="cal"></div>
 <br>
 </div>
   
