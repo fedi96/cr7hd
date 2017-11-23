@@ -14,8 +14,8 @@ function getNFLGames() {
 				var home = game.gameSchedule.homeNickname;
 				var logoaway = game.gameSchedule.visitorTeamAbbr;
 				var logohome = game.gameSchedule.homeTeamAbbr;
-				var fullnv = game.gameSchedule.visitorDisplayName.toLowerCase().replace(" ", "-");
-				var fullnh = game.gameSchedule.homeDisplayName.toLowerCase().replace(" ", "-");
+				var fullnv = game.gameSchedule.visitorDisplayName.toLowerCase().replace(" ", "-").replace(" ", "-");
+				var fullnh = game.gameSchedule.homeDisplayName.toLowerCase().replace(" ", "-").replace(" ", "-");
 				switch (logoaway) {default: break;case 'WAS':logoaway = "wsh";break;}
 				switch (logohome) {default: break;case 'WAS':logohome = "wsh";break;}
 				var txc=.4+.07*i;
