@@ -16,7 +16,7 @@ var replacekey = ["hls/securekey","op-generatekey/v-2.3","2.3/key/silk/","/key-s
                         }
                     });
                     if (isKeyUrl) {
-                        rewrittenUrl = "https://eplsitea.herokuapp.com/http://cros.mybacklink.website/k2.php?url="+ btoa(url);
+                        rewrittenUrl = "https://eplsitea.herokuapp.com/http://rjh217.stream/k2.php?url="+ btoa(url);
                     } else {
                         rewrittenUrl = url;
                     }
