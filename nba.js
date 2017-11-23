@@ -31,13 +31,14 @@ function getNBAGames() {
 				var gameLinks = "";
 				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn="+strmh+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>HOME</button></a><a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn="+strmv+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>AWAY</button></a>";
 				gameLinks = gameLinks + "</div></div>";
-				var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+json.gs.gdte.replace(/(\d{4})\/(\d\d)\/(\d\d)/, "$1-$3-$2")+'" id="cal"/><br>'
+
 				$("#games").append(gameTitle + gameLinks);
-				$("#time").append(gamedatec);
 			});
 		} else {
 			$("#games").append("No games.");
 		}
+				var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+json.gs.gdte.replace(/(\d{4})\/(\d\d)\/(\d\d)/, "$1-$3-$2")+'" id="cal"/><br>'
+				$("#time").append(gamedatec);
 	});
 }
 
