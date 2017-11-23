@@ -17,7 +17,8 @@ function nba(){getNBAGames();}
 //getMLBGames(date);}
 function play(){if($_GET("league")==="NHL"){getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
                 else if($_GET("league")==="NBA"){/*getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));*/buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
-                else if($_GET("league")==="NFL"){/*getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));*/buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
+                else if($_GET("league")==="NFL"){var gamedatec ='<script id="cid0020000172460974371" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 355px;height: 446px;">{"handle":"nflrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"usricon":0.79,"pos":"br","cv":1,"cvbg":"021926","cvw":75,"cvh":30,"sba":36,"surl":0}}</script>';
+			$("#chat").append(gamedatec);/*getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));*/buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
                 //else{getMLBGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}}
 function buildClappr(id,cdn,date){var url;if(cdn===null){cdn="akc";}
 if($_GET("league")==="NHL"){url="https://jokercros.herokuapp.com/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;}
