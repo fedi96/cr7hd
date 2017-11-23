@@ -16,8 +16,8 @@ function getNBAGames() {
 				var home = game.h.tn;
 				var logoaway = game.v.ta;
 				var logohome = game.h.ta;
-				var strmv = game.v.tc.toLowerCase()+"-"+game.v.tn.toLowerCase();
-				var strmh = game.h.tc.toLowerCase()+"-"+game.h.tn.toLowerCase();
+				var strmv = game.v.tc.toLowerCase().replace(" ", "-")+"-"+game.v.tn.toLowerCase();
+				var strmh = game.h.tc.toLowerCase().replace(" ", "-")+"-"+game.h.tn.toLowerCase();
 				if(logohome == "UTA")
 					logohome = "utah";
 				if(logohome == 'NOP')
