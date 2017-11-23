@@ -34,11 +34,12 @@ function getNBAGames() {
 
 				$("#games").append(gameTitle + gameLinks);
 			});
+			var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+json.gs.gdte.replace(/(\d{4})\/(\d\d)\/(\d\d)/, "$1-$3-$2")+'" id="cal"/><br>'
+			$("#time").append(gamedatec);
 		} else {
 			$("#games").append("No games.");
 		}
-				var gamedatec ='<input type="text" class="datetf" style="width: 288;text-align: center;font-size: x-large;" tabindex="-1" value="'+json.gs.gdte.replace(/(\d{4})\/(\d\d)\/(\d\d)/, "$1-$3-$2")+'" id="cal"/><br>'
-				$("#time").append(gamedatec);
+				
 	});
 }
 
