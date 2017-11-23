@@ -6,7 +6,7 @@
 open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 
 
-var replacekey = ["hls/securekey","op-generatekey/v-2.3","2.3/key/silk/","/key-service/mlbnkid"];
+var replacekey = ["hls/securekey","op-generatekey/v-2.3"];
             (function (open) {
                 XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
                     isKeyUrl = false;
