@@ -1,5 +1,5 @@
 function getNBAGames() {
-	var nbaAPI = "https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2017/scores/00_todays_scores.json";
+	var nbaAPI = "https://jokercros.herokuapp.com/https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2017/scores/00_todays_scores.json";
 	$.getJSON(nbaAPI, function (json) {
 		if (json.mid > 0) {
 			var games = json.gs.g;
