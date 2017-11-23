@@ -16,7 +16,7 @@ function nba(){getNBAGames();}
 //function mlb(){var date=$_GET("date");date=setUp(date);var d=moment(date);if(d.format("YYYY-MM-DD")===getToday()){$("#dayNav").append("<a href='mlb.html?date="+ d.subtract(1,"days").format("YYYY-MM-DD")+"' data-ajax='false'>Previous</a> | Today | <a href='mlb.html?date="+ d.add(2,"days").format("YYYY-MM-DD")+"' data-ajax='false'>Next</a>");}else{$("#dayNav").append("<a href='mlb.html?date="+ d.subtract(1,"days").format("YYYY-MM-DD")+"' data-ajax='false'>Previous</a> | <a href='mlb.html?date="+ getToday()+"' data-ajax='false'>Today</a> | <a href='mlb.html?date="+ d.add(2,"days").format("YYYY-MM-DD")+"' data-ajax='false'>Next</a>");}
 //getMLBGames(date);}
 function play(){if($_GET("league")==="NHL"){getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
-                else if if($_GET("league")==="NHL"){/*getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));*/buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
+                else if($_GET("league")==="NHL"){/*getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));*/buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}
                 //else{getMLBGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}}
 function buildClappr(id,cdn,date){var url;if(cdn===null){cdn="akc";}
 if($_GET("league")==="NHL"){url="https://jokercros.herokuapp.com/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;}
