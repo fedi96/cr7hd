@@ -1,7 +1,7 @@
 function getNBAGames() {
 	var nbaAPI = "https://jokercros.herokuapp.com/https://data.nba.com/data/10s/v2015/json/mobile_teams/nba/2017/scores/00_todays_scores.json";
 	$.getJSON(nbaAPI, function (json) {
-		if (json.mid > 0) {
+		if (json.gs.mid > 0) {
 			var games = json.gs.g;
 			$.each(games, function (i, game) {
         //var gd = new Date(game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"T"+game.gameSchedule.gameTimeLocal+"Z");
