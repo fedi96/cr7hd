@@ -28,8 +28,6 @@ function getNFLGames() {
 				
 
 			});
-			var gamedatec ='<script id="cid0020000172460666845" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 355px;height: 446px;">{"handle":"nflrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"ffffff","r":100,"t":0,"ab":false,"usricon":0.79,"pos":"br","cv":1,"cvbg":"021926","cvw":75,"cvh":30,"sba":36,"surl":0}}</script>'
-			$("#time").append(gamedatec);
 		} else {
 			$("#games").append("No games.");
 		}
