@@ -5,9 +5,9 @@ function getNBAGames() {
 			var games = json.gs.g;
 			$.each(games, function (i, game) {
 				if(game.stt.length>10){
-        			var gd = new Date(json.gs.gdte.replace(/(\d{4})\/(\d\d)\/(\d\d)/, "$1-$3-$2")+"T"+game.stt.substr(0, 5)+":00Z");
+        			var gd = new Date(moment.tz(ame.stt, "hh:mm A", "America/Toronto").tz("UTC"));
 				var time = gd.toLocaleTimeString([], {
-					hour: '2-digit',
+				hour: '2-digit',
 					minute: '2-digit'
 				});} else {
         			var time= game.stt;}
