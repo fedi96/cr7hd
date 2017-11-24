@@ -70,11 +70,8 @@ max-height: 50px;
 width: auto;
 padding:5px 0 0 5px;
 }
-#top_menu {
-margin-top: -18px;
-position: absolute;
-right: 20px;
-top: 50%;
+	  #top_menu {
+    float: right;
 }
 .sf-menu.hide {
 display: none;
