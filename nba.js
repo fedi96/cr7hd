@@ -5,7 +5,7 @@ function getNBAGames() {
 			var games = json.gs.g;
 			$.each(games, function (i, game) {
 				if(game.stt.length>10){
-        			var gd = new Date(moment.tz(ame.stt, "hh:mm A", "America/Toronto").tz("UTC"));
+        			var gd = new Date(moment.tz(game.stt, "hh:mm A", "America/Toronto").tz("UTC"));
 				var time = gd.toLocaleTimeString([], {
 				hour: '2-digit',
 					minute: '2-digit'
