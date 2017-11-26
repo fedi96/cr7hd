@@ -1,6 +1,8 @@
 function getNFLGames() {
 	var nflAPI = "https://feeds.nfl.com/feeds-rs/scores.json";
 	$.getJSON(nflAPI, function (json) {
+		var gametv='<div class="box-animate animated fadeInUp" style="animation-delay: 0.26s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">NFL TV</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="http://www.htcinc.net/media/images/NFL_Network_2012_Logo.png"></div><a data-ajax="false" href="http://rjh.fun/play.html?league=NFL&amp;cdn=nfltv"><button class="bttn-slant bttn-xs bttn-warning">WATCH</button></a></div></div><div class="box-animate animated fadeInUp" style="animation-delay: 0.33s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">NFL RedZone</div></div><hr><div class="button-wrapper animated fadeIn"><img style="" src="http://www.htcinc.net/media/images/NFL_Redzone_horz.png"></div><a data-ajax="false" style="" href="http://rjh.fun/play.html?league=NFL&amp;cdn=redzone"><button class="bttn-slant bttn-xs bttn-warning" style="">WATCH</button></a></div></div>';
+		$("#games").append(gametv);
 		if (json.week > 0) {
 			var games = json.gameScores;
 			$.each(games, function (i, game) {
