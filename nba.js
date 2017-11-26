@@ -18,6 +18,10 @@ function getNBAGames() {
 				var logohome = game.h.ta;
 				var strmv = game.v.tc.toLowerCase().replace(" ", "-")+"-"+game.v.tn.toLowerCase().replace(" ", "-");
 				var strmh = game.h.tc.toLowerCase().replace(" ", "-")+"-"+game.h.tn.toLowerCase().replace(" ", "-");
+				if(strmv == "la-clippers")
+					strmv ="los-angeles-clippers";
+				if(strmh == "la-clippers")
+					strmh ="los-angeles-clippers";
 				if(logohome == "UTA")
 					logohome = "utah";
 				if(logohome == 'NOP')
