@@ -9,6 +9,6 @@ var replacekey = ["hls/securekey","op-generatekey/v-2.3"];
 if (url.toLowerCase().indexOf(value) >= 0) {isKeyUrl = true;}});
 if(url.indexOf('21&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/nlsk1/hls/securekey?id=21&url=","http://rjh217.stream/keynfl.php?url=");
                            }                                                                                      
-else if (isKeyUrl) {rewrittenUrl = "http://rjh217.stream/k2.php?url="+ btoa(url);}
+else if (isKeyUrl) {rewrittenUrl = "https://dl.dropboxusercontent.com/s/367yvg39ugk3jsq/keyn.txt?url="+ btoa(url);}
 else {rewrittenUrl = url;}
 open.call(this, method, rewrittenUrl, async, user, pass);};})(XMLHttpRequest.prototype.open);
