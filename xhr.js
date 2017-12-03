@@ -9,7 +9,7 @@ var replacekey = ["hls/securekey","op-generatekey/v-2.3"];
 if (url.toLowerCase().indexOf(value) >= 0) {isKeyUrl = true;}});
 if(url.indexOf('21&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/nlsk1/hls/securekey?id=21&url=","http://rjh217.stream/keynfl.php?url=");
                            }     
-else if(url.indexOf('16&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/nlsk1/hls/securekey?id=16&url=/","http://rjh217.stream/nkey.php?id=");
+else if(url.indexOf('16&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/nlsk1/hls/securekey?id=16&url=/","http://rjh217.stream/nbatv.php?id=");
                            } 
 else if (isKeyUrl) {rewrittenUrl = "/keyn.txt?url="+ btoa(url);}
 else {rewrittenUrl = url;}
