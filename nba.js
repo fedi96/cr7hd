@@ -1,7 +1,7 @@
 function getNBAGames() {
 	var nbaAPI = "http://rjh217.stream/nbajs.php";
 	$.getJSON(nbaAPI, function (json) {
-		var gametv='<div class="box-animate animated fadeInUp" style="animation-delay: 0.33s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">NBA TV</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="https://cdn.tvpassport.com/image/station/240x135/nbatvcanada.png"></div><a data-ajax="false" href="http://rjh.fun/play.html?league=NBA&amp;cdn=nbatv"><button class="bttn-slant bttn-xs bttn-warning">WATCH</button></a></div></div>';
+		var gametv='<div class="box-animate animated fadeInUp" style="animation-delay: 0.33s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">NBA TV</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="https://cdn.iphonelife.com/sites/iphonelife.com/files/NBA-Logo.png"></div><a data-ajax="false" href="http://rjh.fun/play.html?league=NBA&amp;cdn=nbatv"><button class="bttn-slant bttn-xs bttn-warning">WATCH</button></a></div></div>';
 		$("#games").append(gametv);
 		if (json.gs.mid > 0) {
 			var games = json.gs.g;
