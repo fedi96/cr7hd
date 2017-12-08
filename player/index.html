@@ -19,20 +19,7 @@
 <video class="video-js vjs-default-skin vjs-udemy-skin-v2 default vjs-paused vjs-controls-enabled vjs-workinghover tablet vjs-user-inactive"id=js-video-player_10200586_99394922 width=100% height=100% controls>
 <source src="http://nlds16.cdnak.neulion.com/nlds/nba/nba247/as/live/nba247_hd.m3u8" type="application/x-mpegURL">
     </video>
-    <script>
-        var options = {
-  controlBar: {
-    volumeMenuButton: {
-      inline: false,
-      vertical: true
-    }
-  },chromecast:{
-     appId:'00000000'
-  }
-};
-var player = videojs('js-video-player_10200586_99394922',options);
-         player.qualityPickerPlugin();
-         (function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+    <script>(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
   if(url.indexOf('mlb-ws')!=-1){rewrittenUrl=url.replace("https://mlb-ws-mf.media.mlb.com","https://jokercros.herokuapp.com/http://key.rjh.fun");}
   else if(url.indexOf('svc.nhl')!=-1){rewrittenUrl=url.replace("https://mf.svc.nhl.com","https://jokercros.herokuapp.com/http://key.rjh.fun");}
   else if(url.indexOf('url=')!=-1){rewrittenUrl=url.replace("http://rjh217.stream/m3u8.m3u8?url=","");}
@@ -48,5 +35,18 @@ else if(url.indexOf('16&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.ne
 else if (isKeyUrl) {rewrittenUrl = "http://rjh.fun/keyn.txt?url="+ btoa(url);}
 else {rewrittenUrl = url;}
 open.call(this, method, rewrittenUrl, async, user, pass);};})(XMLHttpRequest.prototype.open);
+        var options = {
+  controlBar: {
+    volumeMenuButton: {
+      inline: false,
+      vertical: true
+    }
+  },chromecast:{
+     appId:'00000000'
+  }
+};
+var player = videojs('js-video-player_10200586_99394922',options);
+         player.qualityPickerPlugin();
+         
     </script>
 
