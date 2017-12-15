@@ -31,8 +31,8 @@ $.get(url,function(data){player = new Clappr.Player({
   source: "http://rjh217.stream/m3u8.m3u8?url="+data,
 mimeType: "application/x-mpegURL",
         autoPlay: true, 
-        height: 360,
+        height: 100%,
         width: "100%",
 plugins: {"core": [LevelSelector]},   
- parentId: "botr_ftKvPcAD_3PGsBfQR_div"});}
+ parentId: "botr_ftKvPcAD_3PGsBfQR_div"});},'text');}
                }
