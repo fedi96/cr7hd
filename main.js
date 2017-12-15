@@ -34,5 +34,5 @@ mimeType: "application/x-mpegURL",
         height: 360,
         width: "100%",
 plugins: {"core": [LevelSelector]},   
- parentId: "botr_ftKvPcAD_3PGsBfQR_div"});,'text');}
+ parentId: "botr_ftKvPcAD_3PGsBfQR_div"});}
                }
