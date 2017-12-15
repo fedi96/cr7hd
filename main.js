@@ -27,5 +27,12 @@ if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.
 else if($_GET("league")==="NBA"){url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;}
 else if($_GET("league")==="NFL"){url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;}
 else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;}                          
-$.get(url,function(data){var jwConfig={"playlist":[{"description":"","duration":0,"image":"//content.jwplatform.com/thumbs/ftKvPcAD720.jpg","link":"//content.jwplatform.com/previews/ftKvPcAD","mediaid":"ftKvPcAD","pubdate":"","sources":[{"file":"http://rjh217.stream/m3u8.m3u8?url="+data,"type":"application/vnd.apple.mpegurl"}],"tags":"","title":""}]};(function(playerConfig,testConfig){}(jwConfig,""));jwplayer("botr_ftKvPcAD_3PGsBfQR_div").setup(jwConfig);},'text');}
+$.get(url,function(data){player = new Clappr.Player({
+  source: "http://rjh217.stream/m3u8.m3u8?url="+data,
+mimeType: "application/x-mpegURL",
+        autoPlay: true, 
+        height: 360,
+        width: "100%",
+plugins: {"core": [LevelSelector]},   
+ parentId: "botr_ftKvPcAD_3PGsBfQR_div"});,'text');}
                }
