@@ -27,12 +27,5 @@ if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.
 else if($_GET("league")==="NBA"){url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;}
 else if($_GET("league")==="NFL"){url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;}
 else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;}                          
-$.get(url,function(data){player = new Clappr.Player({
-  source: "http://rjh217.stream/m3u8.m3u8?url="+data,
-mimeType: "application/x-mpegURL",
-        autoPlay: true, 
-        height: 100%,
-        width: "100%",
-plugins: {"core": [LevelSelector]},   
- parentId: "botr_ftKvPcAD_3PGsBfQR_div"});},'text');}
-               }
+$.get(url,function(data){
+	var player=new Clappr.Player({source:"http://rjh217.stream/m3u8.m3u8?url="+data,plugins:[Clappr.HLS,LevelSelector],parentId:"#botr_ftKvPcAD_3PGsBfQR_div"});},'text');
