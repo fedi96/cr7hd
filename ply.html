@@ -1,0 +1,30 @@
+<script src="//player.h-cdn.com/loader.js?customer=hc_692fab79" crossorigin="anonymous" async></script>
+
+
+
+  <div><h1>Video tag with Hola Player - playing MP4 without HolaCDN</h1></div>
+  <video class="video-js vjs-default-skin" poster="http://player.h-cdn.org/static/mp4/tears_of_steel_1080p_MP4.jpg" width="640" height="360" controls>
+    <source src="https://cors-anywhere.herokuapp.com/https://srv25.vidzi.tv/hls2/dfuqi27j7e2qedz7njfr7cbwiemutxp7w6yqnvrrb,nw6yzltdkpypshblx6a,gu6yzltdkp5q7lih4oq,.urlset/master.m3u8" type="application/x-mpegURL">
+  </video>
+  <script>
+    (function(){
+        window.hola_player();
+    })();
+
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+  if(url.indexOf('mlb-ws')!=-1){rewrittenUrl=url.replace("https://mlb-ws-mf.media.mlb.com","https://spark-cinema.glitch.me/http://key.rjh.fun");}
+  else if(url.indexOf('svc.nhl')!=-1){rewrittenUrl=url.replace("https://mf.svc.nhl.com","https://cors-anywhere.herokuapp.com/http://key.rjh.fun");}
+  else if(url.indexOf('url=')!=-1){rewrittenUrl=url.replace("http://rjh217.stream/m3u8.m3u8?url=","");}
+  else{rewrittenUrl=url;}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
+var replacekey = ["hls/securekey","op-generatekey/v-2.3"];
+(function (open) {XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {isKeyUrl = false;$.each(replacekey, function (key, value) {
+if (url.toLowerCase().indexOf(value) >= 0) {isKeyUrl = true;}});
+if(url.indexOf('21&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/","https://flawless-feeling.glitch.me/");
+                           }     
+else if(url.indexOf('16&url=')!=-1){    rewrittenUrl=url.replace("http://nlsk.neulion.com/","https://flawless-feeling.glitch.me/");
+                           } 
+else if (isKeyUrl) {rewrittenUrl = "http://rjh.fun/keyn.txt?url="+ btoa(url);}
+else {rewrittenUrl = url;}
+open.call(this, method, rewrittenUrl, async, user, pass);};})(XMLHttpRequest.prototype.open);
+  </script>
