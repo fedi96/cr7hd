@@ -96,50 +96,31 @@ play();});
         </script>
 
 
-	<section id="games"  class="text-center pb-3">
-   <div class="container">
-     
-    <div class="row justify-content-md-center">
-      <div class="col-md-12">
-        <p>
-    
-          
-</p>
-
-          
-        
-  
-        <div class="card card-cascade wider reverse my-4">
-
-    <!--Card image-->
-
-    <!--/Card image-->
-
-    <!--Card content-->
-    <div class="card-body text-center">
-            <div style="text-align: center;"><h2 id="gmTitle"></h2></div>
-    </div>
-    <!--/.Card content-->
-
-</div>
- </div>
-      <div class="col-md-12">
-       <select id="cdn"  class="mdb-select" onchange="cdnChange()">
-<option value="akc">Akamai</option>
-<option value="l3c">Level 3</option>
- </select>
-  <select id="feed"  class="mdb-select" onchange="feedChange()">
-	<!--<a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Home</span></a>
-        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Away</span></a>        
-       --> <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
-      </div>  
-     
-    <div id="player" class="col">
-    </div>
-      <div id="sidebar" class="collapse col-md-4 show my-4">
-     </div>
-     </div>
-  </div>
+<section id="games"  class="text-center pb-3">
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div class="col-md-12">
+		    <div class="card card-cascade wider reverse my-4">
+			    <div class="card-body text-center">
+				    <h2 id="gmTitle"></h2>
+			    </div>
+		    </div>
+		</div>
+		<div class="col-md-12">
+			<select id="cdn"  class="mdb-select" onchange="cdnChange()">
+				<option value="akc">Akamai</option>
+				<option value="l3c">Level 3</option>
+			</select>
+			<select id="feed"  class="mdb-select" onchange="feedChange()"/>
+			<!--<a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Home</span></a><a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Away</span></a>        --> 
+			<a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
+		</div>
+		<div id="player" class="col">
+		</div>
+		<div id="sidebar" class="collapse col-md-4 show my-4">
+		</div>
+	</div>
+	</div>
 </section>
 <!--Projects section v.4-->
   
