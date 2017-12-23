@@ -35,11 +35,11 @@ function rjhply(id,cdn,date){
 	if(cdn===null){cdn="akc";}
 	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;chatx="nhl"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
-		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"cdn;
+		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
 		chatx="nba"}
 	else if($_GET("league")==="NFL"){
 		//url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;
-		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"cdn;
+		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
 		chatx="nfl"}
 	else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;chatx="mlb"} 
 	if($_GET("league")==="NHL"){
