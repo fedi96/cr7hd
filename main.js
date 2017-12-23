@@ -40,4 +40,4 @@ var url;
 	$.get(url,function(data){
 $("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
     });
-}
+}}
