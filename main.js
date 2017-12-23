@@ -33,7 +33,7 @@ function rjhply(id,cdn,date){
 	var url;
 	var chatx;
 	if(cdn===null){cdn="akc";}
-	if(cdn==="nbatv"){st='nba-tv-24/7';}
+	if(cdn==="nbatv"){cdn='nba-tv-24/7';}
 	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;chatx="nhl"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
