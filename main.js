@@ -42,16 +42,17 @@ function rjhply(id,cdn,date){
 		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
 		chatx="nfl"}
 	else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;chatx="mlb"} 
-	if($_GET("league")==="NHL"){
+	if($_GET("league")==="NHL"||cdn==="nbatv"||cdn==="nfltv"||cdn==="redzone"){
+	if(cdn==="nbatv"){url='/nbatv';}
+	if(cdn==="nfltv"){url='/nfltv'}
+	if(cdn==="redzone"){url='/redzone'}
 	$.get(url,function(data){
 		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
 		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 480;">{"handle":"'+chatx+'rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
 	});}
 	else{
-	if(cdn==="nbatv"){url='/nbatv';}
-	if(cdn==="nfltv"){url='/nfltv'}
-	if(cdn==="redzone"){url='/redzone'}
 	$.get(url,function(data){
+		if(cdn==="nbatv"){
 		var retVal = "";
                 $.each(data, function (index, data) {
                     retVal += data;
