@@ -17,27 +17,26 @@ function nba(){getNBAGames();}
 //getMLBGames(date);}
 function play(){
 	if($_GET("league")==="NHL"){
-		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"nhlrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
 		getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));
 		rjhply($_GET("id"),$_GET("cdn"),$_GET("date"));
 	}
 else if($_GET("league")==="NBA"){
-		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"nbarjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
 	rjhply($_GET("pk"),$_GET("cdn"),$_GET("date"));
 }
 else if($_GET("league")==="NFL"){
-		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"nflrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
 	rjhply($_GET("id"),$_GET("cdn"),$_GET("date"));
 }
 //else{getMLBGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));buildClappr($_GET("id"),$_GET("cdn"),$_GET("date"));}}
 function rjhply(id,cdn,date){
-var url;
+	var url;
+	var chatx;
 	if(cdn===null){cdn="akc";}
-	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;}
-	else if($_GET("league")==="NBA"){url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;}
-	else if($_GET("league")==="NFL"){url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;}
-	else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;} 
+	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;chatx="nhl"}
+	else if($_GET("league")==="NBA"){url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;chatx="nba"}
+	else if($_GET("league")==="NFL"){url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;chatx="nfl"}
+	else{url="http://key.rjh.fun/mlb/m3u8/"+ date+"/"+ id+ cdn;chatx="mlb"} 
 	$.get(url,function(data){
-$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
-    });
+		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
+		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"'+chatx+'rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
+	});
 }}
