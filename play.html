@@ -118,29 +118,20 @@ play();});
     <!--Card content-->
     <div class="card-body text-center">
             <div style="text-align: center;"><h2 id="gmTitle"></h2></div>
-	    <div class="fancy-box-wrapper animated fadeInUp">
-            <div class="box-wrapper animated fadeInUp">
-<center>
-	<br><br>
-<select id="cdn" onchange="cdnChange()">
-		<option value="akc">Akamai</option>
-        <option value="l3c">Level 3</option>
-  </select>
-  <select id="feed" onchange="feedChange()">
-  </select>
-	<br><br>
-            </div>
-         </div>
-
     </div>
     <!--/.Card content-->
 
 </div>
  </div>
       <div class="col-md-12">
-        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Home</span></a>
+       <select id="cdn"  class="mdb-select" onchange="cdnChange()">
+<option value="akc">Akamai</option>
+<option value="l3c">Level 3</option>
+ </select>
+  <select id="feed"  class="mdb-select" onchange="feedChange()">
+	<!--<a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Home</span></a>
         <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="" aria-expanded="true" aria-controls="collapseExample"><span>Away</span></a>        
-        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
+       --> <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
       </div>  
      
     <div id="player" class="col">
