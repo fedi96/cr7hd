@@ -33,7 +33,6 @@ function rjhply(id,cdn,date){
 	var url;
 	var chatx;
 	if(cdn===null){cdn="akc";}
-	if(cdn==="nbatv"){cdn='nba-tv-24/7';}
 	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;chatx="nhl"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
@@ -49,6 +48,9 @@ function rjhply(id,cdn,date){
 		$("#sidebar").append('<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 480;">{"handle":"'+chatx+'rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}<\/script>');
 	});}
 	else{
+	if(cdn==="nbatv"){url='/nbatv';}
+	if(cdn==="nfltv"){url='/nfltv'}
+	if(cdn==="redzone"){url='/redzone'}
 	$.get(url,function(data){
 		var retVal = "";
                 $.each(data, function (index, data) {
