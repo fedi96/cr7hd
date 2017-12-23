@@ -32,6 +32,6 @@ $.get(url,function(data){var player=new Clappr.Player({source:"http://rjh217.str
 function rjhply(id,cdn,date){
 url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 $.get(url,function(data){
-$("#chat").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
+$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>');
     });
 }
