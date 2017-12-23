@@ -52,7 +52,6 @@ function rjhply(id,cdn,date){
 	});}
 	else{
 	$.get(url,function(data){
-		if(cdn==="nbatv"){
 		var retVal = "";
                 $.each(data, function (index, data) {
                     retVal += data;
