@@ -68,3 +68,6 @@ function rjhply(id,cdn,date){
 	}
 
 }}
+
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){if(url.indexOf('svc.nhl')!=-1){rewrittenUrl=url.replace("https://mf.svc.nhl.com","http://sawlive.tv");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
