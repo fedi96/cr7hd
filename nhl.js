@@ -58,14 +58,14 @@ var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-del
 						$.each(media.items, function (k, item) {
 							var feedName = "";
 							if (item.mediaFeedType === "ISO" || item.mediaFeedType === "COMPOSITE") {
-								feedName = item.feedName;
+								var feedNamek = item.feedName;
 							} else {
 								feedName = item.mediaFeedType;
 								if (item.callLetters !== "") {
 									feedName = feedName + " (" + item.callLetters + ")";
 								}
+								gameLinks = gameLinks + createUrl("NHL", date, item.mediaFeedType.toString(), feedName, pk, gd.toLocaleString());
 							}
-							gameLinks = gameLinks + createUrl("NHL", date, item.mediaFeedType.toString(), feedName, pk, gd.toLocaleString());
 						});
 					}
 				});
