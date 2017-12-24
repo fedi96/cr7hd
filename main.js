@@ -18,7 +18,8 @@ function nba(){getNBAGames();}
 function play(){
 	if($_GET("league")==="NHL"){
 		getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));
-		rjhply($_GET("id"),$_GET("cdn"),$_GET("date"));
+		rjhply($_GET("id"),$_GET("pk"),$_GET("date"));
+		$("#games").append('<style>#cdn,#feed{display: none;}<\/style>');
 	}
 else if($_GET("league")==="NBA"){
 	rjhply($_GET("pk"),$_GET("cdn"),$_GET("date"));
@@ -33,7 +34,12 @@ function rjhply(id,cdn,date){
 	var url;
 	var chatx;
 	if(cdn===null){cdn="akc";}
-	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+ date+"/"+ id + cdn;chatx="nhl"}
+	if(id==="NATIONAL"){id='n';}
+	if(id==="FRENCH"){id='f'}
+	if(id==="HOME"){id='h'}
+	if(id==="AWAY"){id='a'}
+	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://stormy-wire.glitch.me/"+cdn+"/"+id;
+				    chatx="nhl"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
 		chatx="nba"}
