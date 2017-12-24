@@ -34,7 +34,7 @@ function rjhply(id,cdn,date){
 	var url;
 	var chatx;
 	if(cdn===null){cdn="akc";}
-	if(id==="NATIONAL"){id='n';}
+	if(id==="NATIONAL"){id='h';}
 	if(id==="FRENCH"){id='f'}
 	if(id==="HOME"){id='h'}
 	if(id==="AWAY"){id='a'}
