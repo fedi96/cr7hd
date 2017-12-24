@@ -65,7 +65,7 @@ var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-del
 									feedName = feedName + " (" + item.callLetters + ")";
 								}
 							}
-							gameLinks = gameLinks + createUrl("NHL", date, item.mediaPlaybackId.toString(), feedName, pk, gd.toLocaleString());
+							gameLinks = gameLinks + createUrl("NHL", date, item.mediaFeedType.toString(), feedName, pk, gd.toLocaleString());
 						});
 					}
 				});
@@ -102,7 +102,7 @@ function getNHLGameInfo(cdn, pk, id, date) {
 								$('#feed').append($('<option>', {
 									value: item.mediaPlaybackId
 								}).text(feedName));
-								if (item.mediaPlaybackId === id) {
+								if (item.mediaFeedType === id) {
 									$("#feed option[value='" + id + "']").prop('selected', true);
 									if (item.callLetters !== "") {
 										gameTitle = gameTitle + " (" + item.callLetters + ")";
