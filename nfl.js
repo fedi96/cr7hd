@@ -16,14 +16,14 @@ function getNFLGames() {
 				var home = game.gameSchedule.homeNickname;
 				var logoaway = game.gameSchedule.visitorTeamAbbr;
 				var logohome = game.gameSchedule.homeTeamAbbr;
-				var fullnv = game.gameSchedule.visitorDisplayName.toLowerCase().replace(" ", "-").replace(" ", "-");
+				var fullnv = game.gameSchedule.homeNickname.toLowerCase();
 				var fullnh = game.gameSchedule.homeDisplayName.toLowerCase().replace(" ", "-").replace(" ", "-");
 				switch (logoaway) {default: break;case 'WAS':logoaway = "wsh";break;}
 				switch (logohome) {default: break;case 'WAS':logohome = "wsh";break;}
 				var txc=.4+.07*i;
 				var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-delay: '+txc+'s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">' + away + " at " + home + '</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/'+ logoaway + '.png&amp;h=55&amp;w=55"><div class="xs hint--rounded hint--bounce" style="margin-top: 10px;"><button class="bttn-material-flat bttn-xs bttn-warning bttn-no-outline">'+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+'</button><button style="margin-top: 10px;" class="bttn-material-flat bttn-xs bttn-warning bttn-no-outline">'+ time + '</button></div><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nfl/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div>';
 				var gameLinks = "";
-				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NFL&pk="+pk+"&date="+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"&cdn="+fullnh+"-vs-"+fullnv+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>WATCH</button></a>";
+				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NFL&pk="+pk+"&date="+game.gameSchedule.gameDate.replace(/(\d\d)\/(\d\d)\/(\d{4})/, "$3-$1-$2")+"&cdn="+fullnv+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>WATCH</button></a>";
 				gameLinks = gameLinks + "</div></div>";
 				
 				$("#games").append(gameTitle + gameLinks);
