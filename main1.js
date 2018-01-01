@@ -53,11 +53,11 @@ function rjhply(id,cdn,date){
 	if(cdn==="nfltv"){url='/nfltv'}
 	if(cdn==="redzone"){url='/redzone'}
 	$.get(url,function(data){
-		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="100%" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script><style> .video-js {width: 100%; height: 100%;}<\/style>');
+		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="100%" controls><source src="https://cdn.rjh.fun/'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script><style> .video-js {width: 100%; height: 100%;}<\/style>');
 	});}
 	else{
 	$.get(url,function(data){
-		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="100%" controls><source src="'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script><style> .video-js {width: 100%; height: 100%;} <\/style>');
+		$("#player").append('<script src="//rjh.fun/vjs.js"></script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="100%" controls><source src="https://cdn.rjh.fun/'+data+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script><style> .video-js {width: 100%; height: 100%;} <\/style>');
 	});
 	}
 
