@@ -1,0 +1,13 @@
+/* Your custom styles */
+a::before {
+    display:none;
+}
+a span{
+      font-size: medium;
+}
+a[aria-expanded="false"]::after {
+    content: '\f104';font-size: large;margin-left: 0.7em;
+}
+a[aria-expanded="true"]::after {
+    content: '\f105';font-size: large;margin-left: 0.7em;
+}

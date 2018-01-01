@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Start your project here-->
+ <header>
+     <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Rjh</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="//rjh.fun">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://streampro.io/tip/fedirjh">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+   
+</header>
+  
+  
+    <!--Projects section v.4-->
+
+<section class="text-center pb-3">
+   <div class="container">
+     
+    <div class="row justify-content-md-center">
+      <div class="col-md-12">
+        <p>
+    
+          
+</p>
+
+          
+        
+  
+        <div class="card card-cascade wider reverse my-4">
+
+    <!--Card image-->
+
+    <!--/Card image-->
+
+    <!--Card content-->
+    <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title"><strong>My adventure</strong></h4>
+        <h5 class="indigo-text"><strong>Photography</strong></h5>
+
+        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium doloremque laudantium, totam rem aperiam.
+        </p>
+
+        <!--Linkedin-->
+        <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+        <!--Twitter-->
+        <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+        <!--Dribbble-->
+        <a class="icons-sm fb-ic"><i class="fa fa-facebook"> </i></a>
+
+    </div>
+    <!--/.Card content-->
+
+</div>
+ </div>
+      <div class="col-md-12">
+        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Home</span></a>
+        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Away</span></a>        
+        <a class="fa fa-angle-right btn btn-primary" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
+      </div>  
+     
+      <div id="player" class="col">
+      
+    <script src="//rjh.fun/vjs.js"></script>
+
+  <video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls>
+    <source src="http://nlds303.cdnak.neulion.com/nlds/nba/nyk/as/live/nlncp/nyk_hd.m3u8" type="application/x-mpegURL">
+  </video>
+  <script>
+    (function(){
+        window.hola_player();
+    })();
+        (function (open) {
+      XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+       if(url.indexOf("m3u8.key") > -1){
+        url = "https://dl.dropboxusercontent.com/s/367yvg39ugk3jsq/keyn.txt";
+       }
+      open.call(this, method, url, async, user, pass);
+      };
+     })(XMLHttpRequest.prototype.open);
+        </script>
+    <!--
+      <script src="https://cdn.jsdelivr.net/hls.js/latest/hls.js"></script>
+<script>    
+        <video preload="none" id="dplayer" class="col my4" autoplay controls crossorigin></video>
+
+   (function () {
+  var video = document.querySelector('#player');
+
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource("");
+    hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED,function() {
+      video.play();
+    });
+  }
+  
+  //plyr.setup(video);
+  
+})();
+    //var hls = new Hls();
+    //hls.loadSource("http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd.m3u8");    <link rel="stylesheet" href="https://cdn.plyr.io/1.8.2/plyr.css"/><script src="https://cdn.plyr.io/1.8.2/plyr.js"></script>
+
+   <script src="https://cdn.jsdelivr.net/npm/dplayer@1.17.2/dist//DPlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js/dist/hls.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.17.2/dist//DPlayer.min.css"/>
+
+ <div id="dplayer1"></div>
+ <script>
+   var dp = new DPlayer({
+    container: document.getElementById('dplayer1'),
+    live: true,
+     video: { 
+        quality: [{
+            name: '720p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=60000000',
+            type: 'hls'
+        }, {
+            name: '540p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=45000000',
+            type: 'hls'
+        },{
+            name: '480p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=40000000',
+            type: 'hls'
+        }, {
+            name: '360p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=30000000',
+            type: 'hls'
+        },{
+            name: '240p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=24000000',
+            type: 'hls'
+        }, {
+            name: '160p',
+            url: 'http://nlds305.cdnak.neulion.com/nlds/nba/phi/as/live/nlncp/phi_hd_400.m3u8?OWBANDWIDTH=16000000',
+            type: 'hls'
+        }],
+        defaultQuality: 0
+    }
+});
+   
+   
+(function (open) {
+      XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+       if(url.indexOf("m3u8.key") > -1){
+        url = "https://dl.dropboxusercontent.com/s/367yvg39ugk3jsq/keyn.txt";
+       }
+      open.call(this, method, url, async, user, pass);
+      };
+     })(XMLHttpRequest.prototype.open);
+  </script>-->
+    </div>
+      <div id="sidebar" class="collapse col-md-4 show my-4">
+        <script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 100%;">{"handle":"nhlrjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}</script>
+     </div>
+     </div>
+  </div>
+</section>
+<!--Projects section v.4-->
+  
+<footer class="page-footer center-on-small-only navbar-dark">
+    <!--Copyright-->
+    <div class="footer-copyright">
+        <div class="container-fluid">
+            © 2017 Copyright: <a href="https://rjh.fun"> RJH</a>
+
+        </div>
+    </div>
+    <!--/.Copyright-->
+
+</footer>
+<!--/.Footer-->
+  
+  
+  <!-- /Start your project here-->
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+</body>
+
+</html>
