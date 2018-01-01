@@ -43,7 +43,7 @@ function rjhply(id,cdn,date){
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		var k='h';
 		if(cdn=4){k='a';}
-		url="https://cdn.rjh.fun/a"+window.atob("nba/"+id+"/"+k);
+		url="https://cdn.rjh.fun/a"+window.btoa("nba/"+id+"/"+k);
 		chatx="nba"}
 	else if($_GET("league")==="NFL"){
 		//url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;
