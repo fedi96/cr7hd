@@ -38,7 +38,7 @@ function getNBAGames() {
 				var k1 = Base64.encode("nba/"+pk+"/a");
 				var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-delay: '+txc+'s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">' + away + " at " + home + '</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/scoreboard/'+ logoaway + '.png&amp;h=55&amp;w=55"><div class="xs hint--rounded hint--bounce" style="margin-top: 20px;"><button class="bttn-material-flat bttn-xs bttn-warning bttn-no-outline">'+ time + '</button></div><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div>';
 				var gameLinks = "";
-				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn="+k+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>HOME</button></a><a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn="+k1+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>AWAY</button></a>";
+				gameLinks = gameLinks + "<a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn=a"+k+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>HOME</button></a><a href='http://rjh.fun/play.html?league=NBA&date="+json.gs.gdte+"&pk="+pk+"&cdn=a"+k1+"' data-ajax='false'><button class='bttn-slant bttn-xs bttn-warning'>AWAY</button></a>";
 				gameLinks = gameLinks + "</div></div>";
 
 				$("#games").append(gameTitle + gameLinks);
