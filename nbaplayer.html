@@ -11,7 +11,6 @@
 
   gtag('config', 'UA-55400274-16');
   </script>
-<script src="//rjh.fun/vjs.js"></script>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 <meta content="rjh" property="og:title">
 <!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
@@ -104,7 +103,7 @@
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://rjh.fun/'+$_GET("cdn")+'.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://rjh.fun/'+$_GET("cdn")+'.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
   document.getElementById("player").innerHTML = ply;
 </script>
 
