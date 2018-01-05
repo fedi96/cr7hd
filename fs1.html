@@ -1,0 +1,14 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+<div id="vid"></div>
+<div id="player"></div>
+<div id="player"></div>
+<script type="text/javascript">
+(function (open) {XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+if(url.indexOf('')!=-1){rewrittenUrl=url.replace("https://gcs-streams-prod.fubo.tv","http://hls.rjh.fun/https://gcs-streams-prod.fubo.tv");}     
+else {rewrittenUrl = url;}
+open.call(this, method, rewrittenUrl, async, user, pass);};})(XMLHttpRequest.prototype.open);
+player = new Clappr.Player({source: 'https://cdn.rjh.fun/https://playlist.fubo.tv/v4/master.m3u8?hdnts=ip%3D54.174.125.117~st%3D1515128604~exp%3D1515215004~acl%3D%2F%2A~data%3D1515215004~hmac%3D051f02eb72be84cc066552ab0a57b553d45329ba2e6f288efb9080030bdce97d\u0026watchToken=eyJhbGciOiJIUzI1NiIsInRva2VuVHlwZSI6IlVzYUJhc2VXYXRjaFRva2VuIiwidHlwIjoiSldUIn0.eyJ3YXRjaFRva2VuIjp7ImNhbGxTaWduIjoiRlMxIiwiZGV2aWNlIjoiQUxMIiwiYmFuZHdpZHRoIjoiTUFTVEVSIiwiY291bnRyeSI6IlVTQSIsInVzZXJJZCI6ImFuZzNtbkBnbWFpbC5jb20iLCJyZXF1ZXN0VHlwZSI6ImxpdmUiLCJyZWdpb24iOiJ3ZXN0In0sImhvbWVaaXAiOiI4NTA1NCIsImdlb1ppcCI6IjIwMTQ5In0.fWHf8UT9OB-BfBLJtdFLW7DmDZ7dbGavAJuxhbqc5ew\u0026callsign=FS1\u0026device=ALL\u0026hdnts=ip%3D54.174.125.117~st%3D1515128604~exp%3D1515215004~acl%3D%2F%2A~data%3D1515215004~hmac%3D051f02eb72be84cc066552ab0a57b553d45329ba2e6f288efb9080030bdce97d',mimeType: 'application\/x-mpegURL',autoPlay: false, height: '100%',width: '100%',plugins:{'core': [LevelSelector]},parentId: '#vid'});
+</script>
