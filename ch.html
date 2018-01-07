@@ -103,7 +103,7 @@
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<iframe src="http://theshadows.site/player/'+$_GET(cdn)+'.php" frameborder="0" allowfullscreen height="480" width="480"><\/iframe>';
+  var ply='<iframe src="http://theshadows.site/player/'+$_GET("cdn")+'.php" frameborder="0" allowfullscreen height="480" width="480"><\/iframe>';
 postscribe("#player", ply);
 	</script>
 <div id='sda'></div>
