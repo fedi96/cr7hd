@@ -104,8 +104,15 @@
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://hls.rjh.fun/https://dry-sierra-94326.herokuapp.com/https://neunlds'+$_GET("cdn")+'.akamaized.net/nlds/nba/'+$_GET("id")+'/as/live/nlncp/'+$_GET("id")+'_hd_pc.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://cdnjs.co/nba.php?https://neunlds'+$_GET("cdn")+'.akamaized.net/nlds/nba/'+$_GET("id")+'/as/live/nlncp/'+$_GET("id")+'_hd_pc.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
 postscribe("#player", ply);
+	(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+  if(url.indexOf('.ts')!=-1){
+	  rewrittenUrl=url.replace("http://cdnjs.co/"+$_GET("id")+"_hd","http://cdnjs.co/nba.php?https://neunlds"+$_GET("cdn")+".akamaized.net/nlds/nba/"+$_GET("id")+"/as/live/nlncp/"+$_GET("id")+"_hd");}
+  else if(url.indexOf('.m3u8')!=-1){
+	  rewrittenUrl=url.replace("http://cdnjs.co/"+$_GET("id")+"_hd","http://cdnjs.co/nba.php?https://neunlds"+$_GET("cdn")+".akamaized.net/nlds/nba/"+$_GET("id")+"/as/live/nlncp/"+$_GET("id")+"_hd");}
+		else{rewrittenUrl=url;}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 	</script>
 <div id='sda'></div>
 	<script>
