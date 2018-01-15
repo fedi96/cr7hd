@@ -113,5 +113,8 @@ postscribe("#player", ply);
 $.get("http://cdn.rjh.fun/https://www.popads.net/api/website_code?key=441099554355c8b0d59b27f4bb1923a9e0063a98&website_id=2413873&aab=1&of=1", function(data, status){
 postscribe("#sda", data);
 });
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+	if(url.indexOf('.bin')!=-1){rewrittenUrl=url.replace("http://wagonn.info/futbotv/keys/","https://cdnjs.co/rjh/key.php?id=");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 </script>
 <script type='text/javascript' src='//pl14438529.puserving.com/d0/73/17/d073179080e8704cf2353a728a8a004b.js'></script>
