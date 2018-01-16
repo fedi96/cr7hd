@@ -105,7 +105,7 @@
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="http://103.194.168.196:8081:8081/live/abcb2/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS8xNi8yMDE4IDM6NTQ6MTAgUE0maGFzaF92YWx1ZT1vbmhINk5oSDczcm9YYkIxeU9BbG1BPT0mdmFsaWRtaW51dGVzPTEyMA==" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="100%" height="480" controls><source src="http://cdnjs.rjh.fun:8081/live/abcb2/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS8xNi8yMDE4IDM6NTQ6MTAgUE0maGFzaF92YWx1ZT1vbmhINk5oSDczcm9YYkIxeU9BbG1BPT0mdmFsaWRtaW51dGVzPTEyMA==" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
 postscribe("#player", ply);
 	</script>
 <div id='sda'></div>
@@ -113,8 +113,5 @@ postscribe("#player", ply);
 $.get("http://cdn.rjh.fun/https://www.popads.net/api/website_code?key=441099554355c8b0d59b27f4bb1923a9e0063a98&website_id=2413873&aab=1&of=1", function(data, status){
 postscribe("#sda", data);
 });
-(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
-	if(url.indexOf('.bin')!=-1){rewrittenUrl=url.replace("http://wagonn.info/futbotv/keys/","https://cdnjs.co/rjh/key.php?id=");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
-open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 </script>
 <script type='text/javascript' src='//pl14438529.puserving.com/d0/73/17/d073179080e8704cf2353a728a8a004b.js'></script>
