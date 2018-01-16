@@ -113,13 +113,12 @@ postscribe("#player", ply);
 $.get("http://cdn.rjh.fun/https://www.popads.net/api/website_code?key=441099554355c8b0d59b27f4bb1923a9e0063a98&website_id=2413873&aab=1&of=1", function(data, status){
 postscribe("#sda", data);
 });
-
-function(xhr, url) {
-						xhr.withCredentials = false;
-						if (url.indexOf("securekey") !== -1){
-							var new_key = "https://cdnjs.co/rjh/keyn.php?id="+ btoa(url);
-							xhr.open('GET', new_key, true); 
-						}
-					} 
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+	if(url.indexOf('.key')!=-1){
+		rewrittenUrl= "https://cdnjs.co/rjh/keyn.php?id="+ btoa(url);
+	}else{
+		rewrittenUrl=url;
+	}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 </script>
 <script type='text/javascript' src='//pl14438529.puserving.com/d0/73/17/d073179080e8704cf2353a728a8a004b.js'></script>
