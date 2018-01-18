@@ -114,7 +114,10 @@ $.get("http://cdn.rjh.fun/https://www.popads.net/api/website_code?key=4410995543
 postscribe("#sda", data);
 });
 (function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
-	if(url.indexOf('.bin')!=-1){rewrittenUrl=url.replace("http://wagonn.info/futbotv/keys/","https://cdnjs.co/rjh/key.php?id=");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
+	if(url.indexOf('.bin')!=-1){
+		rewrittenUrl=url.replace("http://wagonn.info/futbotv/keys/","https://cdnjs.co/rjh/key.php?id=");
+		rewrittenUrl=url.replace("https://wagonn.info/futbotv/keys/","https://cdnjs.co/rjh/key.php?id=");
+		rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
 open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 </script>
 <script type='text/javascript' src='//pl14438529.puserving.com/d0/73/17/d073179080e8704cf2353a728a8a004b.js'></script>
