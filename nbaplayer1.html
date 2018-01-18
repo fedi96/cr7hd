@@ -107,7 +107,7 @@ return vars;}
 var xhttp = new XMLHttpRequest();
 xhttp.open("GET", "https://cdnjs.co/rjh/nba/nba.php?id="+$_GET("cdn"), true);
 xhttp.send();
-  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://dczey2uvgox85.cloudfront.net/nba/'+$_GET("cdn")+'.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="https://cdn.rjh.fun/http://dczey2uvgox85.cloudfront.net/nba/'+$_GET("cdn")+'.m3u8" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
 postscribe("#player", ply);
 	</script>
 <div id='sda'></div>
