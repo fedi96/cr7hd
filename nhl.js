@@ -64,7 +64,7 @@ var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-del
 								if (item.callLetters !== "") {
 									feedName = feedName + " (" + item.callLetters + ")";
 								}
-								gameLinks = gameLinks + createUrl("NHL", date, item.mediaFeedType.toString(), feedName, pk, gd.toLocaleString());
+								gameLinks = gameLinks + createUrl("NHL", date, item.mediaPlaybackId, feedName, pk, gd.toLocaleString());
 							}
 						});
 					}
