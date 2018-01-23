@@ -38,7 +38,8 @@ function rjhply(id,cdn,date){
 	if(id==="FRENCH"){id='f'}
 	if(id==="HOME"){id='h'}
 	if(id==="AWAY"){id='a'}
-	if($_GET("league")==="NHL"){url="https://spark-cinema.glitch.me/https://alive-nitrogen.glitch.me/"+cdn+"/"+id;
+	if($_GET("league")==="NHL"){//url="https://spark-cinema.glitch.me/https://alive-nitrogen.glitch.me/"+cdn+"/"+id;
+		url="https://key.rjh.fun/m3u8/"+date"/"+id+cdn;
 				    chatx="nhl"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		url="http://cdn.rjh.fun/"+cdn;
