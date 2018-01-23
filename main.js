@@ -19,7 +19,7 @@ function play(){
 	if($_GET("league")==="NHL"){
 		getNHLGameInfo($_GET("cdn"),$_GET("pk"),$_GET("id"),$_GET("date"));
 		rjhply($_GET("id"),$_GET("cdn"),$_GET("date"));
-		$("#games").append('<style>#cdn,#feed{display: none;}<\/style>');
+		//$("#games").append('<style>#cdn,#feed{display: none;}<\/style>');
 	}
 else if($_GET("league")==="NBA"){
 	rjhply($_GET("pk"),$_GET("cdn"),$_GET("date"));
