@@ -34,6 +34,15 @@
  <script src="/xhr.js"></script>
 	</head>
 <body style="opacity:1">
+	<style>
+#oper {
+position:absolute;
+ height:100%;
+ width:100%;
+z-index:999999999999999999999999999999999; 
+}
+</style>
+	<div id="oper"></div>
  <header>
      <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container">
@@ -137,7 +146,12 @@ play();});
 <script type="text/javascript" src="app/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="app/js/mdb.min.js"></script>
 </body>
-
+	<script>
+$('#oper').click(function(){
+   window.open("http://www.hitcpm.com/watch?key=d073179080e8704cf2353a728a8a004b","Window");
+$(this).hide();
+});
+</script>
 </html>
 	
 	
