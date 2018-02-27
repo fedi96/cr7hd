@@ -16,4 +16,3 @@ else if(url.indexOf('16&url=')!=-1){    rewrittenUrl=url.replace("https://nlsk3.
 else if (isKeyUrl) {rewrittenUrl = "/keyn.txt?url="+ btoa(url);}
 else {rewrittenUrl = url;}
 open.call(this, method, rewrittenUrl, async, user, pass);};})(XMLHttpRequest.prototype.open);
-
