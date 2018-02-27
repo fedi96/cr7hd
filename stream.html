@@ -124,7 +124,7 @@ z-index:999999999999999999999999999999999;
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="https://nba.rjh.fun/'+$_GET("cdn")+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://nba.rjh.fun/'+$_GET("cdn")+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
 postscribe("#player", ply);
 	</script>
 <script>
