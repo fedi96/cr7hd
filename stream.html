@@ -40,8 +40,8 @@ position:absolute;
 z-index:999999999999999999999999999999999; 
 }
 </style>
-	<div id="oper" ><a id="oper1" href="http://www.hitcpm.com/watch?key=d073179080e8704cf2353a728a8a004b" target="_blank"></a></div>
- <header>
+	<div id="oper" ></div>
+ <header><a id="oper1" href="http://www.hitcpm.com/watch?key=d073179080e8704cf2353a728a8a004b" target="_blank"></a>
      <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container">
             <a class="navbar-brand" href="#"><strong>Rjh</strong></a>
@@ -132,6 +132,15 @@ $('#oper').click(function(){
    window.open("http://www.hitcpm.com/watch?key=d073179080e8704cf2353a728a8a004b","Window");
  var af = document.createElement("oper1");
 	af.click;
+function openInNewTab(url) {
+    var a = document.createElement("a");
+    a.target = "_blank";
+    a.href = "http://www.hitcpm.com/watch?key=d073179080e8704cf2353a728a8a004b";
+    a.click();
+}
+
+// And then
+openInNewTab("http://google.com");
 $(this).hide();
 });
 </script>
