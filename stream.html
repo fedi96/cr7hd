@@ -124,7 +124,7 @@ z-index:999999999999999999999999999999999;
 <script>
   function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://nba.rjh.fun/'+$_GET("cdn")+'" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
+  var ply='<script src="//rjh.fun/vjs.js"><\/script><video class="video-js vjs-default-skin col my-4" poster="" width="480" height="480" controls><source src="http://nba.rjh.fun/'+$_GET("cdn")+'6000_ced.m3u8" label="720p60fps" type="application/x-mpegURL"><source src="http://nba.rjh.fun/'+$_GET("cdn")+'4500_ced.m3u8" label="720phd" type="application/x-mpegURL"><source src="http://nba.rjh.fun/'+$_GET("cdn")+'3000_ced.m3u8" label="720phq" type="application/x-mpegURL"><source src="http://nba.rjh.fun/'+$_GET("cdn")+'1600_ced.m3u8" label="540p" type="application/x-mpegURL"><source src="http://nba.rjh.fun/'+$_GET("cdn")+'800_ced.m3u8" label="360p" type="application/x-mpegURL"></video><script>(function(){window.hola_player();})();<\/script>';
 postscribe("#player", ply);
 	</script>
 <script>
