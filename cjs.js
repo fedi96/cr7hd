@@ -33,7 +33,7 @@
         },
         width: '100%',
         height: '480px',
-        parentId: "#player",
+        parentId: "#plu",
         autoPlay: true,
         hlsjsConfig: {
             xhrSetup: function (xhr, url) {
