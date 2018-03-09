@@ -12,14 +12,6 @@
         return time / 60 + "m";
     }
 
-    function default_seek() {
-        var stored_time = parseInt(Cookies.get("gYUAZV_current_time_0"));
-        if(stored_time == 0) {
-        }
-        return stored_time
-    }
-
-
     var BITRATE_LABELS = {5200.000: '720p-HD', 3500.000: '720p-HQ', 2400.000: '540p', 1650000: '480p', 990.000: '360p',
         5772.652: '720p-60', 4023.049: '720p-HD', 2908.735: '720p-HQ', 2121.091: '540p', 2121.091: '480p', 1425.340: '360p', 985.571: '288p',
         6000: '720p-60', 4500:'720p-HD', 3500: '720p', 3000:'720p-HQ', 2500: '540p', 1800: '480p', 1600:'540p', 1200: '480p', 800:'360p', 400:'240p',
@@ -40,8 +32,8 @@
             onPlay: setDvrLabels
         },
         width: '100%',
-        height: 'auto',
-        parentId: "#plu",
+        height: '480px',
+        parentId: "#player",
         autoPlay: true,
         hlsjsConfig: {
             xhrSetup: function (xhr, url) {
