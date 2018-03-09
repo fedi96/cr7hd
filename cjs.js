@@ -87,12 +87,6 @@
         }
     }
 
-    if(seekable) {
-        setInterval(function() {
-            Cookies.set("gYUAZV_current_time_0", player.getCurrentTime(), { expires: 2 })
-        }, 2500)
-    }
-
     $(document).on('click', '[data-ff]', function() {
         var time = player.getCurrentTime();
         var new_time = time + parseInt(seek_forward);
