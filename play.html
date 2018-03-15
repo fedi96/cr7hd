@@ -107,7 +107,7 @@
 position:absolute;
  height:100%;
  width:100%;
-z-index:999999999999999999999999999999999; 
+z-index:999999999999999999999999999999999;
 }
 </style>
 	<div id="oper"></div>
@@ -129,7 +129,7 @@ z-index:999999999999999999999999999999999;
                 </ul>
             </div>
         </div>
-    </nav>  
+    </nav>
 </header>
  <script>
 $(document).ready(function() {
@@ -158,7 +158,7 @@ play();});
                 var url = window.location.href;
                 var feedcb = document.getElementById("feed"),
                 feed = feedcb.options[feedcb.selectedIndex].value;
-                
+
                 var prefix = url.substring(0, url.indexOf("id"));
                 var suffix = url.substring(url.indexOf("id"));
                 suffix = suffix.substring(suffix.indexOf("=") + 1);
@@ -197,10 +197,26 @@ play();});
 		<div id="sidebar" class="collapse col-md-4 my-4">
 		</div>
 	</div>
+  <div id="rn_ad_native_idc09"></div>
+<script src="//cdn.run-syndicate.com/sdk/v1/n.js"></script>
+<script>
+   NativeAd({
+       element_id: "rn_ad_native_idc09",
+       spot: "803c2f265db14677b21ae316bb4d1fa5",
+       type: "label-under",
+       cols: 4,
+       rows: 1,
+       title: "Suggested for you",
+       titlePosition: "left",
+       adsByPosition: "right",
+       keywords: "{ keywords }"
+   });
+</script>
+
 	</div>
 </section>
 <!--Projects section v.4-->
-  
+
 <footer class="page-footer center-on-small-only navbar-dark">
     <!--Copyright-->
     <div class="footer-copyright">
@@ -228,10 +244,5 @@ $('#oper').click(function(){
 $(this).hide();
 });
 </script>
-	
+
 </html>
-	
-	
-	
-	
-	
