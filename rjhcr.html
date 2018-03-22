@@ -35,7 +35,7 @@
       display: none !important;
     }
 
-    #vid {
+    #plu {
       background-color: #000000;
     }
   </style>
@@ -69,14 +69,14 @@
   [data-player] {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 100%;
     margin: 0;
   }
   .playback_rate[data-playback-rate-select] { margin-top: 0px !important; }
   /* Fix the video container to take up 100% width and to calculate its height based on its children. */
   [data-player] .container[data-container] {
     width: 100%;
-    height: auto;
+    height: 100%;
     position: relative;
   }
 
@@ -93,7 +93,7 @@
     position: relative;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
   }
   .level_selector[data-level-selector] {
     float: right;
@@ -155,7 +155,7 @@ function get(name) {
             onPlay: setDvrLabels
         },
         width: '100%',
-        height: '480px',
+        height: '100%',
         parentId: "#plu",
         autoPlay: true,
         hlsjsConfig: {
