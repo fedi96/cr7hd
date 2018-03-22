@@ -1,0 +1,70 @@
+
+<html>
+<head>
+  <meta name="referrer" content="no-referrer"/>
+  <title>rjh streams</title>
+  <style>
+    body {
+      background: #DDDDDD;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .close img {
+      width: 12px
+    }
+
+    [data-watermark] {
+      width: auto !important;
+    }
+
+    [data-watermark]:hover {
+      cursor: pointer;
+    }
+
+    [data-position] {
+      display: none !important;
+    }
+
+    [data-duration] {
+      display: none !important;
+    }
+
+    button[aria-label='hd-indicator'] {
+      display: none !important;
+    }
+
+    #vid {
+      background-color: #000000;
+    }
+  </style>
+  <script src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/clappr.level-selector/latest/level-selector.min.js"></script>
+</head>
+<body>
+<div id="vid"></div>
+<script type="text/javascript">
+function get(name) {
+      if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
+}
+    if (data.source !== '') {
+      player = new Clappr.Player({
+        source: 'https://rjhcr-agile-bat.cfapps.io/'+data.source,
+        mimeType: 'application/x-mpegURL',
+        autoPlay: false,
+        height: '480',
+        width: '100%',
+        // watermark: '/watermark.png',
+        position: 'top-right',
+        plugins: {'core': [LevelSelector]},
+        mediacontrol: {seekbar: '#FF0000', buttons: '#FF0000'},
+        parentId: '#vid'
+      });
+      player.getPlugin('click_to_pause').disable();
+      
+    }
+</script>
+</body>
+</html>
