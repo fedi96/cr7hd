@@ -51,6 +51,7 @@ function get(name) {
 }
   var data = {
       source: get('url'),
+      keyUrl: 'http://rjh.fun/keyn.txt'
     };
     if (data.source !== '') {
       player = new Clappr.Player({
@@ -66,7 +67,16 @@ function get(name) {
         parentId: '#vid'
       });
       player.getPlugin('click_to_pause').disable();
-      
+      (function (open) {
+        XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+          if (url.toLowerCase().indexOf('ffd.net') >= 0) {
+            return;
+          }
+          var rewrittenUrl = url;
+          rewrittenUrl = rewrittenUrl.replace(/^http(.*)key$/i, data.keyUrl);
+          open.call(this, method, rewrittenUrl, async, user, pass);
+        };
+      })(XMLHttpRequest.prototype.open);
     }
 </script>
 </body>
