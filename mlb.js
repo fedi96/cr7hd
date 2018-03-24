@@ -17,38 +17,16 @@ function getMLBGames(date) {
 				switch (logoaway) {
 				    default: 
 					break;
-				    case 'LAK':
-					logoaway = "la";
+				    case 'CWS':
+					logoaway = "chw";
 					break; 
-				  case 'TBL':
-					logoaway = "tb";
-					break;
-				  case 'NJD':
-					logoaway = "nj";
-					break;  
-				  case 'SJS':
-					logoaway = "sj";
-					break; 
-				    case 'VGK':
-					logoaway = "vgs";
 				}
 				switch (logohome) {
 				    default: 
 					break;
-				    case 'LAK':
-					logohome = "la";
+				    case 'CWS':
+					logoaway = "chw";
 					break; 
-				  case 'TBL':
-					logohome = "tb";
-					break; 
-				  case 'SJS':
-					logohome = "sj";
-					break;
-				case 'NJD':
-					logohome = "nj";
-					break;  
-				    case 'VGK':
-					logohome = "vgs";
 				}
 				var txc=.4+.07*i;
 				var gameTitle = '<div class="box-animate animated fadeInUp" style="animation-delay: '+txc+'s;"><div class="box" style="color: rgb(254, 171, 58);background: rgb(2, 25, 38);text-align: center;"><div class="title-wrapper"><div class="title">' + away + " at " + home + '</div></div><hr><div class="button-wrapper animated fadeIn"><img style="float: left;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/scoreboard/'+ logoaway + '.png&amp;h=55&amp;w=55"><div class="xs hint--rounded hint--bounce" style="margin-top: 20px;"><button class="bttn-material-flat bttn-xs bttn-warning bttn-no-outline">'+ time + '</button></div><img style="float: right;" src="http://a1.espncdn.com/combiner/i?img=/i/teamlogos/mlb/500/scoreboard/' + logohome + '.png&amp;h=55&amp;w=55"></div>';
