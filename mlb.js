@@ -64,7 +64,7 @@ function getMLBGames(date) {
 								if (item.callLetters !== "") {
 									feedName = feedName + " (" + item.callLetters + ")";
 								}
-								gameLinks = gameLinks + createUrl("MLB", date, item.mediaPlaybackId, feedName, pk, gd.toLocaleString());
+								gameLinks = gameLinks + createUrl("MLB", date, item.id, feedName, pk, gd.toLocaleString());
 							}
 						});
 					}
