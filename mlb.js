@@ -55,4 +55,47 @@ function getMLBGames(date) {
 		}
 	});
 }
+function getMLBGameInfo(cdn, pk, id, date) {
+	var nhlAPI = "https://statsapi.web.nhl.com/api/v1/schedule?gamePk=" + pk + "&expand=schedule.teams,schedule.linescore,schedule.broadcasts,schedule.ticket,schedule.game.content.media.epg&leaderCategories=&site=en_nhl&teamId=";
+	var gameTitle;
+	$.getJSON(nhlAPI, function (json) {
+		if (json.totalGames > 0) {
+			var games = json.dates[0].games;
+			$.each(games, function (i, game) {
+				var away = game.teams.away.team.name;
+				var home = game.teams.home.team.name;
+				gameTitle = away + " at " + home;
+				$.each(game.content.media.epg, function (j, media) {
+					if (media.title === "NHLTV") {
+						$.each(media.items, function (k, item) {
+							var feedName = "";
+							if (item.mediaFeedType === "ISO" || item.mediaFeedType === "COMPOSITE") {
+								feedName = item.feedName;
+							} else {
+								feedName = item.mediaFeedType;
+								if (item.callLetters !== "") {
+									feedName = feedName + " (" + item.callLetters + ")";
+								}
+								$('#feed').append($('<option>', {
+									value: item.mediaPlaybackId
+								}).text(feedName));
+								if (item.mediaFeedType === id) {
+									$("#feed option[value='" + id + "']").prop('selected', true);
+									if (item.callLetters !== "") {
+										gameTitle = gameTitle + " (" + item.callLetters + ")";
+									}
+									$("#gmTitle").append(gameTitle);
+								}
+							}
+						});
+					}
+				});
+			});
+		}
+	});
+	if (cdn !== null) {
+		$("#cdn option[value='" + cdn + "']").prop('selected', true);
+	}
+	$("#back-link").append("<a href=nhl.html?date=" + date + ">Back</a>");
+}
 
