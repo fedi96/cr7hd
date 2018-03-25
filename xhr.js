@@ -1,4 +1,5 @@
-(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){if(url.indexOf('svc.nhl')!=-1){rewrittenUrl=url.replace("https://mf.svc.nhl.com","https://spark-cinema.glitch.me/http://sawlive.tv");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url;}
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+  if(url.indexOf('svc.nhl')!=-1){rewrittenUrl=url.replace("https://mf.svc.nhl.com","https://spark-cinema.glitch.me/http://sawlive.tv");rewrittenUrl=rewrittenUrl.replace("/ws/media/mf/v2.3/key/silk/","/m/streams?");rewrittenUrl=rewrittenUrl.replace("mediaid/","ci=");rewrittenUrl=rewrittenUrl.replace("/kid/","&k=");}else{rewrittenUrl=url.replace("https://playback.svcs.mlb.com","https://spark-cinema.glitch.me/https://key.rjh.fun/");rewrittenUrl=url;}
 open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
 (function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
   if(url.indexOf('mlb-ws')!=-1){rewrittenUrl=url.replace("https://mlb-ws-mf.media.mlb.com","https://spark-cinema.glitch.me/http://key.rjh.fun");}
