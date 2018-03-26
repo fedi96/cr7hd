@@ -41,16 +41,12 @@ function rjhply(id,cdn,date){
 	var url;
 	var chatx;
 	if(cdn===null){cdn="akc";}
-	if(id==="NATIONAL"){id='h';}
-	if(id==="FRENCH"){id='f'}
-	if(id==="HOME"){id='h'}
-	if(id==="AWAY"){id='a'}
 	if($_GET("league")==="NHL"){//url="https://spark-cinema.glitch.me/https://alive-nitrogen.glitch.me/"+cdn+"/"+id;
 		url="https://spark-cinema.glitch.me/https://key.rjh.fun/m3u8/"+date+"/"+id+cdn;
-				    chatx="nhl"}
-	if($_GET("league")==="MLB"){//url="https://spark-cinema.glitch.me/https://alive-nitrogen.glitch.me/"+cdn+"/"+id;
+		chatx="nhl"}
+	else if($_GET("league")==="MLB"){//url="https://spark-cinema.glitch.me/https://alive-nitrogen.glitch.me/"+cdn+"/"+id;
 		url="https://spark-cinema.glitch.me/https://key.rjh.fun/mlb/m3u8/"+date+"/"+id+cdn;
-				    chatx="mlb"}
+		chatx="mlb"}
 	else if($_GET("league")==="NBA"){//url="http://rjh217.stream/nba.php?date="+date+"&cdn="+ cdn;
 		url="http://cdn.rjh.fun/"+cdn;
 		chatx="nba"}
@@ -58,7 +54,8 @@ function rjhply(id,cdn,date){
 		//url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;
 		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
 		chatx="nfl"}
-	else{url="http://key.rjh.fun/m3u8/"+ date+"/"+ id+ cdn;chatx="mlb"} 
+	else{url="http://key.rjh.fun/m3u8/"+ date+"/"+ id+ cdn;
+	     chatx="mlb"} 
 	if($_GET("league")==="NHL"||$_GET("league")==="MLB"||cdn==="nfltv"||cdn==="redzone"){
 	if(cdn==="nbatv"){url='/nbatv';}
 	if(cdn==="nfltv"){url='/nfltv'}
