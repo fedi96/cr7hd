@@ -1,0 +1,971 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/icons.css" />
+    <link rel="stylesheet" href="css/exp.css" />
+    <link href="css/cir.css" rel="stylesheet" />
+    <script src="js/angular.min.js"></script>
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <style>
+    .channels a {
+display:inline-block !important;
+color:#fff;
+width:80px !important;
+height:70px !important;
+background:#272727;
+border-radius:3px;
+text-decoration:none;
+text-align:center;
+margin:3px;
+border: 1px solid #5a4423;
+}
+.channels a:hover {
+border: 1px solid #e09f26;
+}
+.channels a img {
+margin:11px 0px;
+}
+.channels a span {
+display:block;
+background:#1a1a1a;
+height:20px;
+border-bottom-right-radius:3px;
+border-bottom-left-radius:3px;
+line-height:20px;
+font-size: 12px;
+}
+.channels a#open {
+background:#b61a1b
+}
+.channels a#open span {
+background:#ae0200;
+}
+img {
+    max-width: 100%;
+    height: auto;
+    -ms-interpolation-mode: bicubic;
+}
+.column1 {
+    margin: 0.7rem;
+}
+    </style>
+</head>
+
+<body ng-app="streams" class="fain">
+
+  <div class="columns filternav" id="nav">
+        <div class="column col-10 col-mx-auto">
+            <header class="navbar">
+                <section class="navbar-section">
+                    <h2>fedirjh</h2>
+                </section>
+                <section class="navbar-center">
+
+                </section>
+                <section class="navbar-section">
+                    <a href="https://paypal.me/fedirjh/3">Buy</a>
+
+                </section>
+            </header>
+        </div>
+    </div>
+    <div class="columns" ng-controller="streams">
+        <div class="column col-11 col-9-lms col-mx-auto">
+            <div class="container">
+                <div class="columns">
+                    <div class="column col col-mx-auto">
+                        <div class="fain" id="tag-1">
+                            <div class="columns">
+                                <div class="column1 column col col-mx-auto card portfolio bounce animated">
+                                    <div class="card-body">
+                                      <div ng-switch="name">
+                                        <div ng-switch-when="sme">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/skysportsmainevent.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="spl">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/skysportspremierleague.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sf">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/skysportsfootball.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="skysportsf1">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/skysportsf1.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sa">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/skysportsaction.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="fs1">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/foxsports1.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="fs2">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/foxsports2.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports11">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports11.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports12">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports12.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports13">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports13.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports1france">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports1france.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports2france">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports2france.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="beinsports3france">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/beinsports3france.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="tsn1">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/tsn.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="tsn2">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/tsn2.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sporttv1">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/sporttv1.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sporttv2">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/sporttv2.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sporttv3">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/sporttv3.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sporttv4">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/sporttv4.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+                                        <div ng-switch-when="sporttv5">
+                                          <iframe
+                                          src='http://www.liveonlinetv247.info/embed/sporttv5.php?width=100%&height=480'
+                                          width='100%'
+                                          height='480'
+                                          name='myfr'
+                                          frameborder='0'
+                                          marginwidth='0'
+                                          marginheight='0'
+                                          scrolling='no'
+                                          webkitallowfullscreen='true'
+                                          mozallowfullscreen='true'
+                                          allowfullscreen='true'>
+                                        </iframe>
+                                        </div>
+
+
+                                              <div ng-switch-when="bt1">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/btsport1.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="bt2">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/btsport2.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="bt3">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/btsport3.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="nbcsn">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/nbcsn.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="bts">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/btsportespn.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="c+">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/canal%2Bsport.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="c+l">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/canal%2Bliga.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="eur1">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/eurosport.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-when="eur2">
+                                                <iframe
+                                                src='http://www.liveonlinetv247.info/embed/eurosport2.php?width=100%&height=480'
+                                                width='100%'
+                                                height='480'
+                                                name='myfr'
+                                                frameborder='0'
+                                                marginwidth='0'
+                                                marginheight='0'
+                                                scrolling='no'
+                                                webkitallowfullscreen='true'
+                                                mozallowfullscreen='true'
+                                                allowfullscreen='true'>
+                                              </iframe>
+                                              </div>
+                                              <div ng-switch-default>
+                                                  <iframe
+                                                  src='http://www.liveonlinetv247.info/embed/btsport1.php?width=100%&height=480'
+                                                  width='100%'
+                                                  height='480'
+                                                  name='myfr'
+                                                  frameborder='0'
+                                                  marginwidth='0'
+                                                  marginheight='0'
+                                                  scrolling='no'
+                                                  webkitallowfullscreen='true'
+                                                  mozallowfullscreen='true'
+                                                  allowfullscreen='true'>
+                                                </iframe>
+                                              </div>
+                                      </div>
+
+                                    </div>
+                                </div>
+                                <div class="column column1 col-4-lms col-12 col-mx-auto portfolio bounce animated" id="tag-2">
+                                    <div class="card-header">
+                                      <script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 500;">{"handle":"rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}</script>
+                                    </div>
+                                </div>
+                                <div id="tag-3" class="column column1 col-12-lms col-12 card col-mx-auto portfolio bounce animated">
+                                        <div class="card-header">
+                                            <div class="card-title h5 text-center">Channels</div>
+                                        </div>
+                                        <div class="card-body">
+                                          <div class="channels">
+                                              <a name="bt1" ng-click="name = 'bt1'"style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/image/67.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">BT Sport 1</span>
+                                              </a>
+                                              <a name="bt2" ng-click="name = 'bt2'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/image/127.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  BT Sport 2
+                                                </span>
+                                               </a>
+                                              <a name="bt3" ng-click="name = 'bt3'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/image/144.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  BT Sport 3
+                                                </span>
+                                               </a>
+                                              <a name="bts" ng-click="name = 'bts'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/image/218.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  BT ESPN
+                                                </span>
+                                               </a>
+                                              <a name="fs1" ng-click="name = 'fs1'" style="background: rgb(39, 39, 39);">
+                                                <img src="https://i2.wp.com/media02.statarea.com/images/tv/219.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                              FS 1
+                                                            </span>
+                                                          </a>
+                                              <a name="fs2" ng-click="name = 'fs2'" style="background: rgb(39, 39, 39);">
+                                                <img src="https://i2.wp.com/media02.statarea.com/images/tv/167.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                              FS 2
+                                                            </span>
+                                                          </a>
+                                              <a name="nbcsn" ng-click="name = 'nbcsn'" style="background: rgb(39, 39, 39);">
+                                                <img src="https://i2.wp.com/media02.statarea.com/images/tv/444.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  NBCSN
+                                                </span>
+                                               </a>
+                                              <a name="espn" ng-click="name = 'espn'" style="background: rgb(39, 39, 39);">
+                                                <img src="https://i2.wp.com/media02.statarea.com/images/tv/333.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                        ESPN
+                                                </span>
+                                                    </a>
+                                              <a name="sme" ng-click="name = 'sme'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/sky.png">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Main Event
+                                                </span>
+                                               </a>
+                                              <a name="spl" ng-click="name = 'spl'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/sky.png">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Pre League
+                                                </span>
+                                               </a>
+                                              <a name="sf" ng-click="name = 'sf'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/sky.png">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sky Football
+                                                </span>
+                                               </a>
+                                              <a name="smx" ng-click="name = 'smx'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/sky.png">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sky Mix
+                                                </span>
+                                               </a>
+                                              <a name="sf1" ng-click="name = 'sf1'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://mybacklink.website/images/sky.png">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sky F1
+                                                </span>
+
+
+                                               </a>
+                                              <a name="sporttv1" ng-click="name = 'sporttv1'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://media02.statarea.com/images/tv/39.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sport TV 1
+                                                </span>
+                                               </a>
+                                              <a name="sporttv2" ng-click="name = 'sporttv2'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://media02.statarea.com/images/tv/14.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sport TV 2
+                                                </span>
+                                                </a>
+                                              <a name="sporttv3" ng-click="name = 'sporttv3'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://media02.statarea.com/images/tv/61.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sport TV 3
+                                                </span>
+                                                </a>
+                                              <a name="sporttv4" ng-click="name = 'sporttv4'" style="background: rgb(39, 39, 39);">
+                                                <img src="http://media02.statarea.com/images/tv/402.png" style="margin: -4px;">
+                                                <br>
+                                                <span style="background: rgb(26, 26, 26);">
+                                                  Sport TV 4
+                                                </span>
+                                                </a>
+                                              <a name="beinsports11" ng-click="name = 'beinsports11'" style="background: rgb(39, 39, 39);">
+                                                  <img src="http://mamahd.com/images/channels/137.png">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    BeIn 11 HD
+                                                  </span>
+                                                </a>
+                                              <a name="beinsports12" ng-click="name = 'beinsports12'" style="background: rgb(39, 39, 39);">
+                                                    <img src="http://mamahd.com/images/channels/137.png">
+                                                    <br>
+                                                    <span style="background: rgb(26, 26, 26);">
+                                                      BeIn 12 HD
+                                                    </span>
+                                                  </a>
+                                              <a name="beinsports13" ng-click="name = 'beinsports13'" style="background: rgb(39, 39, 39);">
+                                                      <img src="http://mamahd.com/images/channels/137.png">
+                                                      <br>
+                                                      <span style="background: rgb(26, 26, 26);">
+                                                        BeIn 13 HD
+                                                      </span>
+                                                    </a>
+                                              <a name="beinsports1france" ng-click="name = 'beinsports1france'" style="background: rgb(39, 39, 39);">
+                                                        <img src="http://mamahd.com/images/channels/137.png">
+                                                        <br>
+                                                        <span style="background: rgb(26, 26, 26);">
+                                                          BeIn fr 1 HD
+                                                        </span>
+                                                      </a>
+                                              <a name="beinsports2france" ng-click="name = 'beinsports2france'" style="background: rgb(39, 39, 39);">
+                                                          <img src="http://mamahd.com/images/channels/137.png">
+                                                          <br>
+                                                          <span style="background: rgb(26, 26, 26);">
+                                                            BeIn fr 2 HD
+                                                          </span>
+                                                        </a>
+                                              <a name="beinsports3france" ng-click="name = 'beinsports3france'" style="background: rgb(39, 39, 39);">
+                                                            <img src="http://mamahd.com/images/channels/137.png">
+                                                            <br>
+                                                            <span style="background: rgb(26, 26, 26);">
+                                                              BeIn fr 3 HD
+                                                            </span>
+                                                          </a>
+                                              <a name="tsn1" ng-click="name = 'tsn1'" style="background: rgb(39, 39, 39);">
+                                                  <img src="https://lh3.googleusercontent.com/wqO8u2GqBK7t6X1hJA2tMT1VGFxo56qr=s46-c-k-no" style="margin: -2px;">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    Tsn 1 HD
+                                                  </span>
+                                                </a>
+                                              <a name="tsn2" ng-click="name = 'tsn2'" style="background: rgb(39, 39, 39);">
+                                                  <img src="https://lh3.googleusercontent.com/wqO8u2GqBK7t6X1hJA2tMT1VGFxo56qr=s46-c-k-no" style="margin: -2px;">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    Tsn 2 HD
+                                                  </span>
+                                                </a>
+                                              <a name="c+" ng-click="name = 'c+'" style="background: rgb(39, 39, 39);">
+                                                  <img src="http://media02.statarea.com/images/tv/270.png" style="margin: -4px">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    Canal +
+                                                  </span>
+                                                </a>
+                                              <a name="c+l" ng-click="name = 'c+l'" style="background: rgb(39, 39, 39);">
+                                                    <img src="http://i46.tinypic.com/5wazye.png" style="margin: 1px;width: 80%;">
+                                                    <br>
+                                                    <span style="background: rgb(26, 26, 26);">
+                                                      canal+ liga
+                                                    </span>
+                                                  </a>
+                                              <a name="eur1" ng-click="name = 'eur1'" style="background: rgb(39, 39, 39);">
+                                                  <img src="http://media02.statarea.com/images/tv/275.png" style="margin: -4px">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    Eurosport 1
+                                                  </span>
+                                                </a>
+                                              <a name="eur2" ng-click="name = 'eur2'" style="background: rgb(39, 39, 39);">
+                                                  <img src="http://media02.statarea.com/images/tv/461.png" style="margin: -4px">
+                                                  <br>
+                                                  <span style="background: rgb(26, 26, 26);">
+                                                    Eurosport 2
+                                                  </span>
+                                                </a>
+
+
+                <!--<a name="sporttv1" ng-click="name = 'sf1'" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 1 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 2 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-2-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 2 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 3 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-3-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 3 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 4 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-4-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 4 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 5 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-5-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 5 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 6 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-6-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 6 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 7 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-7-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 7 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 8 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-8-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 8 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 9 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-9-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 9 HD
+                  </span>
+                </a>
+                <a data-original-title="BeIn 10 HD Arabic 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/bein-sport-10-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://mamahd.com/images/channels/137.png">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    BeIn 10 HD
+                  </span>
+                </a>
+
+
+                <a data-original-title="Tsn 3 HD Canada 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/tsn-3-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="https://lh3.googleusercontent.com/wqO8u2GqBK7t6X1hJA2tMT1VGFxo56qr=s46-c-k-no" style="margin: -2px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Tsn 3 HD
+                  </span>
+                </a>
+                <a data-original-title="Tsn 4 HD Canada 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/tsn-4-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="https://lh3.googleusercontent.com/wqO8u2GqBK7t6X1hJA2tMT1VGFxo56qr=s46-c-k-no" style="margin: -2px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Tsn 4 HD
+                  </span>
+                </a>
+                <a data-original-title="Tsn 5 HD Canada 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/tsn-5-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="https://lh3.googleusercontent.com/wqO8u2GqBK7t6X1hJA2tMT1VGFxo56qr=s46-c-k-no" style="margin: -2px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Tsn 5 HD
+                  </span>
+                </a>
+
+                <a data-original-title="Match! 1 HD Russia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/match-futbol-1-russia.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/160.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Match! 1 HD
+                  </span>
+                </a>
+                <a data-original-title="Match! 2 HD Russia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/match-futbol-2-russia.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/179.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Match! 2 HD
+                  </span>
+                </a>
+                <a data-original-title="Match! 3 HD Russia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/match-futbol-3-russia.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/140.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Match! 3 HD
+                  </span>
+                </a>
+                <a data-original-title="Sport klub 1 Croatia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/sport-klub-1-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/18.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Sport klub 1
+                  </span>
+                </a>
+                <a data-original-title="Sport klub 2 Croatia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/sport-klub-2-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/64.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Sport klub 2
+                  </span>
+                </a>
+                <a data-original-title="Sport klub 3 Croatia 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/sport-klub-3-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/41.png" style="margin: -4px;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Sport klub 3
+                  </span>
+                </a>
+
+
+
+                <a data-original-title="Eleven HD Poland 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/eleven-hd-polska.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/13.png" style="margin: -4px">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Eleven HD
+                  </span>
+                </a>
+                <a data-original-title="Eleven Sport Poland 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/eleven-sport-hd-polska.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/277.png" style="margin: -4px">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Eleven Sport
+                  </span>
+                </a>
+                <a data-original-title="Eleven Extra Poland 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/eleven-extra-polska.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/954.png" style="margin: -4px">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Eleven Extra
+                  </span>
+                </a>
+                <a data-original-title="Canal + 2 Poland 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/canal-sport-2-poland-polska.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/158.png" style="margin: -4px">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Canal + 2
+                  </span>
+                </a>
+
+
+                <a data-original-title="Movistar HD Spain 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/movistar-futbol-hd.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://media02.statarea.com/images/tv/416.png" style="margin: -4px">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Movistar HD
+                  </span>
+                </a>
+                <a data-original-title="Deportes 1 HD Spain 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/movistar-deportes-1.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://www.movistarplus.es/recorte/m-NEO/guiapc/CPDEP.png" style="width: 90%;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Deportes 1
+                  </span>
+                </a>
+                <a data-original-title="Deportes 2 HD Spain 720p" data-placement="top" data-toggle="tooltip" href="http://www.jokerstream.com/p/movistar-deportes-2.html" style="background: rgb(39, 39, 39);">
+                  <img src="http://www.movistarplus.es/recorte/m-NEO/guiapc/CPD2.png" style="width: 90%;">
+                  <br>
+                  <span style="background: rgb(26, 26, 26);">
+                    Deportes 2
+                  </span>
+                </a>-->
+
+              </div>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns footer">
+        <div class="column col-10 col-mx-auto">
+            <div>
+                copyright &copy; <a href="https://fedirjh.com">fedirjh</a> 2018
+            </div>
+        </div>
+    </div>
+
+        <script src="js/app.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/jquery.min.js"></script>
+</body>
+
+</html>
