@@ -519,19 +519,33 @@ img {
                                               </iframe>
                                               </div>
                                               <div ng-switch-default>
-                                                   <iframe
-                                                      src='http://www.liveonlinetv247.info/embed/skysportsmainevent.php?width=100%&height=480'
-                                                      width='100%'
-                                                      height='480'
-                                                      name='myfr'
-                                                      frameborder='0'
-                                                      marginwidth='0'
-                                                      marginheight='0'
-                                                      scrolling='no'
-                                                      webkitallowfullscreen='true'
-                                                      mozallowfullscreen='true'
-                                                      allowfullscreen='true'>
-                                                    </iframe>
+                                                <iframe
+                                                  id='iff'
+                                                  src='#'
+                                                  width='100%'
+                                                  height='480'
+                                                  name='myfr'
+                                                  frameborder='0'
+                                                  marginwidth='0'
+                                                  marginheight='0'
+                                                  scrolling='no'
+                                                  webkitallowfullscreen='true'
+                                                  mozallowfullscreen='true'
+                                                  allowfullscreen='true'>
+                                                </iframe>
+                                                <script type="text/javascript">
+                                                function get(name) {
+                                                  if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+                                                return decodeURIComponent(name[1]);
+                                                }
+                                                name = get('id');
+                                                if(name){
+                                                  erc='http://www.liveonlinetv247.info/embed/'+name+'.php?width=100%&height=480';
+                                                }else{
+                                                  erc='http://www.liveonlinetv247.info/embed/skysportsmainevent.php?width=100%&height=480'
+                                                }
+                                                document.getElementById('iff').src = erc;
+                                                </script>
                                               </div>
                                       </div>
 
