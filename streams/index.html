@@ -541,7 +541,8 @@ img {
                                                 name = get('id');
                                                 if(name){
                                                   erc='http://www.liveonlinetv247.info/embed/'+name+'.php?width=100%&height=480';
-                                                }else{
+                                                }
+                                                 if(name=="undefined"){
                                                   erc='http://www.liveonlinetv247.info/embed/skysportsmainevent.php?width=100%&height=480'
                                                 }
                                                 document.getElementById('iff').src = erc;
