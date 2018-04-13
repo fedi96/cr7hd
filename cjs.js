@@ -21,7 +21,15 @@
 
     var clappr_options = {
         source: hlssrc,
-        plugins: [LevelSelector, Clappr.HLS, PlaybackRatePlugin, ClapprCapturePlugin],
+        plugins: [LevelSelector, Clappr.HLS, PlaybackRatePlugin, ClapprCapturePlugin, ChromecastPlugin],
+        chromecast: {
+          appId: '9DFB77C0',
+          media: {
+            type: ChromecastPlugin.Movie,
+            title: 'Live NHL Streams',
+            subtitle: 'rjh Streams'
+          }
+        },
         levelSelectorConfig: {
             labelCallback: function (level, label) {
                 console.log(level)
@@ -32,7 +40,7 @@
             onPlay: setDvrLabels
         },
         width: '100%',
-        height: '480px',
+        height: '500px',
         parentId: "#plu",
         autoPlay: true,
         hlsjsConfig: {
