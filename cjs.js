@@ -21,7 +21,7 @@
 
     var clappr_options = {
         source: hlssrc,
-        plugins: [LevelSelector, Clappr.HLS, PlaybackRatePlugin, ClapprCapturePlugin, ChromecastPlugin],
+        plugins: [ChromecastPlugin, LevelSelector, Clappr.HLS, PlaybackRatePlugin, ClapprCapturePlugin],
         chromecast: {
           appId: '9DFB77C0',
           media: {
@@ -42,20 +42,7 @@
         width: '100%',
         height: '500px',
         parentId: "#plu",
-        autoPlay: true,
-        hlsjsConfig: {
-            xhrSetup: function (xhr, url) {
-                xhr.onerror = function (err, thing) {
-                    console.log("errrr");
-                    console.log(err);
-                    console.log(thing);
-                    if (retry === 1) {
-                        retry++;
-                        console.log("error: do second try");
-                    }
-                }
-            }
-        }
+        autoPlay: true
     }
 
     var player = new Clappr.Player(clappr_options);
