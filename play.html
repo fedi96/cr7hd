@@ -33,14 +33,12 @@
 	<script src="/mlb.js"></script>
  	<script src="/main.js"></script>
  	<script src="/xhr.js"></script>
-	       <script src="/players/clappr/clappr.min.js" data-turbolinks-track="true"></script>
-<script src="/players/clappr/level-selector.min.js" data-turbolinks-track="true"></script>
-<script src="/players/clappr/custom.js" data-turbolinks-track="true"></script>
-<script src="/players/clappr/clappr-playback-rate-plugin.min.js" data-turbolinks-track="true"></script>
-<script src="/players/clappr/clappr-capture-plugin.min.js" data-turbolinks-track="true"></script>
-	
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clappr@latest/dist/clappr.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+	<script src="/players/clappr/clappr.min.js" data-turbolinks-track="true"></script>
+	<script src="/players/clappr/level-selector.min.js" data-turbolinks-track="true"></script>
+	<script src="/players/clappr/custom.js" data-turbolinks-track="true"></script>
+	<script src="/players/clappr/clappr-playback-rate-plugin.min.js" data-turbolinks-track="true"></script>
+	<script src="/players/clappr/clappr-capture-plugin.min.js" data-turbolinks-track="true"></script>
+	<script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
 	<style>
 
   .spinnit {
@@ -66,24 +64,10 @@
   [data-player] {
     position: relative;
     width: 100%;
-    height: 480px;
+    height: 500px;
     margin: 0;
   }
-  .playback_rate[data-playback-rate-select] { margin-top: 0px !important; }
-  /* Fix the video container to take up 100% width and to calculate its height based on its children. */
-  [data-player] .container[data-container] {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-
-  /* Fix the media-control element to take up the entire size of the player. */
-  [data-player] .media-control[data-media-control] {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-  }
+  
 
   /* Fix the video element to take up 100% width and to calculate its height based on its natural aspect ratio. */
   [data-player] video {
@@ -91,12 +75,7 @@
     display: block;
     width: 100%;
     height: auto;
-  }
-  .level_selector[data-level-selector] {
-    float: right;
-    margin-top: 0px !important;
-    position: relative;
-  }
+		}
 
   .level_selector:focus { outline: none; }
   [data-level-selector-button]:focus { outline: none; }
