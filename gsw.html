@@ -18,7 +18,7 @@
 
     <script>
           vf={};
-          $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
+          $.getJSON("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
             vf = resp;
       var player = videojs('example-video');
       player.ready(function() {
