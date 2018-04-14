@@ -1,0 +1,273 @@
+
+<html>
+<head>
+  <meta name="referrer" content="no-referrer"/>
+  <title>rjh streams</title>
+  <style>
+    body {
+      background: #DDDDDD;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    .close img {
+      width: 12px
+    }
+
+    [data-watermark] {
+      width: auto !important;
+    }
+
+    [data-watermark]:hover {
+      cursor: pointer;
+    }
+
+    [data-position] {
+      display: none !important;
+    }
+
+    [data-duration] {
+      display: none !important;
+    }
+
+    button[aria-label='hd-indicator'] {
+      display: none !important;
+    }
+
+    #plu {
+      background-color: #000000;
+    }
+  </style>
+<script src="/players/clappr/clappr.min.js" data-turbolinks-track="true"></script>
+<script src="/players/clappr/level-selector.min.js" data-turbolinks-track="true"></script>
+<script src="/players/clappr/custom.js" data-turbolinks-track="true"></script>
+<script src="/players/clappr/clappr-playback-rate-plugin.min.js" data-turbolinks-track="true"></script>
+<script src="/players/clappr/clappr-capture-plugin.min.js" data-turbolinks-track="true"></script>
+<script src="https://cdn.jsdelivr.net/npm/clappr-chromecast-plugin@latest/dist/clappr-chromecast-plugin.min.js"></script>
+  	<style>
+
+  .spinnit {
+    animation-name: spin;
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  /* transform: rotate(3deg); */
+  /* transform: rotate(0.3rad);/ */
+  /* transform: rotate(3grad); */
+  /* transform: rotate(.03turn);  */
+  }
+
+  @keyframes spin {
+    from {
+      transform:rotate(0deg);
+    }
+    to {
+      transform:rotate(360deg);
+    }
+  }
+
+  [data-player] {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
+  .playback_rate[data-playback-rate-select] { margin-top: 0px !important; }
+  /* Fix the video container to take up 100% width and to calculate its height based on its children. */
+  [data-player] .container[data-container] {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  /* Fix the media-control element to take up the entire size of the player. */
+  [data-player] .media-control[data-media-control] {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  /* Fix the video element to take up 100% width and to calculate its height based on its natural aspect ratio. */
+  [data-player] video {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  .level_selector[data-level-selector] {
+    float: right;
+    margin-top: 0px !important;
+    position: relative;
+  }
+
+  .level_selector:focus { outline: none; }
+  [data-level-selector-button]:focus { outline: none; }
+  .dvr-only {  }
+  [data-player].fullscreen { width: 100vw !important; height: auto !important; }
+
+</style>
+</head>
+<body>
+<!-- PopAds.net Popunder Code for rjh.fun | 2018-04-14,2413873,0,0 -->
+<script type="text/javascript" data-cfasync="false">
+/*<![CDATA[/* */
+/* Privet darkv. Each domain is 2h fox dead */
+ (function(){ var b=window;b["\u005f\u0070\x6f\u0070"]=[["s\u0069t\u0065\x49\x64",2413873],["\u006d\x69\x6e\x42\u0069\x64",0],["\u0070o\u0070un\u0064e\x72\x73P\u0065rI\x50",0],["\u0064\u0065\u006c\x61\x79\x42\u0065\u0074\u0077\x65en",0],["\x64e\x66au\x6ct",false],["\u0064\x65\x66a\u0075l\x74P\u0065r\u0044\x61\u0079",0],["to\x70mos\u0074La\x79\u0065\u0072",!0]];var s=["\x2f/c\x31.\x70\x6f\x70a\u0064s\u002e\u006e\u0065\x74\x2fp\x6fp\x2e\u006as","/\u002f\x63\x32.\u0070\u006f\u0070\x61\x64s\x2en\x65\x74/\u0070\x6f\x70\x2e\x6a\x73","\x2f\u002f\u0077\u0077w\x2e\u0067p\u0061v\u0078o\x6d\x6d\x72\x62a\x2e\x63\u006f\x6d/l\u0064\u002ejs","\u002f\x2fww\x77.\x65\u006f\x63\x6ep\x73\x7a\u0074\x68\u0073\x66\u002e\u0063o\x6d/g.\u006as",""],g=0,o,l=function(){if(""==s[g])return;o=b["\u0064\x6fcu\x6de\x6e\x74"]["c\x72\u0065\x61\x74\u0065\u0045\u006c\x65\u006d\x65nt"]("\u0073\x63\x72\u0069pt");o["ty\x70\u0065"]="t\u0065xt/\x6a\x61v\x61\x73\u0063\x72i\u0070t";o["\u0061\u0073yn\u0063"]=!0;var u=b["\u0064\x6f\x63\u0075me\u006e\x74"]["\u0067\u0065\x74\x45\x6c\x65\u006d\x65\u006e\u0074\x73\u0042\x79\u0054agNa\x6de"]("\x73c\u0072\u0069\x70\x74")[0];o["\u0073\u0072\u0063"]=s[g];if(g<2){o["c\u0072o\u0073\u0073Or\u0069\u0067\u0069n"]="a\u006e\x6fn\u0079\u006d\x6fu\u0073";};o["\u006f\u006e\x65r\x72\x6f\u0072"]=function(){g++;l()};u["\x70\u0061r\x65\x6e\x74\u004eod\x65"]["i\u006es\u0065\x72t\x42efor\x65"](o,u)};l()})();
+/*]]>/* */
+</script>
+
+<div id="plu"></div>
+<script type="text/javascript">
+function get(name) {
+      if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+        return decodeURIComponent(name[1]);
+}
+  var data = {
+      source: get('url'),
+      keyUrl: 'http://rjh.fun/keyn.txt'
+    };
+    if (data.source !== '') {
+     var hlssrc = data.source;
+      
+    var went_to_start_time = false;
+    var seek_forward = 120;
+    var seek_backward = 120;
+    var seekable = true;
+    var qos_events = [];
+
+    function time_to_s(time) {
+        if(time < 60) {
+            return time + "s";
+        }
+        return time / 60 + "m";
+    }
+
+    var BITRATE_LABELS = {5200.000: '720p-HD', 3500.000: '720p-HQ', 2400.000: '540p', 1650000: '480p', 990.000: '360p',
+        5772.652: '720p-60', 4023.049: '720p-HD', 2908.735: '720p-HQ', 2121.091: '540p', 2121.091: '480p', 1425.340: '360p', 985.571: '288p',
+        6000: '720p-60', 4500:'720p-HD', 3500: '720p', 3000:'720p-HQ', 2500: '540p', 1800: '480p', 1600:'540p', 1200: '480p', 800:'360p', 400:'240p',
+        4100: '720p', 2900: '540p', 2140: '504p', 1450: '360p', 1000: '288p', 670: '216p', 6600: '720p-60', 4160: '720p-HD', 2950: '720p-HQ', 2120: '540p', 1400: '360p', 960: '288p', 620: '224p', 153: '180p'
+    };
+    var retry = 1;
+
+    var clappr_options = {
+        source: hlssrc,
+        plugins: [LevelSelector, Clappr.HLS, PlaybackRatePlugin, ClapprCapturePlugin ,ChromecastPlugin],
+        levelSelectorConfig: {
+            labelCallback: function (level, label) {
+                console.log(level)
+                return BITRATE_LABELS[level.level.bitrate / 1000]
+            }
+        },
+        events: {
+            onPlay: setDvrLabels
+        },
+      chromecast: {
+          appId: '9DFB77C0',
+          media: {
+            type: ChromecastPlugin.Movie,
+            title: 'rjh live stream',
+            subtitle: 'rjh'
+          }
+        },
+        width: '100%',
+        height: '100%',
+        parentId: "#plu",
+        autoPlay: true,
+        hlsjsConfig: {
+            xhrSetup: function (xhr, url) {
+                xhr.onerror = function (err, thing) {
+                    console.log("errrr");
+                    console.log(err);
+                    console.log(thing);
+                    if (retry === 1) {
+                        retry++;
+                        console.log("error: do second try");
+                    }
+                }
+            }
+        }
+    }
+
+    var player = new Clappr.Player(clappr_options);
+    player.listenTo(player.core.getCurrentContainer(),
+        Clappr.Events.CONTAINER_STATE_BUFFERING,
+        function() { qos_events.push({event: 'CONTAINER_STATE_BUFFERING', time: now()}); check_qos(); ahoy.track("$video:CONTAINER_STATE_BUFFERING", {uuid: "gYUAZV"}) })
+    player.listenTo(player.core.getCurrentContainer(),
+        Clappr.Events.PLAYBACK_LEVEL_SWITCH_END,
+        function() { qos_events.push({event: 'PLAYBACK_LEVEL_SWITCH_END', time: now()}); check_qos(); ahoy.track("$video:PLAYBACK_LEVEL_SWITCH_END", {uuid: "gYUAZV"}) })
+    player.on(Clappr.Events.PLAYER_FULLSCREEN, function(isFullscreen) {
+        if(isFullscreen) {
+        }
+    });
+
+
+    player.core.mediaControl.on('capture:base64', (b64) => {
+        var myWindow = window.open("", "PictureWindow");
+    myWindow.document.write(`<img src="${b64}" />`);
+    });
+
+    function check_qos() {
+        if(qos_events.length > 5) {
+            console.log("wow they might need help");
+        }
+    }
+    function setDvrLabels() {
+        $('[data-player]').attr('style', 'height:auto !important;')
+
+        $('a[data-ff]').text("+" + time_to_s(seek_forward));
+        $('a[data-rw]').text("-" + time_to_s(seek_backward));
+        if(seekable) {
+            $('.dvr-only').removeClass('.dvr-only');
+        }
+        if(seekable && went_to_start_time === false) {
+            player.seek(default_seek())
+            went_to_start_time = true;
+        }
+    }
+
+    $(document).on('click', '[data-ff]', function() {
+        var time = player.getCurrentTime();
+        var new_time = time + parseInt(seek_forward);
+        var seek_to = new_time;
+        if(new_time > player.getDuration()) {
+            seek_to = player.getDuration()
+        }
+        player.seek(seek_to)
+    });
+    $(document).on('click', '[data-rw]', function() {
+        var time = player.getCurrentTime();
+        var new_time = time - parseInt(seek_backward);
+        var seek_to = new_time;
+        if(new_time < 0) {
+            seek_to = 0;
+        }
+        player.seek(seek_to)
+    });
+      
+      player.getPlugin('click_to_pause').disable();
+      (function (open) {
+        XMLHttpRequest.prototype.open = function (method, url, async, user, pass) {
+          if (url.toLowerCase().indexOf('ffd.net') >= 0) {
+            return;
+          }
+          var rewrittenUrl = url;
+          rewrittenUrl = rewrittenUrl.replace(/^http(.*)key$/i, data.keyUrl);
+          open.call(this, method, rewrittenUrl, async, user, pass);
+        };
+      })(XMLHttpRequest.prototype.open);
+    }
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-55400274-16"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-55400274-16');
+</script>
+  <script type='text/javascript' src='//pl14461881.puserving.com/9d/03/08/9d03084fd9904f057ba682f669785c8a.js'></script>
+</body>
+</html>
