@@ -17,16 +17,7 @@
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
 
     <script>
-    window.drm_token = "";
-    (function(send) {
-        XMLHttpRequest.prototype.send = function(a) {
-            if(window.drm_token.length > 0) {
-              this.setRequestHeader('authorization', 'bearer ' + window.drm_token);
-              this.withCredentials = false;
-            };
-            send.apply(this, arguments);
-        };
-    })(XMLHttpRequest.prototype.send);
+      window.drm_token = "";
       var player = videojs('example-video');
       player.ready(function() {
             player.src({
@@ -48,6 +39,15 @@
             window.drm_token = resp.token;
             }).then(function() {
                   player.play();
+                   (function(send) {
+                       XMLHttpRequest.prototype.send = function(a) {
+                       if(window.drm_token.length > 0) {
+                       this.setRequestHeader('authorization', 'bearer ' + window.drm_token);
+                       this.withCredentials = false;
+                         };
+                         send.apply(this, arguments);
+                   };
+                   })(XMLHttpRequest.prototype.send);
             });
          
     
