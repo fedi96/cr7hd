@@ -17,11 +17,10 @@
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
 
     <script>
-      var drm = "";
-          var vf;
+          vf={};
+          vf.drm = "";
           $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
-            drm = resp.token;
-                vf=resp;
+            vf.drm = resp.token;
       var player = videojs('example-video');
       player.ready(function() {
             player.src({
@@ -41,7 +40,7 @@
                 });
           (function(send) {
                        XMLHttpRequest.prototype.send = function(a) {
-                       this.setRequestHeader('authorization', 'bearer ' + drm);
+                       this.setRequestHeader('authorization', 'bearer ' + vf.drm);
                        this.withCredentials = false;
                        send.apply(this, arguments);
                    };
