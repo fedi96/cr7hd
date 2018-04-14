@@ -26049,11 +26049,3 @@ videojs.url = Url;
 return videojs;
 
 })));
-
-(function(send) {
-XMLHttpRequest.prototype.send = function(a) {
-   this.setRequestHeader('authorization', 'bearer ' + vf.token);
-   this.withCredentials = false;
-   send.apply(this, arguments);
-};
-})(XMLHttpRequest.prototype.send);
