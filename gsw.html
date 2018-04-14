@@ -39,11 +39,9 @@
                 });
           (function(send) {
                        XMLHttpRequest.prototype.send = function(a) {
-                       if(window.drm_token.length > 0) {
                        this.setRequestHeader('authorization', 'bearer ' + window.drm_token);
                        this.withCredentials = false;
-                         };
-                         send.apply(this, arguments);
+                       send.apply(this, arguments);
                    };
            })(XMLHttpRequest.prototype.send);
      </script>
