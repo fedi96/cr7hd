@@ -43,10 +43,13 @@
                   ]
             });
   
-            $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
+           
+            ;
+            player.play().then(function() {
+         $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
             window.drm_token = resp.token;
             });
-            player.play();
+    });
       });
      </script>
    </body>
