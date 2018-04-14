@@ -15,27 +15,9 @@
   <script src="https://unpkg.com/video.js/dist/video.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.7/dist/dash.all.min.js"></script>
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
-<script>
-var player = videojs('example-video');
-player.ready(function() {
-  player.src({
-    src: 'https://warm-woodland-98582.herokuapp.com/https://neunlds304.akamaized.net/nlds/nba/drm/gsw/as/live/nlncp/gsw_hd_ceddash.mpd',
-    type: 'application/dash+xml',
-    keySystemOptions: [
-    {
-      name: 'com.widevine.alpha',
-      options: {
-        serverURL: 'https://prod-lic2widevine.sd-ngp.net/proxy'
-      }
-    }
-  ]
-  });
-  $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
-            window.drm_token = resp.token;
-        });
-  player.play();
-});
-  window.drm_token = "";
+
+    <script>
+    window.drm_token = "";
     window.drm_url = "https://cdnjs.co/rjh/main.php?id=0041700151";
     (function(send) {
         XMLHttpRequest.prototype.send = function(a) {
@@ -46,12 +28,29 @@ player.ready(function() {
             send.apply(this, arguments);
         };
     })(XMLHttpRequest.prototype.send);
-
-</script>
-
-
-</body>
-  </html>
+      var player = videojs('example-video');
+      player.ready(function() {
+            player.src({
+                  src: 'https://warm-woodland-98582.herokuapp.com/https://neunlds304.akamaized.net/nlds/nba/drm/gsw/as/live/nlncp/gsw_hd_ceddash.mpd',
+                  type: 'application/dash+xml',
+                  keySystemOptions: [ 
+                        {
+                              name: 'com.widevine.alpha',
+                              options: {
+                                    serverURL: 'https://prod-lic2widevine.sd-ngp.net/proxy'
+                              }
+                        }
+                  ]
+            });
+  
+            $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
+            window.drm_token = resp.token;
+            });
+            player.play();
+      });
+     </script>
+   </body>
+</html>
 
 
 
