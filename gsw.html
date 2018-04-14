@@ -14,6 +14,7 @@
 <script src="https://unpkg.com/video.js/dist/video.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.7/dist/dash.all.min.js"></script>
  <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@0.0.2/dist/videojs-hls-quality-selector.cjs.min.js"></script>
 
     <script>
           vf={};
@@ -33,6 +34,7 @@
                         }
                   ]
             });
+            player.hlsQualitySelector();
             player.play();
       });
           });
