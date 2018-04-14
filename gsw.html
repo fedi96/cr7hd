@@ -12,18 +12,18 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <video id=example-video width=600 height=300 class="video-js vjs-default-skin" controls></video> 
 <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
-  <script src="https://unpkg.com/video.js/dist/video.js"></script>
+<script src="/video.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.7/dist/dash.all.min.js"></script>
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
 
     <script>
           vf={};
-          $.getJSON("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
+          $.getJSON("https://cdnjs.co/rjh/main.php?id=0041700101", function(resp) {
             vf = resp;
       var player = videojs('example-video');
       player.ready(function() {
             player.src({
-                  src: 'https://warm-woodland-98582.herokuapp.com/https://neunlds304.akamaized.net/nlds/nba/drm/gsw/as/live/nlncp/gsw_hd_ceddash.mpd',
+                  src: 'https://warm-woodland-98582.herokuapp.com/https://neunlds285.akamaized.net/nlds/nba/drm/tor/as/live/nlncp/tor_hd_ceddash.mpd',
                   type: 'application/dash+xml',
                   keySystemOptions: [ 
                         {
@@ -36,14 +36,7 @@
             });
             player.play();
       });
-                });
-          (function(send) {
-                       XMLHttpRequest.prototype.send = function(a) {
-                       this.setRequestHeader('authorization', 'bearer ' + vf.token);
-                       this.withCredentials = false;
-                       send.apply(this, arguments);
-                   };
-           })(XMLHttpRequest.prototype.send);
+          });
      </script>
    </body>
 </html>
