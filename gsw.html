@@ -1,15 +1,22 @@
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<!DOCTYPE html>
+<html class="v2 js js" dir="ltr" 
+      xmlns="http://www.w3.org/1999/xhtml" 
+      xmlns:b="http://www.google.com/2005/gml/b" 
+      xmlns:data="http://www.google.com/2005/gml/data" 
+      xmlns:expr="http://www.google.com/2005/gml/expr">
+<head>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+  </head>
+  <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <video id=example-video width=600 height=300 class="video-js vjs-default-skin" controls></video> 
 <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
   <script src="https://unpkg.com/video.js/dist/video.js"></script>
-  <script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.7/dist/dash.all.min.js"></script>
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
 <script>
 var player = videojs('example-video');
-
 player.ready(function() {
   player.src({
     src: 'https://warm-woodland-98582.herokuapp.com/https://neunlds304.akamaized.net/nlds/nba/drm/gsw/as/live/nlncp/gsw_hd_ceddash.mpd',
@@ -43,7 +50,8 @@ player.ready(function() {
 </script>
 
 
-
+</body>
+  </html>
 
 
 
