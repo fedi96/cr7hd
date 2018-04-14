@@ -17,11 +17,11 @@
   <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
 
     <script>
-    var drm_token = "";
+    window.drm_token = "";
     (function(send) {
         XMLHttpRequest.prototype.send = function(a) {
-            if(drm_token.length > 0) {
-              this.setRequestHeader('authorization', 'bearer ' + drm_token);
+            if(window.drm_token.length > 0) {
+              this.setRequestHeader('authorization', 'bearer ' + window.drm_token);
               this.withCredentials = false;
             };
             send.apply(this, arguments);
@@ -45,7 +45,7 @@
            
             ;
             $.get("https://cdnjs.co/rjh/main.php?id=0041700151", function(resp) {
-            drm_token = resp.token;
+            window.drm_token = resp.token;
             }).then(function() {
                   player.play();
             });
