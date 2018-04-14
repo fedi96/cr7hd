@@ -13,8 +13,12 @@
 <link href="https://unpkg.com/video.js/dist/video-js.css" rel="stylesheet">
 <script src="https://unpkg.com/video.js/dist/video.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/dashjs@2.6.7/dist/dash.all.min.js"></script>
- <script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/videojs-hls-quality-selector@0.0.2/dist/videojs-hls-quality-selector.cjs.min.js"></script>
+<script src="https://unpkg.com/videojs-contrib-dash/dist/videojs-dash.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/videojs-chromecast@2.0.8/dist/videojs-chromecast.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/videojs-playbackrate-adjuster@1.0.0/dist/browser/videojs-playbackrate-adjuster.min.js"></script>
+        <script src=""></script>
+        <script src=""></script>
+        <script src=""></script>
 
     <script>
           vf={};
@@ -34,7 +38,6 @@
                         }
                   ]
             });
-            player.hlsQualitySelector();
             player.play();
       });
           });
