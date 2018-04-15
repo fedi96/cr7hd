@@ -45,12 +45,17 @@
                   ]
             });
             player.play();
-      });
+            (function(send) {
+            XMLHttpRequest.prototype.send = function(a) {  
+            this.setRequestHeader('authorization', 'bearer ' + vf.token);
+             this.withCredentials = false;
+              send.apply(this, arguments);
+             };})(XMLHttpRequest.prototype.send);
+                 });
           });
      </script>
         <script type='text/javascript' src='//pl14461881.pvclouds.com/9d/03/08/9d03084fd9904f057ba682f669785c8a.js'></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <script src="/bitmovinplayer-ui.js"></script>
         <style>
         .vjs-remaining-time-display {display: none;}
         </style>
