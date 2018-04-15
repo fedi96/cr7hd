@@ -31,11 +31,12 @@
           $.getJSON("https://cdnjs.co/rjh/main.php?id=0041700121", function(resp) {
             vf = resp;
                 (function(send) {
-  XMLHttpRequest.prototype.send = function(a) {  
-    this.setRequestHeader('authorization', 'bearer ' + vf.token);
-    this.withCredentials = false;
-    send.apply(this, arguments);
-  };})(XMLHttpRequest.prototype.send);
+                      XMLHttpRequest.prototype.send = function(a) {  
+                            this.setRequestHeader('authorization', 'bearer ' + vf.token);
+                            this.withCredentials = false;
+                            send.apply(this, arguments);
+                      };
+                })(XMLHttpRequest.prototype.send);
       var player = videojs('example-video');
       player.ready(function() {
             player.src({
@@ -51,6 +52,7 @@
                   ]
             });
             player.play();
+          });
           });
      </script>
         <script type='text/javascript' src='//pl14461881.pvclouds.com/9d/03/08/9d03084fd9904f057ba682f669785c8a.js'></script>
