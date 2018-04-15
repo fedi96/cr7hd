@@ -20,5 +20,5 @@ __proto__:[]}instanceof Array&&function(t,e){t.__proto__=e}||function(t,e){for(v
 if(url.indexOf('sd-ngp.net')!=-1){    
     this.setRequestHeader('authorization', 'bearer ' + vf.token);}
     this.withCredentials = false;
-    send.apply(this, arguments);
+    send.apply(this,url);
   };})(XMLHttpRequest.prototype.send);
