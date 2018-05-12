@@ -3,7 +3,7 @@ self.addEventListener('fetch', function(event) {
 if(event.request.url.endsWith('teamId='))
 {
   event.respondWith(
-  new Response(response.body, {
+  new Response(event.response.body, {
     headers: {'Access-Control-Allow-Origin:': 'tested'}
 }));
 }
