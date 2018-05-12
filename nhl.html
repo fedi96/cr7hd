@@ -9,8 +9,6 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-55400274-16');
-    if (!navigator.serviceWorker) return;
-
   navigator.serviceWorker.register('/sw.js').then(function() {
     console.log('Registration worked!');
   }).catch(function() {
