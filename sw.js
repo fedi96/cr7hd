@@ -2,8 +2,9 @@ self.addEventListener('fetch', function(event) {
   // url ending in ".jpg"
 if(event.request.url.endsWith('teamId='))
 {
+  console.log(event);
   event.respondWith(
-  new Response(event.body,{
+  new Response({
     headers: {'Access-Control-Allow-Origin:': 'tested'}
 }));
 }
