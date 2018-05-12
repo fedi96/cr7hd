@@ -9,11 +9,6 @@
   gtag('js', new Date());
 
   gtag('config', 'UA-55400274-16');
-  navigator.serviceWorker.register('/sw.js').then(function() {
-    console.log('Registration worked!');
-  }).catch(function() {
-    console.log('Registration failed!');
-  });
 </script>
 
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
@@ -230,7 +225,24 @@ rjh
   
 
   
-  
+  <script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw-test/sw.js', { scope: '/sw-test/' }).then(function(reg) {
+
+    if(reg.installing) {
+      console.log('Service worker installing');
+    } else if(reg.waiting) {
+      console.log('Service worker installed');
+    } else if(reg.active) {
+      console.log('Service worker active');
+    }
+
+  }).catch(function(error) {
+    // registration failed
+    console.log('Registration failed with ' + error);
+  });
+}
+  </script>
   
 </div>
 </div>
