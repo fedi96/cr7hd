@@ -1,19 +1,25 @@
 <script type="text/javascript"
         src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7/bitmovinplayer.js"></script>
 
-<div style='display:none' class="demo_form">
+<div class="description">
+    <p>Simply paste the link to your manifest file to test your own stream with the Bitmovin Player.</p>
+</div>
+
+<div class="demo_form">
     <div class="row">
         <div class="col-md-3 adjust-pad-right mt-2">
             <select id="stream_format" class="form-control">
                 <option selected="selected" value="dash">DASH (.mpd)</option>
+                <option value="hls">HLS (.m3u8)</option>
+                <option value="progressive">Progressive</option>
             </select>
         </div>
         <div class="col-md-6 adjust-pad-left adjust-pad-right mt-2">
             <input id="manifest" class="form-control" name="manifest" type="text"
-                   value="https://video.ftun5-1.fna.fbcdn.net/hvideo-ash5/v/ryMZVdMh2qbCP2Gw2Udih/live-dash/dash-abr4/332018437324378.mpd?lvp=1&_nc_rl=AfBEV5uV_t4v5US8&efg=eyJxZV9ncm91cHMiOnsibGl2ZV9jYWNoZV9wcmltaW5nX3VuaXZlcnNlIjp7ImVuYWJsZWQiOiIxIiwiZm5hX2VuYWJsZWQiOiIwIn19fQ%3D%3D&oh=2f79f165d16f59f1a517c35a331754db&oe=5B0BF665&_nc_nc=1">
+                   placeholder="//bitmovin-a.akamaihd.net/content/sintel/sintel.mpd">
         </div>
-            <div class="col-md-3 adjust-pad-left mt-2"><script>
-                    loadManifest();</script>
+        <div class="col-md-3 adjust-pad-left mt-2">
+            <input id="submit" class="btn btn-success" type="submit" value="Load" onclick="loadManifest()">
         </div>
     </div>
     <div class="row">
