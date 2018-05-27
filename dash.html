@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.22.2/dist/DPlayer.min.css">
+<div id="dplayer"></div>
+<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dplayer@1.22.2/dist/DPlayer.min.js"></script>
+<script>
+const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+        url: 'https://video.ftun5-1.fna.fbcdn.net/hvideo-ash5/v/ryMZVdMh2qbCP2Gw2Udih/live-dash/dash-abr4/332018437324378.mpd?lvp=1&_nc_rl=AfBEV5uV_t4v5US8&efg=eyJxZV9ncm91cHMiOnsibGl2ZV9jYWNoZV9wcmltaW5nX3VuaXZlcnNlIjp7ImVuYWJsZWQiOiIxIiwiZm5hX2VuYWJsZWQiOiIwIn19fQ%3D%3D&oh=2f79f165d16f59f1a517c35a331754db&oe=5B0BF665&_nc_nc=1',
+        type: 'dash'
+    }
+});
+</script>
