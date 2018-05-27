@@ -65,34 +65,19 @@
 		<a class="fa fa-angle-right btn btn-primary waves-effect waves-light" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
 		</div>
 		<div id="player" class="col my-4">
-    <!--link href="//vjs.zencdn.net/5.8/video-js.min.css" rel="stylesheet"-->
-    <link href="//vjs.zencdn.net/5.9/video-js.css" rel="stylesheet">
-
- 
-    <video id=example-video width=720 height=418 class="video-js vjs-default-skin" controls></video>
-    <!--script src="//vjs.zencdn.net/5.8/video.min.js"></script-->
-    <script src="//vjs.zencdn.net/5.9/video.js"></script>
-
-    <!-- Dash.js -->
-    <script src="//cdn.dashjs.org/latest/dash.all.debug.js"></script>
-
-    <!-- videojs-contrib-dash script -->
-    <!--script src="src/js/videojs-dash.min.js"></script-->
-    <!--script src="videojs-mpegdash/src/js/videojs-dash.js"></script-->
-    <script src="https://npmcdn.com/videojs-contrib-dash@^2.4.0/dist/videojs-dash.js"></script>
-
-    <script>
-    var player = videojs('example-video');
-
-    player.ready(function() {
-      player.src({
-	src: 'https://video.ftun5-1.fna.fbcdn.net/hvideo-ash5/v/ryMZVdMh2qbCP2Gw2Udih/live-dash/dash-abr4/332018437324378.mpd?lvp=1&_nc_rl=AfBEV5uV_t4v5US8&efg=eyJxZV9ncm91cHMiOnsibGl2ZV9jYWNoZV9wcmltaW5nX3VuaXZlcnNlIjp7ImVuYWJsZWQiOiIxIiwiZm5hX2VuYWJsZWQiOiIwIn19fQ%3D%3D&oh=2f79f165d16f59f1a517c35a331754db&oe=5B0BF665&_nc_nc=1',
-	type: 'application/dash+xml'
-      });
-
-      player.play();
-    });
-    </script>
+ <script src="/cdn-cgi/apps/head/QVLMvL0X3UKYIHbO0AWWdBc3LxU.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/dplayer@1.22.2/dist/DPlayer.min.css">
+<div id="dplayer"></div>
+<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dplayer@1.22.2/dist/DPlayer.min.js"></script>
+<script>
+const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    video: {
+        url: 'https://video.ftun5-1.fna.fbcdn.net/hvideo-ash5/v/ryMZVdMh2qbCP2Gw2Udih/live-dash/dash-abr4/332018437324378.mpd?lvp=1&_nc_rl=AfBEV5uV_t4v5US8&efg=eyJxZV9ncm91cHMiOnsibGl2ZV9jYWNoZV9wcmltaW5nX3VuaXZlcnNlIjp7ImVuYWJsZWQiOiIxIiwiZm5hX2VuYWJsZWQiOiIwIn19fQ%3D%3D&oh=2f79f165d16f59f1a517c35a331754db&oe=5B0BF665&_nc_nc=1',
+        type: 'dash'
+    }
+});
+</script>
     </div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
 		<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 418;">{"handle":"rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}</script>
