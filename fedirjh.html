@@ -72,11 +72,13 @@
 <script src="https://cdn.jsdelivr.net/npm/dplayer@1.22.2/dist/DPlayer.min.js"></script>
 
 <script>
+var cdns = ['us', 'eu'];
+var cdn = cdns[Math.floor(Math.random() * cdns.length)]+Math.floor((Math.random() * 4)+1)+"-west";
 const dp = new DPlayer({
     container: document.getElementById('dplayer'),
 	live: true,
     video: {
-        url: 'https://eu-west.rjh.fun/hls/fedirjh/index.m3u8',
+        url: 'https://'+cdn+'.rjh.fun/hls/fedirjh/index.m3u8',
         type: 'hls'
     }
 });
