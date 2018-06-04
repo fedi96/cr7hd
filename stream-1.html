@@ -64,39 +64,14 @@
 		<a class="fa fa-angle-right btn btn-primary waves-effect waves-light" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
 		</div>
 		<div id="player" style="height: 480px;" class="col my-4">
-		<!-- the player skin -->
 <link rel="stylesheet" href="https://releases.flowplayer.org/7.2.6/skin/skin.css">
-
-<!-- jQuery is required for video tag based setups only -->
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<!-- Flowplayer -->
 <script src="https://releases.flowplayer.org/7.2.6/flowplayer.min.js"></script>
-
-<!-- load the AdSense assets after the Flowplayer assets -->
-<!-- the IMA SDK -->
-<script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-<!-- your AdSense plugin (at your server) -->
-<script
-    src="//releases.flowplayer.org/asf/flowplayer.com/2.1.9/asf.min.js">
-</script>
-			
-			<div class="flowplayer is-splash"
+<div class="flowplayer is-splash"
      id="image_text" data-ratio="0.75">
-    <script>
-    flowplayer_ima.conf({
-        adtest: true,
-        description_url: location.href,
-        ads: [{
-            time: 3,
-            ad_type: "image_text"
-        }]
-    });
-    </script>
-
     <video>
        <source type="application/x-mpegurl" src="https://hls.rjh.fun/index.m3u8">
     </video>
-
 </div>	
     </div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
