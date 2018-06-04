@@ -64,41 +64,43 @@
 		<a class="fa fa-angle-right btn btn-primary waves-effect waves-light" data-toggle="collapse" href="#sidebar" aria-expanded="true" aria-controls="collapseExample"><span>Sidebar</span></a>
 		</div>
 		<div id="player" style="height: 480px;" class="col my-4">
-			<div id="hlsjslive" class="fp-slim is-closeable">
-  </div>
-<script src='http://releases.flowplayer.org/7.0.0/flowplayer.min.js'></script>
-    <script src='http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js'></script>
-    <link rel='stylesheet prefetch' href='http://releases.flowplayer.org/7.0.0/skin/skin.css'>
-    <link rel='stylesheet prefetch' href='http://demos.flowplayer.org/media/css/codepen.css'>
-	<style>
-    #hlsjslive {width: 100%;}
-    #hlsjsvod {background-image: url("//drive.cdn.flowplayer.org/202777/84049-snap.jpg");
-    }
-    #hlsjslive {background-color: #2f2f4f;
-    }
-    </style>
+			<div id="hlsjslive" class="fp-slim is-closeable"></div>
+			<script src='http://releases.flowplayer.org/7.0.0/flowplayer.min.js'></script>
+			<script src='http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js'></script>
+			<link rel='stylesheet prefetch' href='http://releases.flowplayer.org/7.0.0/skin/skin.css'>
+			<link rel='stylesheet prefetch' href='http://demos.flowplayer.org/media/css/codepen.css'>
+			<style>
+				#hlsjslive {
+					width: 100%;
+				}
+				#hlsjsvod {
+					background-image: url("//drive.cdn.flowplayer.org/202777/84049-snap.jpg");
+				}
+				#hlsjslive {background-color: #2f2f4f;
+				}
+			</style>
 			<script>
-    window.onload = function () {
-      flowplayer("#hlsjslive", {
-	native_fullscreen: true,
-        splash: true,
-        embed: false,
-		autoplay: true,
-        ratio: 9/16,
-        hlsjs: {
-          xhrSetup: function(xhr) {
-            xhr.withCredentials = false;
-          }
-        },
-        clip: {
-          live: true,
-          sources: [
-            { type: "application/x-mpegurl",
-              src: "https://hls.rjh.fun/index.m3u8" }
-          ]
-        }
-      });
-    };
+				window.onload = function () {
+				flowplayer("#hlsjslive", {
+					native_fullscreen: true,
+					splash: true,
+					embed: false,
+						autoplay: true,
+					ratio: 9/16,
+					hlsjs: {
+					  xhrSetup: function(xhr) {
+					    xhr.withCredentials = false;
+					  }
+					},
+					clip: {
+					  live: true,
+					  sources: [
+					    { type: "application/x-mpegurl",
+					      src: "https://hls.rjh.fun/index.m3u8" }
+					  ]
+					}
+				      });
+				    };
     </script>
     </div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
