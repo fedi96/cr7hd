@@ -66,21 +66,25 @@
 		</div>
 					<div id="player" style="height: 480px;" class="col my-4">
 <script type="text/javascript" src="https://bitmovin-a.akamaihd.net/bitmovin-player/stable/7.6/bitmovinplayer.js"></script>
-<div id="my-player"></div>
+<div id="player"></div>
 <script type="text/javascript">
 var conf = {
-   key: "Y2tvaWtjY29lbSEqXyVrZG9lYTJzZT9yb201ZGFzaXMzMGRiMEElXyo=",
-   source: {
-      hls: "https://hls.rjh.fun/index.m3u8",
-   }
+   	key: "Y2tvaWtjY29lbSEqXyVrZG9lYTJzZT9yb201ZGFzaXMzMGRiMEElXyo=",
+	playback: {
+                        autoplay                : true,
+                        muted                   : false
+                    },
+	source: {
+	      hls: "https://hls.rjh.fun/index.m3u8"
+	   },
+	style: {
+                        ux: true
+                    }
 };
-	var player = bitmovin.player('my-player');
- 
-player.setup(conf).then(function(playerInstance) {
-	console.log('Successfully created Bitmovin Player instance');
-}, function(reason) {
-	console.log('Error while creating Bitmovin Player instance');
-});
+player = bitmovin.player('player');
+                player.setup(conf).then(function() {
+
+                });
 </script>
     </div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
