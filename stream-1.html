@@ -65,10 +65,9 @@
 		</div>
 		<div id="player" style="height: 480px;" class="col my-4">
 			<div id="hlsjslive" class="fp-slim is-closeable"></div>
-			<script src='http://releases.flowplayer.org/7.0.0/flowplayer.min.js'></script>
-			<script src='http://releases.flowplayer.org/hlsjs/flowplayer.hlsjs.min.js'></script>
-			<link rel='stylesheet prefetch' href='http://releases.flowplayer.org/7.0.0/skin/skin.css'>
-			<link rel='stylesheet prefetch' href='http://demos.flowplayer.org/media/css/codepen.css'>
+			<script src='flowplayer/flowplayer.min.js'></script>
+			<script src='flowplayer/flowplayer.hlsjs.min.js'></script>
+			<link rel='flowplayer/skin.css'>
 			<style>
 				#hlsjslive {
 					width: 100%;
@@ -83,9 +82,6 @@
 				window.onload = function () {
 				flowplayer("#hlsjslive", {
 					fullscreen: true,
-					native_fullscreen: true,
-					splash: true,
-					embed: false,
 					autoplay: true,
 					ratio: 3/4,
 					hlsjs: {
