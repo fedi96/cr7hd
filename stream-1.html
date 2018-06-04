@@ -74,6 +74,13 @@ var conf = {
       hls: "https://hls.rjh.fun/index.m3u8",
    }
 };
+	var player = bitmovin.player('my-player');
+ 
+player.setup(conf).then(function(playerInstance) {
+	console.log('Successfully created Bitmovin Player instance');
+}, function(reason) {
+	console.log('Error while creating Bitmovin Player instance');
+});
 </script>
     </div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
