@@ -71,7 +71,7 @@
 			<link rel='stylesheet prefetch' href='http://demos.flowplayer.org/media/css/codepen.css'>
 			<style>
 				#hlsjslive {
-					width: 80%;
+					width: 100%;
 				}
 				#hlsjsvod {
 					background-image: url("//drive.cdn.flowplayer.org/202777/84049-snap.jpg");
@@ -82,6 +82,7 @@
 			<script>
 				window.onload = function () {
 				flowplayer("#hlsjslive", {
+					fullscreen: true,
 					native_fullscreen: true,
 					splash: true,
 					embed: false,
