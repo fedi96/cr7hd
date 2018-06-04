@@ -9,8 +9,10 @@
 <script src='flowplayer/flowplayer.hlsjs.min.js'></script>
 <link rel='stylesheet prefetch' href='http://releases.flowplayer.org/7.0.0/skin/skin.css'>
 			<style>
+				body{margin:0;}
 				#hlsjslive {
 					width: 100%;
+					min-height: 480px;
 				}
 				#hlsjsvod {
 					background-image: url("//drive.cdn.flowplayer.org/202777/84049-snap.jpg");
@@ -22,10 +24,10 @@
 				window.onload = function () {
 				flowplayer("#hlsjslive", {
 					native_fullscreen: true,
-          splash: true,
-          embed: false,
-	      	autoplay: true,
-          ratio: 9/16,
+					  splash: true,
+					  embed: false,
+					  autoplay: true,
+					  ratio: 9/16,
 					hlsjs: {
 					  xhrSetup: function(xhr) {
 					    xhr.withCredentials = false;
