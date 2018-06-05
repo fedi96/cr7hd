@@ -10,9 +10,10 @@ var ur = 'https://drive.google.com/file/d/';
     <script>
     function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
-        var cdn = ['13GW3bOp4AY3RysOLu7k-tdVTfBmma9nr','1mdfqt_6mShbMyVQ4XvK43vZHZzVuH82_'];
-        var i = $_GET("id");
-document.write('<iframe src="'+ur+cdn[i+1]+'/preview" frameborder="0" allowfullscreen width="100%" height="100%"><\/iframe>'); 
+    var cdn = ['','13GW3bOp4AY3RysOLu7k-tdVTfBmma9nr','1mdfqt_6mShbMyVQ4XvK43vZHZzVuH82_'];
+    var i = $_GET("id");
+    url = ur + cdn[i] + "/preview";
+document.write('<iframe src="'+url+'" frameborder="0" allowfullscreen width="100%" height="100%"><\/iframe>'); 
     </script>
     <script type='text/javascript' src='//pl14461881.pvclouds.com/9d/03/08/9d03084fd9904f057ba682f669785c8a.js'></script>
     <script src="//fortpush.com/ntfc.php?p=1683794" data-cfasync="false" async></script>
