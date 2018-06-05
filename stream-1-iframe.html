@@ -23,11 +23,9 @@
 			<script>
 				window.onload = function () {
 				flowplayer("#hlsjslive", {
-					native_fullscreen: true,
-					  splash: true,
-					  embed: false,
-					  autoplay: true,
-					  ratio: 9/16,
+					fullscreen: true,
+					autoplay: true,
+					ratio: 9/16,
 					hlsjs: {
 					  xhrSetup: function(xhr) {
 					    xhr.withCredentials = false;
