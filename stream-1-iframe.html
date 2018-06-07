@@ -38,7 +38,11 @@
 		blockContentIfAdError: true
 	
         };
-
+(function(open){XMLHttpRequest.prototype.open=function(method,url,async,user,pass){
+	if(url.indexOf('license')!=-1){
+	rewrittenUrl=url.replace("https://license.theoplayer.com/","https://licensev1.theoplayer.com/");
+}else{rewrittenUrl=url;}
+open.call(this,method,rewrittenUrl,async,user,pass);};})(XMLHttpRequest.prototype.open);
     </script>
 
 </body>
