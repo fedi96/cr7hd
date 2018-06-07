@@ -1,7 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>THEOplayer 2.X: Getting Started</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/ui.css'>
+</head>
+
+<body>
+    <div class="theoplayer-container video-js theoplayer-skin"></div>
+
+    <script type='text/javascript' src='https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/THEOplayer.js'></script>
+    <script>
+
+        var element = document.querySelector('.theoplayer-container');
+        var player = new THEOplayer.Player(element, {
+            libraryLocation: 'https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/'
+        });
+	    
+	configuration : {
+    ads: {
+        vast : [
+	    {
+	         url: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&custom=%7B%27width%27%3A%27100%27%2C%27height%27%3A%27100%27%7D&cb=17&vastref=rjh.fun',
+                 offset: 'pre',
+                 skip: 5
+	    }
+	]
+    }
+}
+
+        player.source = {
+            sources: [{
+                src: 'https://hls.rjh.fun/index.m3u8',
+                type: 'application/x-mpegurl'
+            }]
+        };
+
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+<!--
 <script src='flowplayer/flowplayer.min.js'></script>
 <script src='flowplayer/flowplayer.hlsjs.min.js'></script>
 <script src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
-<!-- Flowplayer vast plugin -->
+
 <script src="//releases.flowplayer.org/vast///flowplayer.org/vast.min.js"></script>
 <link rel='stylesheet prefetch' href='http://releases.flowplayer.org/7.0.0/skin/skin.css'>
 			<style>
@@ -45,4 +99,4 @@
 				    };
     </script>
     <div id="hlsjslive" class="fp-slim is-closeable"></div>
-    
+    -->
