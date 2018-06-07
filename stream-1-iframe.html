@@ -5,25 +5,25 @@
     <meta charset="UTF-8">
     <title>THEOplayer 2.X: Getting Started</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href='https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/ui.css'>
+    <link rel="stylesheet" type="text/css" href='player/ui.css'>
 </head>
 
 <body>
     <div class="theoplayer-container video-js theoplayer-skin"></div>
 
-    <script type='text/javascript' src='https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/THEOplayer.js'></script>
+    <script type='text/javascript' src='player/THEOplayer.js'></script>
     <script>
 
         var element = document.querySelector('.theoplayer-container');
         var player = new THEOplayer.Player(element, {
-            libraryLocation: 'https://cdn.myth.theoplayer.com/30ddda10-847c-43ff-ba29-9b088348c627/'
+            libraryLocation: 'player/'
         });
 	    
 	configuration : {
     ads: {
         vast : [
 	    {
-	         url: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&custom=%7B%27width%27%3A%27100%27%2C%27height%27%3A%27100%27%7D&cb=17&vastref=rjh.fun',
+	         url: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&cb=17&vastref=rjh.fun',
                  offset: 'pre',
                  skip: 5
 	    }
