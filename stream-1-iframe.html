@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href='player/ui.css'>
+	<style class="vjs-styles-dimensions">
+      .fKa3-dimensions {
+        width: 100%;
+        min-height: 480px;
+      }
+    </style>
 </head>
 
 <body>
@@ -15,10 +21,6 @@
         var element = document.querySelector('.theoplayer-container');
         var player = new THEOplayer.Player(element, {
             libraryLocation: 'player/',
-		ui : {
-		    height: '480px',
-		    width: '100%'
-		}
         });
 	 player.ads.addEventListener('aderror', function (event) {
 	    });
