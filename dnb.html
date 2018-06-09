@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href='player/ui.css'>
+	<style class="vjs-styles-dimensions">
+	body{margin:0;}
+      .fKa3-dimensions {
+        width: 100%;
+        height: 480px;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="theoplayer-container video-js fKa3-dimensions theoplayer-skin"></div>
+    <script type='text/javascript' src='player/THEOplayer.js'></script>
+    <script>
+
+        var element = document.querySelector('.theoplayer-container');
+        var player = new THEOplayer.Player(element, {
+            libraryLocation: 'player/',
+		autoplay: true
+	});
+	 player.ads.addEventListener('aderror', function (event) {
+	    });
+        player.source = {
+            sources: [{
+                src: 'https://neunlds120.akamaized.net/nlds_vod/nba/vod/2018/05/08/nlncp/41700235/6ffae870-0baa-3de3-f896-7a63d05c25c8/v1/stream/3_41700235_nop_gsw_2017_b_whole_1_pc.mp4.m3u8',
+                type: 'application/x-mpegurl',
+                crossOrigin: ''
+            }],
+	    blockContentIfAdError: true,
+	    ads: [{
+		sources: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&cb=17&vastref=rjh.fun',
+		skipOffset: '00:00:05'
+	    }]
+        };
+    </script>
+
+</body>
+
+</html>
+
