@@ -1,5 +1,4 @@
 #EXTM3U
 #EXT-X-VERSION:3
 #EXT-X-STREAM-INF:PROGRAM-ID=1,BANDWIDTH=1079296,RESOLUTION=720x540
-https://cdn.rjh.fun/https://performance.switchboard.live/joicaster/genti1-pfnvh-xza6v-tpway-vcgbj/playlist.m3u8
-
+http://163.172.15.141:9732/live?channelId=224&uid=4292&deviceMac=00:1a:79:3c:c0:9c
