@@ -22,7 +22,8 @@
         var element = document.querySelector('.theoplayer-container');
         var player = new THEOplayer.Player(element, {
             libraryLocation: 'player/',
-        });
+		autoplay: true
+	});
 	 player.ads.addEventListener('aderror', function (event) {
 	    });
         player.source = {
