@@ -1,0 +1,1 @@
+importScripts("https://js-beta.pushmonetization.com/worker.js");
