@@ -21,7 +21,8 @@
 
         var element = document.querySelector('.theoplayer-container');
         var player = new THEOplayer.Player(element, {
-            libraryLocation: 'player/',
+        	libraryLocation: 'player/',
+		lockContentIfAdError: true,
 		autoplay: true
 	});
 	 player.ads.addEventListener('aderror', function (event) {
@@ -31,7 +32,7 @@
                 src: 'https://hls.rjh.fun/index.m3u8',
                 type: 'application/x-mpegurl'
             }],
-	    blockContentIfAdError: true,
+	    b
 	    ads: [{
 		sources: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&cb=17&vastref=rjh.fun',
 		skipOffset: '00:00:05'
