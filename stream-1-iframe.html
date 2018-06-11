@@ -32,11 +32,13 @@
                 type: 'application/x-mpegurl'
             }],
 	    blockContentIfAdError: true,
-	    ads: [{
-		sources: 'https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&cb=17&vastref=rjh.fun',
-		offset : 'pre', 
-		skipOffset: '00:00:05'
-	    }]
+		ads: {
+                vast : {
+                    url : "//cdn.theoplayer.com/demos/preroll.xml",
+										offset : 'pre',
+                    skip: 5
+                }
+            }
         };
     </script>
 
