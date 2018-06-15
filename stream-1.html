@@ -56,18 +56,18 @@
 		<div class="col-md-12"><br/></div>
 		<div id="player" style="height: 480px;" class="col my-4">
 			<script>
-			var url = new URL(window.location.href);
-			var match = url.searchParams.get("match");
+			function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
+return vars;}
+			var match = $_GET("match");
 			var xmlhttp = new XMLHttpRequest();
 			xmlhttp.onreadystatechange = function() {
 			    if (this.readyState == 4 && this.status == 200) {
 				var games = JSON.parse(this.responseText);
-				    
 				    if(games[match]){
-					 document.write(`<iframe src="https://www.youtube.com/embed/${games[match]}" frameborder="0" allowfullscreen width="100%" height="411"></iframe>`);  
+					    document.getElementById('stream').src = `https://www.youtube.com/embed/${games[match]}`;
 				    }
 				    else{
-					 document.write(`<iframe src="stream-1-iframe.html" frameborder="0" allowfullscreen width="100%" height="411"></iframe>`);
+					    document.getElementById('stream').src = 'stream-1-iframe.html';
 				    }
 			    }
 			};
@@ -75,6 +75,7 @@
 			xmlhttp.send();
 
 			</script>
+			<iframe id="stream" frameborder="0" allowfullscreen width="100%" height="411"></iframe>
 		<textarea class="form-control" rows="5" id="comment"><iframe src="https://rjh.fun/stream-1-iframe.html" frameborder="0" allowfullscreen width="100%" height="540"></iframe></textarea>
 		</div>
 		<div id="sidebar" class="collapse col-md-4 show my-4">
