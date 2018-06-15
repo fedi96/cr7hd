@@ -30,9 +30,9 @@
         "showSocial": true,
         "skipButtons": false,
         "showDownload": false,
-        "subTitle": "",
-        "title": "",
-        "para": ""
+        "subTitle": "You\\'re watching",
+        "title": "FIFA World Cup 2018",
+        "para": "rjhStreams"
     },
     "brand": {
         "controlbar": "#0a0a0a",
