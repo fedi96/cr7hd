@@ -64,7 +64,7 @@ return vars;}
 			    if (this.readyState == 4 && this.status == 200) {
 				var games = JSON.parse(this.responseText);
 				    if(games[match]){
-					    document.getElementById('stream').src = `https://www.youtube.com/embed/${games[match]}`;
+					    document.getElementById('stream').src = `https://streamable.com/s/${games[match]}`;
 				    }
 				    else{
 					    document.getElementById('stream').src = 'stream-1-iframe.html';
