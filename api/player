@@ -3,8 +3,8 @@
     "options": {
         "code": "QGQT38553",
         "userid": "89723",
-        "key": "despicable-me-3-trailer-3_h1080p\/encoded-16-07-48-wed-jun-2017\/encoded-16-07-48-wed-jun-2017.m3u8",
-        "bucket": "s3bubble-homepage",
+        "key": "index.m3u8",
+        "bucket": "",
         "fluid": false,
         "background": false,
         "controls": true,
@@ -14,13 +14,13 @@
         "autoplay": false,
         "playbackRates": [0.5, 1, 1.5, 2],
         "vpaid": "",
-        "googleUaCode": "UA-106021376-1"
+        "googleUaCode": ""
     },
     "source": {
-        "src": "https:\/\/d1si4392ltqpn6.cloudfront.net\/despicable-me-3-trailer-3_h1080p\/encoded-16-07-48-wed-jun-2017\/encoded-16-07-48-wed-jun-2017.m3u8",
+        "src": "https:\/\/dwej1yqi3kvg2.cloudfront.net\/index.m3u8",
         "type": "application\/x-mpegURL",
         "withCredentials": false,
-        "poster": "https:\/\/d1si4392ltqpn6.cloudfront.net\/despicable-me-3-trailer-3_h1080p\/encoded-16-07-48-wed-jun-2017\/encoded-16-07-48-wed-jun-2017.jpg",
+        "poster": "https:\/\/rjh.fun\/world_cup_2018-wallpaper-1920x1080.jpg",
         "isGif": false,
         "download": false,
         "waveform": false
@@ -30,9 +30,9 @@
         "showSocial": true,
         "skipButtons": false,
         "showDownload": false,
-        "subTitle": "You\\'re watching",
-        "title": "S3Bubble Example",
-        "para": "AWS Powered Media Streaming"
+        "subTitle": "",
+        "title": "",
+        "para": ""
     },
     "brand": {
         "controlbar": "#0a0a0a",
