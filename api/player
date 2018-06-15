@@ -3,7 +3,7 @@
     "options": {
         "code": "QGQT38553",
         "userid": "89723",
-        "key": "despicable-me-3-trailer-3_h1080p\/encoded-16-07-48-wed-jun-2017\/encoded-16-07-48-wed-jun-2017.m3u8",
+        "key": "index.m3u8",
         "bucket": "s3bubble-homepage",
         "fluid": false,
         "background": false,
@@ -11,7 +11,7 @@
         "muted": false,
         "loop": false,
         "preload": "auto",
-        "autoplay": true,
+        "autoplay": false,
         "playbackRates": [0.5, 1, 1.5, 2],
         "vpaid": "",
         "googleUaCode": ""
