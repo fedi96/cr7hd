@@ -44,7 +44,7 @@
 return vars;}
 		var match = $_GET("match");
 		var tele = ['958024', '958030', '958042', '958048', '958055', '958067', '958032'];
-		var srcc = tele..includes(match) ? 'https://livehlsdai-i.akamaihd.net/hls/live/571640/telecinco/bitrate_4.m3u8?xtreamiptv.m3u8' : 'https://livehlsdai-i.akamaihd.net/hls/live/571643/cuatro/bitrate_4.m3u8';
+		var srcc = tele.includes(match) ? 'https://livehlsdai-i.akamaihd.net/hls/live/571640/telecinco/bitrate_4.m3u8?xtreamiptv.m3u8' : 'https://livehlsdai-i.akamaihd.net/hls/live/571643/cuatro/bitrate_4.m3u8';
 		var playerElement = document.getElementById("ppp");
 		var player = new Clappr.Player({
 		source: srcc,
