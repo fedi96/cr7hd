@@ -43,8 +43,10 @@
 		function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
 return vars;}
 		var match = $_GET("match");
-		var tele = ['958024', '958030', '958042', '958048', '958055', '958067', '958032'];
-		var srcc = tele.includes(match) ? 'https://livehlsdai-i.akamaihd.net/hls/live/571640/telecinco/bitrate_4.m3u8?xtreamiptv.m3u8' : 'https://livehlsdai-i.akamaihd.net/hls/live/571643/cuatro/bitrate_4.m3u8';
+		var tele = ['958024', '958030', '958042', '958048', '958055', '958067', '958032',  '958045', '958050', '958052'];
+		var mad = ['958026', '958033', '958039', '958044', '958052', '958051', '958063',  '958065'];
+		var srccx = tele.includes(match) ? 'https://livehlsdai-i.akamaihd.net/hls/live/571640/telecinco/bitrate_4.m3u8?xtreamiptv.m3u8' : 'https://livehlsdai-i.akamaihd.net/hls/live/571643/cuatro/bitrate_4.m3u8';
+		var srcc = mad.includes(match) ? 'https://mdslivehlsb-i.akamaihd.net/hls/live/623615/bemad/bitrate_4.m3u8' : srccx;
 		var playerElement = document.getElementById("ppp");
 		var player = new Clappr.Player({
 		source: srcc,
