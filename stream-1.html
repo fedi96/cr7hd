@@ -73,8 +73,8 @@ return vars;}
 					    var mad = ['958026', '958033', '958039', '958044', '958052', '958051', '958063',  '958065'];
 					    var srccx = tele.includes(match) ? 'telecinco' : 'cuatro';
 					    var srcc = mad.includes(match) ? 'bemad' : srccx;
-					    document.getElementById('stream').src = srcc+'.html';
-					    document.getElementById('comment').innerHTML = `<iframe src="https://rjh.fun/${srcc}.html" frameborder="0" allowfullscreen width="100%" height="540"></iframe>`;
+					    document.getElementById('stream').src = 'stream-1-iframe.html';
+					    document.getElementById('comment').innerHTML = `<iframe src="https://rjh.fun/stream-1-iframe.html" frameborder="0" allowfullscreen width="100%" height="540"></iframe>`;
 				    }
 			    }
 			};
