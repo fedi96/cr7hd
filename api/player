@@ -17,7 +17,7 @@
         "googleUaCode": ""
     },
     "source": {
-        "src": "http:\/\/ilvc01.ak.ustvnow.com\/ilv61\/smil:5E2CDWPMTUSTVNOW\/playlist.m3u8?hdnts=st=1529748000~exp=1529776800~acl=*~hmac=ac86e3c56130e6e752140717421309bbf12596f6c29d68eab31dee48f8f2654c&hdntl=exp=1529836902~acl=*~data=hdntl~hmac=3f55dcba2ad394b15ac6ec44b7b8b41eafbcf00ad773c0a23467ddbf12e70afd&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuIjoiMTc1Nzk2IiwidCI6InBhb2NrOGRtZnJ6dHZlcjEyZHBxdG1yaHRsdG0iLCJpIjoiYjk1MDgyY2MiLCJzIjoid3BtdCJ9.g9_ETS08z2tvGYdSRHcwj5runP3NoKgZZnxMtxpcXFk",
+        "src": "https:\/\/ilvc01.ak.ustvnow.com\/ilv61\/smil:5E2CDWPMTUSTVNOW\/playlist.m3u8?hdnts=st=1529748000~exp=1529776800~acl=*~hmac=ac86e3c56130e6e752140717421309bbf12596f6c29d68eab31dee48f8f2654c&hdntl=exp=1529836902~acl=*~data=hdntl~hmac=3f55dcba2ad394b15ac6ec44b7b8b41eafbcf00ad773c0a23467ddbf12e70afd&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJuIjoiMTc1Nzk2IiwidCI6InBhb2NrOGRtZnJ6dHZlcjEyZHBxdG1yaHRsdG0iLCJpIjoiYjk1MDgyY2MiLCJzIjoid3BtdCJ9.g9_ETS08z2tvGYdSRHcwj5runP3NoKgZZnxMtxpcXFk",
         "type": "application\/x-mpegURL",
         "withCredentials": false,
         "poster": "https:\/\/rjh.fun\/world_cup_2018-wallpaper-1920x1080.jpg",
