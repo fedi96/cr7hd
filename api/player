@@ -17,7 +17,7 @@
         "googleUaCode": ""
     },
     "source": {
-        "src": "https:\/\/hls.rjh.fun\/hls\/fedirjh.m3u8",
+        "src": "https:\/\/d3hb8cjpm53u9r.cloudfront.net\/hls\/fedirjh.m3u8",
         "type": "application\/x-mpegURL",
         "withCredentials": false,
         "poster": "https:\/\/rjh.fun\/world_cup_2018-wallpaper-1920x1080.jpg",
