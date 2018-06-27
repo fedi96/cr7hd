@@ -11,7 +11,7 @@
         "muted": false,
         "loop": false,
         "preload": "auto",
-        "autoplay": false,
+        "autoplay": true,
         "playbackRates": [0.5, 1, 1.5, 2],
         "vpaid": "",
         "googleUaCode": ""
