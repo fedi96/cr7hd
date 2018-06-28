@@ -37,16 +37,5 @@ self.addEventListener('fetch',e=>{
         let fd = data.getAll()
         .then(dt=>{
             return dt;
-        })
-    })
-}
-else{
-    e.respondWith(caches.match(e.request)
-    .then((res)=>{
-        return res || fetch(e.request).then(res=>{if(res.status === 404)
-        return new Response("Not Found");});
-    })
-    )
-}
-console.log('fetched');
-})
+        })})}
+console.log('fetched');})
