@@ -1,25 +1,33 @@
-const cache_v = 'a2',
-cache_all = [],
+var staticCacheName = 'converter-v1';
 
-statics = [];
+self.addEventListener('install', function(event) {
 
-
-this.addEventListener('install',e=>{
-  console.log("Installing Service Worker");
-  console.log("Storing Static Data");
-  e.waitUntil(
-    caches.open(cache_all[0])
-    .then(cac=>cac.addAll(statics))
-    .catch(er=>console.error(er))
-  )
-  console.log("Installation Complete");
+  event.waitUntil(
+    caches.open(staticCacheName).then(function(cache) {
+      return cache.addAll([
+        '/index.html',
+        'idb.js',
+        'https://free.currencyconverterapi.com/api/v5/currencies'
+      ]);
+    })
+  );
 });
 
-this.addEventListener('activate',e=>{
-  console.log("Service worker activated, now clearing obsolete data");
-})
-
-this.addEventListener('fetch',e=>{
+self.addEventListener('activate', function(event) {
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          return cacheName.startsWith('converter-') &&
+                 cacheName != staticCacheName;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+});
+self.addEventListener('fetch',e=>{
     if(e.request.url === 'https://free.currencyconverterapi.com/api/v5/currencies'){
        console.log("IndexDB Reqrd");
        let db = idb.open('Converter')
