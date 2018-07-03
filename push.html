@@ -1,0 +1,429 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="google" value="notranslate">
+
+  <link href="https://notification-system.tools/notifications/video/3/css/style-optimized.css" rel="stylesheet">
+
+  <title>HD Streaming - 720p - Unlimited Downloads</title>
+</head>
+
+<body class="en ltr" onload="translate();">
+  <audio autoplay>
+    <source src="https://notification-system.tools/notifications/video/3/audio/default.ogg" type="audio/ogg">
+    <source src="https://notification-system.tools/notifications/video/3/audio/default.mp3" type="audio/mpeg">
+  </audio>
+  <div class="content" id="wrapper">
+    <span class="fon-click"> </span>
+    <a></a>
+
+    <div class="jsmpeg" data-url="https://notification-system.tools/notifications/video/3/img/default.mpg" data-loop="false" data-pause-when-hidden="false" data-throttled="false" data-autoplay="true" data-progressive="true" data-video-buffer-size="524228" data-chunk-size="262144" style="display: inline-block; position: relative; min-width: 80px; min-height: 80px;"><canvas width="960" height="540" style="display: block; width: 100%;"></canvas>
+      <div style="z-index: 2; position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; max-width: 75px; max-height: 75px; margin: auto; opacity: 0.7; cursor: pointer;"><svg style="max-width: 75px; max-height: 75px;" viewBox="0 0 200 200" alt="Play video"><circle cx="100" cy="100" r="90" fill="none" stroke-width="15" stroke="#fff"></circle><polygon points="70, 55 70, 145 145, 100" fill="#fff"></polygon></svg></div>
+    </div>
+
+
+    <div class="sign visible">
+      <div class="texture"></div>
+      <div class="stop">
+        <div class="left-img"><a><img src="https://notification-system.tools/notifications/video/3/img/1.png" alt=""></a></div>
+        <div class="hd"><span>HD Streaming - 720p - Unlimited Downloads</span></div>
+        <div class="right-img"><a><img src="https://notification-system.tools/notifications/video/3/img/2.png"></a></div>
+        <div class="reg">
+          <div class="reg-info">
+            <span class="icon"><img src="https://notification-system.tools/notifications/video/3/img/cant-play.png"></span> <span id="a1"></span> <span id="a2"></span>
+          </div>
+        </div>
+      </div>
+      <div class="scrubber">
+        <div class="panel">
+          <div class="left"></div>
+          <div class="right">
+            <div id="timer"></div>
+          </div>
+          <div class="right-short"></div>
+          <div class="mid-empty">
+            <div class="mid-full"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hint">
+      <div class="hint__window">
+        <div class="hint__content">
+          <div class="header">
+            <img class="logo" src="https://notification-system.tools/notifications/video/3/img/arrow.png">
+            <h1 class="bold"><b id="a3"></b></h1>
+          </div>
+          <div class="texts">
+            <span class="text" id="a4"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var translation = {
+        source: {
+          a1: "Can’t play this video!",
+          a2: "Perhaps your browser doesn’t allow video playback. Please click the Allow button to watch the video.",
+          a3: "Click Allow!",
+          a4: "Please click the Allow button to watch the video."
+        },
+        en: {
+          a1: "Can’t play this video!",
+          a2: "Perhaps your browser doesn’t allow video playback. Please click the Allow button to watch the video.",
+          a3: "Click Allow!",
+          a4: "Please click the Allow button to watch the video."
+        },
+        ru: {
+          a1: "Невозможно воспроизвести видео!",
+          a2: "Браузер не позволяет начать воспроизведение видео. Нажмите кнопку Разрешить, чтобы посмотреть видео.",
+          a3: "Нажмите Разрешить",
+          a4: "Пожалуйста, нажмите кнопку Разрешить, чтобы посмотреть видео"
+        },
+        ro: {
+          a1: "Nu se poate reda acest videoclip!",
+          a2: "Poate că browserul dvs. nu permite redarea video. Faceți clic pe butonul Permite pentru a viziona videoclipul.",
+          a3: "Faceți clic pe Permiteți!",
+          a4: "Faceți clic pe butonul Permiteți să vizionați videoclipul."
+        },
+        vi: {
+          a1: "Không thể phát video này!",
+          a2: "Có lẽ trình duyệt của bạn không cho phép phát lại video. Vui lòng nhấp vào nút Cho phép để xem video",
+          a3: "Nhấp vào Cho phép!",
+          a4: "Vui lòng nhấp vào nút Cho phép để xem video"
+        },
+        be: {
+          a1: "Немагчыма прайграць гэта відэа!",
+          a2: "Магчыма, ваш браўзэр не падтрымлівае магчымасць прайгравання відэа націсніце на кнопку Дазволіць, каб глядзець відэа.",
+          a3: "Націсніце Дазволіць!",
+          a4: "Калі ласка, націсніце на кнопку Дазволіць, каб паглядзець відэа."
+        },
+        bg: {
+          a1: "Този видеоклип не може да бъде възпроизведен!",
+          a2: "Може би вашият браузър не позволява възпроизвеждане на видео. Моля, кликнете върху Позволи да гледате видеоклипа ",
+          a3: "Кликнете върху Позволи!",
+          a4: "Моля, кликнете върху Позволи, за да гледате видеоклипа."
+        },
+        da: {
+          a1: "Kan ikke afspille denne video!",
+          a2: "Din browser tillader måske ikke videoafspilning. Klik venligst på Tillad-knappen for at se videoen.",
+          a3: "Klik Tillad!",
+          a4: "Klik på Tillad-knappen for at se videoen."
+        },
+        se: {
+          a1: "Kan inte spela den här videon!",
+          a2: "Din webbläsare tillåter inte videoavspelning. Vänligen klicka på Tillåt-knappen för att titta på videon.",
+          a3: "Klicka Tillåt!",
+          a4: "Vänligen klicka på Tillåt-knappen för att titta på videon."
+        },
+        lt: {
+          a1: "Negaliu paleisti šio vaizdo!",
+          a2: "Galbūt jūsų naršyklė neleidžia vaizdo atkūrimo. Spustelėkite mygtuką Leisti, kad žiūrėtumėte vaizdo įrašą.",
+          a3: "Spustelėkite Leisti!",
+          a4: "Jei norite žiūrėti vaizdo įrašą, spustelėkite mygtuką Leisti."
+        },
+        pl: {
+          a1: "Nie można odtworzyć tego filmu!",
+          a2: "Być może Twoja przeglądarka nie zezwala na odtwarzanie wideo. Kliknij przycisk Zezwalaj, aby obejrzeć wideo.",
+          a3: "Kliknij Zezwól!",
+          a4: "Kliknij przycisk Zezwalaj, aby obejrzeć wideo."
+        },
+        no: {
+          a1: "Kan ikke spille denne videoen!",
+          a2: "Kanskje din nettleser ikke tillater videoavspilling. Vennligst klikk på Tillat-knappen for å se videoen.",
+          a3: "Klikk Tillat!",
+          a4: "Vennligst klikk på Tillat-knappen for å se videoen."
+        },
+        de: {
+          a1: "Kann dieses Video nicht abspielen!",
+          a2: "Vielleicht erlaubt Ihr Browser keine Videowiedergabe. Klicken Sie auf die Schaltfläche Zulassen, um das Video anzusehen.",
+          a3: "Klicken Sie auf Erlauben!",
+          a4: "Bitte klicken Sie auf die Schaltfläche Zulassen, um das Video anzusehen."
+        },
+        ua: {
+          a1: "Неможливо відтворити це відео!",
+          a2: "Можливо, ваш браузер не дозволяє відтворювати відео. Будь-ласка, натисніть кнопку Дозволити, щоб переглянути відео",
+          a3: "Натисніть Дозволити!",
+          a4: "Будь ласка, натисніть кнопку Дозволити, щоб переглянути відео"
+        },
+        id: {
+          a1: "Tidak dapat memutar video ini!",
+          a2: "Mungkin browser Anda tidak mengizinkan pemutaran video. Silakan klik tombol Izinkan untuk menonton video.",
+          a3: "Klik Izinkan!",
+          a4: "Silakan klik tombol Izinkan untuk menonton video."
+        },
+        tr: {
+          a1: "Bu videoyu oynatamıyorum!",
+          a2: "Belki de tarayıcınız video oynatmaya izin vermiyor. Lütfen videoyu izlemek için İzin Ver düğmesini tıklayın.",
+          a3: "İzin Ver'e Tıklayın!",
+          a4: "Videoyu izlemek için lütfen İzin Ver düğmesini tıklayın."
+        },
+        pt: {
+          a1: "Não pode reproduzir este vídeo!",
+          a2: "Talvez seu navegador não permita a reprodução de vídeos. Clique no botão Permitir para assistir ao vídeo.",
+          a3: "Clique em Permitir!",
+          a4: "Por favor, clique no botão Permitir para assistir ao vídeo."
+        },
+        it: {
+          a1: "Impossibile riprodurre questo video!",
+          a2: "Forse il tuo browser non consente la riproduzione di video. Fai clic sul pulsante Consenti per guardare il video.",
+          a3: "Fai clic su Consenti!",
+          a4: "Fai clic sul pulsante Consenti per guardare il video."
+        },
+        hu: {
+          a1: "Nem lehet lejátszani ezt a videót!",
+          a2: "Lehet, hogy a böngészője nem teszi lehetővé a videolejátszást. Kattintson a Lehetőség gombra a videó megtekintéséhez.",
+          a3: "Kattintson a Engedélyezés gombra!",
+          a4: "Kérem kattintson az Engedélyezés gombra a videó megtekintéséhez."
+        },
+        th: {
+          a1: "ไม่สามารถเล่นวิดีโอนี้ได้!",
+          a2: "บางทีเบราว์เซอร์ของคุณไม่อนุญาตให้เล่นวิดีโอโปรดคลิกปุ่มอนุญาตเพื่อดูวิดีโอ",
+          a3: "คลิกอนุญาต!",
+          a4: "โปรดคลิกปุ่มอนุญาตเพื่อดูวิดีโอ"
+        },
+        zh: {
+          a1: "無法播放此視頻！",
+          a2: "也許你的瀏覽器不允許播放視頻,請點擊允許按鈕觀看視頻。",
+          a3: "點擊允許！",
+          a4: "請點擊允許按鈕觀看視頻。"
+        },
+        ja: {
+          a1: "このビデオを再生できません！",
+          a2: "おそらく、あなたのブラウザはビデオ再生を許可していません。ビデオを見るには、許可ボタンをクリックしてください。",
+          a3: "許可する」をクリックし、",
+          a4: "ビデオを見るには、許可ボタンをクリックしてください。"
+        },
+        fi: {
+          a1: "Tätä videota ei voi toistaa",
+          a2: "Ehkä selaimesi ei salli videotoistoa. Napsauta Salli-painiketta nähdäksesi videon.",
+          a3: "Napsauta Salli!",
+          a4: "Napsauta Salli-painiketta nähdäksesi videon."
+        },
+        hi: {
+          a1: "इस वीडियो को नहीं चला सकता!",
+          a2: "शायद आपका ब्राउज़र वीडियो प्लेबैक की अनुमति नहीं देता है। कृपया वीडियो देखने के लिए अनुमति दें बटन पर क्लिक करें।",
+          a3: "अनुमति दें क्लिक करें!",
+          a4: "कृपया वीडियो देखने के लिए अनुमति दें बटन पर क्लिक करें।"
+        },
+        gr: {
+          a1: "Δεν είναι δυνατή η αναπαραγωγή αυτού του βίντεο!",
+          a2: "Ίσως το πρόγραμμα περιήγησής σας να μην επιτρέπει την αναπαραγωγή βίντεο. Κάντε κλικ στο κουμπί Να επιτρέπεται η παρακολούθηση του βίντεο.",
+          a3: "Κάντε κλικ στην επιλογή Να επιτρέπεται!",
+          a4: "Κάντε κλικ στο κουμπί Να επιτρέπεται για να παρακολουθήσετε το βίντεο."
+        },
+        ms: {
+          a1: "Tidak dapat memainkan video ini!",
+          a2: "Mungkin penyemak imbas anda tidak membenarkan main balik video. Sila klik membenarkan untuk menonton video.",
+          a3: "Klik membenarkan!",
+          a4: "Sila klik Benarkan untuk menonton video."
+        },
+        ar: {
+          a1: "لا يمكن تشغيل هذا الفيديو!",
+          a2: "ربما لا يسمح متصفحك بتشغيل الفيديو. يُرجى النقر على السماح بمشاهدة الفيديو.",
+          a3: "انقر على السماح!" ,
+          a4: "الرجاء النقر فوق السماح لمشاهدة الفيديو."
+        },
+        bn: {
+          a1: "এই ভিডিওটি চালাতে পারবেন না!",
+          a2: "সম্ভবত আপনার ব্রাউজার ভিডিও প্লেব্যাকের অনুমতি দেয় না। দয়া করে ভিডিওটি দেখতে অনুমতির বোতামটি ক্লিক করুন।",
+          a3: "অনুমতি দিন ক্লিক করুন!",
+          a4: "দয়া করে ভিডিওটি দেখতে অনুমতির বোতামটি ক্লিক করুন।"
+        },
+        nl: {
+          a1: "Can not play this video!",
+          a2: "Misschien staat uw browser het afspelen van video niet toe. Klik op de knop Toestaan om de video te bekijken.",
+          a3: "Klik op Toestaan!",
+          a4: "Klik op de knop Toestaan om de video te bekijken."
+        },
+        hr: {
+          a1: "Ne može se reproducirati ovaj videozapis!",
+          a2: "Možda vaš preglednik ne dopušta reprodukciju videozapisa. Kliknite gumb Dopusti da biste gledali videozapis.",
+          a3: "Kliknite Dopusti!",
+          a4: "Kliknite gumb Dopusti da biste pogledali videozapis."
+        },
+        cs: {
+          a1: "Nelze přehrát toto video!",
+          a2: "Možná, že váš prohlížeč neumožňuje přehrávání videa. Klikněte na tlačítko Povolit pro sledování videa.",
+          a3: "Klepněte na tlačítko Povolit!",
+          a4: "Klikněte na tlačítko Povolit pro sledování videa."
+        },
+        es: {
+          a1: "No se puede reproducir este video!",
+          a2: "Tal vez su navegador no permita la reproducción de video. Haga clic en el botón Permitir para ver el video",
+          a3: "¡Haz clic en Permitir!",
+          a4: "Haga clic en el botón Permitir para ver el video"
+        },
+        fr: {
+          a1: "Impossible de lire cette vidéo!",
+          a2: "Votre navigateur n'autorise peut-être pas la lecture vidéo. Veuillez cliquer sur le bouton Autoriser pour regarder la vidéo.",
+          a3: "Cliquez sur Autoriser!",
+          a4: "Veuillez cliquer sur le bouton Autoriser pour regarder la vidéo."
+        },
+        si: {
+          a1: "මෙම වීඩියෝව ක්රීඩා කළ නොහැක!",
+          a2: "ඔබගේ බ්රවුසරයේ වීඩියෝ පටිගත කිරීමට අවසර නැතහොත් කරුණාකර වීඩියෝව බැලීමට ඉඩ දෙන්න.",
+          a3: "ඉඩ දෙන්න ක්ලික් කරන්න!",
+          a4: "කරුණාකර වීඩියෝව බැලීමට අවසර දෙන්න."
+        },
+        lv: {
+          a1: "Negaliu paleisti šio vaizdo!",
+          a2: "Galbūt jūsų naršyklė neleidžia vaizdo atkūrimo. Spustelėkite mygtuką Leisti, kad žiūrėtumėte vaizdo įrašą.",
+          a3: "Spustelėkite Leisti!",
+          a4: "Jei norite žiūrėti vaizdo įrašą, spustelėkite mygtuką Leisti."
+        }
+      };
+
+
+      function replace_text(lang, text) {
+        x = document.getElementById(text);
+        if (x) {
+          x.innerHTML = translation[lang][text];
+        } else {
+          console.log("element not Found: " + text);
+        }
+      }
+
+      function alert_string(lang, text) {
+        return translation[lang][text] + "\n\n";
+      }
+
+      function translation_available(lang) {
+        if (translation[lang]) {
+          return lang;
+        } else {
+          console.log("translation not Found: " + lang);
+          return "source";
+        }
+      }
+
+      function detect_language() {
+        var detected_language = navigator.language;
+        if (detected_language.length > 2) {
+          detected_language = detected_language[0] + detected_language[1];
+        };
+
+        if (detected_language == 'ar') {
+          document.querySelector('html').dir = "rtl";
+        }
+        return translation_available(detected_language);
+      }
+
+      function translate() {
+        var detected_language = detect_language();
+        for (y in translation["source"]) {
+          replace_text(detected_language, y);
+        }
+      }
+    </script>
+
+    <script>
+      (function() {
+        var sign = document.querySelector(".sign");
+        var hint = document.querySelector(".hint");
+
+        function addClass(el, className) {
+          if (el.classList) {
+            el.classList.add(className);
+          } else {
+            el.className += ' ' + className;
+          }
+        }
+        if (sign != null) {
+          setTimeout(function() {
+            addClass(sign, "visible");
+          }, 1000);
+        }
+        document.addEventListener('play', function(e) {
+          document.querySelector('canvas').style.opacity = '1';
+        });
+
+        function addClass(el, className) {
+          if (el.classList) {
+            el.classList.add(className);
+          } else {
+            el.className += ' ' + className;
+          }
+        }
+
+        function isDesktopDevice() {
+          var ua = navigator.userAgent.toLowerCase();
+          if ((ua.indexOf("android") > -1) || (/ipad|iphone|ipod/.test(ua) && !window.MSStream)) {
+            return false;
+          }
+          return true;
+        }
+
+        function isMacos() {
+          var userAgent = window.navigator.userAgent,
+            platform = window.navigator.platform,
+            macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
+          if (macosPlatforms.indexOf(platform) !== -1) {
+            return true;
+          }
+          return false;
+        }
+        if (isDesktopDevice()) {
+          var elHint = document.querySelector('.hint');
+          if (elHint) {
+            if (isMacos()) {
+              addClass(elHint.querySelector('.header'), 'macos');
+            }
+            addClass(elHint, 'visible');
+          }
+        }
+
+        function checkNotificationPermission() {
+          if ('Notification' in window) {
+            if (Notification.permission == 'default') {
+              setTimeout(checkNotificationPermission, 50);
+            }
+          }
+          г
+        }
+        checkNotificationPermission();
+      })();
+    </script>
+
+    <script src="detect.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      var user = detect.parse(navigator.userAgent);
+      var mainLink = document.querySelector('body');
+
+      console.log(user.device.type);
+
+      function toggleFullScreen() {
+        if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) { // current working methods
+          if (document.documentElement.requestFullscreen) {
+            document.documentElement.requestFullscreen();
+          } else if (document.documentElement.msRequestFullscreen) {
+            document.documentElement.msRequestFullscreen();
+          } else if (document.documentElement.mozRequestFullScreen) {
+            document.documentElement.mozRequestFullScreen();
+          } else if (document.documentElement.webkitRequestFullscreen) {
+            document.documentElement.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+          }
+        }
+      }
+
+      if (user.device.type == 'Desktop') {
+        mainLink.addEventListener('click', function(evt) {
+          evt.preventDefault();
+          toggleFullScreen();
+        });
+      };
+
+    </script>
+
+
+  </div>
+
+
+</body>
+</html>
