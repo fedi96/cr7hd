@@ -1,6 +1,187 @@
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr">
+<head>  
+	<title>Live Soccer - rjh</title>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=UA-55400274-16"></script>
 <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-55400274-16');
+  </script>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="rjh" property="og:title">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<link href="https://fonts.googleapis.com/css?family=Oswald:300" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Kaushan+Script|Merienda+One|UnifrakturCook:700" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="app/css/bootstrap.css" rel="stylesheet">
+    <link href="app/css/mdb.min.css" rel="stylesheet">
+    <link href="app/css/style.css" rel="stylesheet">
+</head> 
+  
+<body" style="opacity:1">
+ <header>
+     <nav class="navbar navbar-expand-lg navbar-dark scrolling-navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#"><strong>Rjh</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link waves-effect waves-light" href="//rjh.fun">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link waves-effect waves-light" href="https://streampro.io/tip/fedirjh">Donate</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>  
+</header>
+        <script>
+            if(top!=self) {
+                alert("This website is trying to steal my stream. Please report it to the mods.")
+                self.window.stop();
+            }
+        </script>
+<section id="games" class="text-center pb-3">
+<div class="container">
+	<div class="row justify-content-md-center">
+		<div class="col-md-12"><br/></div>
+		<div id="player" style="height: 480px;" class="col my-4">
+			<script>
+			function $_GET(param){var vars={};window.location.href.replace(location.hash,'').replace(/[?&]+([^=&]+)=?([^&]*)?/gi,function(m,key,value){vars[key]=value!==undefined?value:'';});if(param){return vars[param]?vars[param]:null;}
+return vars;}
+			var match = $_GET("match");
+			var xmlhttp = new XMLHttpRequest();
+			xmlhttp.onreadystatechange = function() {
+			    if (this.readyState == 4 && this.status == 200) {
+				var games = JSON.parse(this.responseText);
+				    if(games[match]){
+					    document.getElementById('stream').src = `https://streamable.com/s/${games[match]}`;
+					    document.getElementById('comment').innerHTML = `<iframe src="https://streamable.com/s/${games[match]}" frameborder="0" allowfullscreen width="100%" height="540"></iframe>`;
+
+				    }
+				    else{
+					    var tele = ['958024', '958030', '958042', '958048', '958055', '958067', '958032',  '958045', '958050', '958052'];
+					    var mad = ['958026', '958033', '958039', '958044', '958052', '958051', '958063',  '958065'];
+					    var srccx = tele.includes(match) ? 'telecinco' : 'cuatro';
+					    var srcc = mad.includes(match) ? 'bemad' : srccx;
+					    document.getElementById('stream').src = 'stream-2-iframe.html';
+					    document.getElementById('comment').innerHTML = `<iframe src="https://rjh.fun/stream-2-iframe.html" frameborder="0" allowfullscreen width="100%" height="540"></iframe>`;
+				    }
+			    }
+			};
+			xmlhttp.open("GET", "wc-games.json", true);
+			xmlhttp.send();
+
+			</script>
+			<iframe id="stream" frameborder="0" allowfullscreen width="100%" height="411"></iframe>
+		<textarea class="form-control" rows="5" id="comment"><iframe src="https://rjh.fun/stream-2-iframe.html" frameborder="0" allowfullscreen width="100%" height="540"></iframe></textarea>
+		</div>
+		<div id="sidebar" class="collapse col-md-4 show my-4">
+		<script id="cid0020000172461619766" data-cfasync="false" async src="//st.chatango.com/js/gz/emb.js" style="width: 100%;height: 480;">{"handle":"rjhfun","arch":"js","styles":{"a":"021926","b":100,"c":"FFFFFF","d":"FFFFFF","e":"021926","g":"feab3a","h":"ffffff","k":"021926","l":"000000","m":"021926","n":"FFFFFF","p":"10","q":"021926","r":100,"t":0,"ab":false,"surl":0}}</script>
+		
+								     <!--<iframe width="100%" height="480" src="https://gaming.youtube.com/live_chat?v=-FBXBRfPeJc&embed_domain=rjh.fun" frameborder="0" allowfullscreen></iframe>
+		--></div>
+		<div class="col-md-12" style="padding: 0;">
+		<script src="https://s3-eu-west-1.amazonaws.com/widget.cloud.opta.net/2.0/js/widgets.opta.js"></script>
+<script>var dataLayer = [{"taxonomyId":"\/taxonomies\/381","taxonomyName":"\u0643\u0631\u0629 \u0627\u0644\u0642\u062f\u0645"}];</script>
+<script>var _optaParams = {custID: '97cfaeb0a4b71cf1a9238cde7c2d17db',language: 'en',matchDetailText: '\u0646\u062A\u0627\u0626\u062C\x20\u0627\u0644\u0645\u0628\u0627\u0631\u0627\u0629',siteSlug: 'ar'};_optaCallbackParams = {linkMatch: {linkTarget: '#',widgets: ['fixtures_plus']}}; </script>
+<link href="https://s3-eu-west-1.amazonaws.com/widget.cloud.opta.net/2.0/css/widgets.opta.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="stylesheet" href="https://secure.widget.cloud.opta.net/v3/css/v3-mobile.all.opta-widgets.css" />
+   <style>.col.prm.fixtures .fixtures-plus .left.standout .team-name, .col.prm.results .fixtures-plus .left.standout .team-name {
+    width: 85%;
+    float: left;
+}
+main_live_scores .tabs-live-content .fixtures-plus .away-team-name .crest {
+    float: left;
+}
+.col.prm.fixtures .fixtures-plus .right.standout .team-name, .col.prm.results .fixtures-plus .right.standout .team-name {
+    width: 85%;
+    float: right;
+}
+main_live_scores .tabs-live-content .fixtures-plus .home-team-name .crest {
+    float: left;
+}
+td.standout.score.score-divider {
+    text-align: center;
+}
+   body {
+    background: url(wc_2018_bg.png) center top no-repeat #f1ebe3!important;
+ }
+div#header-wrapper {
+    background-color: #ff000000;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+div#footer {
+    background-color: transparent;
+    box-shadow: 0 2px 5px 5px rgba(0,0,0,.16), 0 2px 10px 10px rgba(0,0,0,.12);
+}
+ h2.opta-v3.fixtures-plus-list {
+    background: transparent;
+    text-align: center;
+}
+span {
+    font-size: 26px;
+}
+div#opta-widget-idx-0 {
+    box-shadow: 0px 0px 20px 2px rgba(0,0,0,.16), 1px 2px 10px 1px rgba(0,0,0,.12);
+}
+td {}
+.opta-widget-container .fixtures-plus-list tbody.grouping td, .opta-widget-container .opta-v3-h3 {
+    background: #3b5a67;
+}
+.opta-v3.fixtures-plus-list.fixtures-plus {
+    background: transparent;
+}
+.opta-widget-container table {
+    background: transparent;
+}
+.opta-expansion {
+    background: transparent;
+    box-shadow: none;
+}
+iframe{box-shadow: 0px 0px 20px 2px rgba(0,0,0,.16), 1px 2px 10px 5px rgba(0,0,0,.12);}
+   </style>
+<main class="col prm fixtures"><div class="tabs-live-content"><div class="tabs-content__globtable"><script>document.write(`<opta widget="matchdaylive" sport="football" competition="4" season="2017" match="${match}" side="both" change_team="true" pitch_players="circles" show_subs="true" show_summary="true" show_team_lineups="true" show_score="true" show_kickoff="true" show_ref="true" show_venue="true" show_event_icons="true" show_player_overlay="true" show_player_image="false" orientation="h" opta_logo="false" live="false" player_names="last_name" team_names="full" template="standard" narrow_limit="400"></opta>`);</script></div></div></main></div>
+		<style>
+			textarea#comment {
+				background-color: #242424;
+    color: white;
+    border: 1px solid #121212;
+    min-height: 4rem;
+    font-size: 15;
+			}
+		   body {
+    background: url(wc_2018_bg.png) center top no-repeat #f1ebe3!important;
+ }
+div#header-wrapper {
+    background-color: #ff000000;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+div#footer {
+    background-color: transparent;
+    box-shadow: 0 2px 5px 5px rgba(0,0,0,.16), 0 2px 10px 10px rgba(0,0,0,.12);
+}
+   </style>
+		
+		
+	</div>
+	</div>
+<!--<script src="//pushnest.com/ntfc.php?p=1759116" data-cfasync="false" async></script>-->
+<script type="text/javascript"> document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://hiug862dj0.com/0fbdf3b599e50e76c0f5fad3ed6bf60c/invoke.js"></scr' + 'ipt>'); </script>
+
+
+
+<!--<script>
 var pushconfig = {
     property:"46",
 };
 </script>
-<script src="https://js-beta.pushmonetization.com/webpush.js"></script>
+<script src="https://js-beta.pushmonetization.com/webpush.js"></script>-->
