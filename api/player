@@ -20,7 +20,7 @@
         "src": "https:\/\/d25qb307nj98p3.cloudfront.net\/rjh.m3u8",
         "type": "application\/x-mpegURL",
         "withCredentials": false,
-        "poster": "https:\/\/rjh.fun\/world_cup_2018-wallpaper-1920x1080.jpg",
+        "poster": "",
         "isGif": false,
         "download": false,
         "waveform": false
