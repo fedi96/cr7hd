@@ -1,5 +1,5 @@
 function getdata(idw) {
-  var api = "https://api.rjh.fun/v3/json/feed/5b54a02f0a4cf304097644/"+idw+"/GMT0/960/540";
+  var api = "https://api.rjh.fun/v3/json/feed/5b54a02f0a4cf304097644/"+idw+"/10/960/540/GMT0";
   $.getJSON(api, function (json) {
     if (json.events) {
       var uniquegames = [];
