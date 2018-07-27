@@ -1,5 +1,5 @@
 function getdata(idw) {
-  var api = "http://api.sport365.link/v3/json/feed/5b54a02f0a4cf304097644/"+idw+"/GMT0/960/540";
+  var api = "https://fedilab.co/rjh/api.php?id=10"+idw;
   $.getJSON(api, function (json) {
     if (json.events) {
       var uniquegames = [];
