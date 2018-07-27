@@ -1,5 +1,5 @@
 function getdata(idw) {
-  var api = "https://fedilab.co/rjh/api.php?id=10"+idw;
+  var api = "https://fedilab.co/rjh/api.php?id="+idw;
   $.getJSON(api, function (json) {
     if (json.events) {
       var uniquegames = [];
