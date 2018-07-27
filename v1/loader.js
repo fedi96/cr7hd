@@ -1,5 +1,6 @@
-function getdata(idw) {
-  var api = "https://api.rjh.fun/v3/json/feed/5b54a02f0a4cf304097644/"+idw+"/10/960/540/GMT0";
+function getdata(idw,idx) {
+  if(!idx) idx=10;
+  var api = "https://api.rjh.fun/v3/json/feed/5b54a02f0a4cf304097644/"+idw+"/"+idx+"/960/540/GMT0";
   $.getJSON(api, function (json) {
     if (json.events) {
       var uniquegames = [];
@@ -34,7 +35,43 @@ function getdata(idw) {
     }
   });
 }
-
+function getsports(idw) {
+  if(!idw) idw=10;
+  var api = "https://api.rjh.fun/v3/json/sports/5b54a02f0a4cf304097644/"+idw;
+  $.getJSON(api, function (json) {
+    if (json.events) {
+      var uniquegames = [];
+      $.each(json.events, function(i, el){
+          if($.inArray(el.event, uniquegames) === -1) uniquegames.push(el.event);
+      });
+      var games = [];
+      $.each(uniquegames,function(i, game){
+        var un = [];
+      $.each(json.events, function(j, el){
+          if(el.event == game) un.push({'id' : j,'lang' : el.audio,'time': el.startDateTime,'sport': el.sport,'league': el.league,'def': el.definition});
+      });
+      console.log(un);
+      games.push({'game': game,'content' : un});
+      });
+      $.each(games, function (i, game) {
+        var gd = new Date(parseInt(game.content[0].time));
+        var time = gd.toLocaleTimeString([], {hour: '2-digit',minute: '2-digit'});
+        var id = game.content[0].id;
+        var sport = game.content[0].sport;
+        var league = game.content[0].league;
+        var title = game.game;
+        var gameLinks = '';
+        $.each(game.content, function (j, media) {
+          gameLinks = `${gameLinks}<span class="badge badge-pill badge-primary text-uppercase">${media.lang.substr(0, 3)}</span>`;
+        });
+        var gameTitle = `<div class="card shadow col-lg-3"><div class="card-body"><p class="description">${title}<br>${league}<br>${time}<br>${id}<br>`;
+        $("#soccers").append(gameTitle + gameLinks + "</p></div></div>");
+      });
+    } else {
+      $("#soccers").append('<div class="tab-content">No games.</div>');
+    }
+  });
+}
 
 
 
