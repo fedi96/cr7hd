@@ -1,0 +1,58 @@
+{
+    "error": false,
+    "options": {
+        "code": "QGQT38553",
+        "userid": "89723",
+        "key": "index.m3u8",
+        "bucket": "s3bubble-homepage",
+        "fluid": false,
+        "background": false,
+        "controls": true,
+        "muted": false,
+        "loop": false,
+        "preload": "auto",
+        "autoplay": true,
+        "playbackRates": [0.5, 1, 1.5, 2],
+        "vpaid": "https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&custom=%7B%27width%27%3A%27100%27%2C%27height%27%3A%27100%27%7D&cb=100&vastref=rjh.fun",
+        "googleUaCode": ""
+    },
+    "source": {
+        "src": "https:\/\/d3i97116bfxn0b.cloudfront.net\/index.m3u8",
+        "type": "application\/x-mpegURL",
+        "withCredentials": false,
+        "poster": "",
+        "isGif": false,
+        "download": false,
+        "waveform": false
+    },
+    "meta": {
+        "backButton": false,
+        "showSocial": true,
+        "skipButtons": false,
+        "showDownload": false,
+        "subTitle": "",
+        "title": "",
+        "para": ""
+    },
+    "brand": {
+        "controlbar": "#0a0a0a",
+        "controlbarSize": "inherit",
+        "icons": "rgba(255, 255, 255, 1)",
+        "sliders": "#f48221",
+        "theme": "netflix"
+    },
+    "preview": {
+        "previewSeconds": "0",
+        "previewLink": "",
+        "previewTitle": "",
+        "previewDescription": ""
+    },
+    "adverts": [],
+    "buttons": [],
+    "user": {
+        "error": false,
+        "id": 100680,
+        "message": "https:\/\/d3hb8cjpm53u9r.cloudfront.net\/hls\/fedirjh.m3u8This website has been whitelisted https:\/\/dwej1yqi3kvg2.cloudfront.net\/index.m3u8"
+    },
+    "message": "Success returning S3Bubble player data"
+}
