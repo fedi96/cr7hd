@@ -13,11 +13,11 @@
         "preload": "auto",
         "autoplay": true,
         "playbackRates": [0.5, 1, 1.5, 2],
-        "vpaid": "https://www.vidcpm.com/watch.xml?key=fc7aa456bd18c252d114846ea7c9a118&custom=%7B%27width%27%3A%27100%27%2C%27height%27%3A%27100%27%7D&cb=100&vastref=rjh.fun",
+        "vpaid": "out\/v1\/65696210d014497581954bb8a81d6645\/rjh_fun",
         "googleUaCode": ""
     },
     "source": {
-        "src": "https:\/\/d2hz1kolljlu7t.cloudfront.net\/out\/v1\/65696210d014497581954bb8a81d6645\/rjh_fun.m3u8",
+        "src": "https:\/\/d2hz1kolljlu7t.cloudfront.net\/index.m3u8",
         "type": "application\/x-mpegURL",
         "withCredentials": false,
         "poster": "",
