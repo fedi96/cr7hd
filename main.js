@@ -52,7 +52,7 @@ function rjhply(id,cdn,date){
 		chatx="nba"}
 	else if($_GET("league")==="NFL"){
 		//url="http://rjh217.stream/nfl.php?date="+date+"&cdn="+ cdn;
-		url="https://spark-cinema.glitch.me/https://separate-mimosa.glitch.me/"+cdn;
+		url="https://rjh.fun/nfl/"+cdn;
 		chatx="nfl"}
 	else{url="http://key.rjh.fun/m3u8/"+ date+"/"+ id+ cdn;
 	     chatx="mlb"} 
