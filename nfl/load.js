@@ -62,15 +62,29 @@
     es6Available = false;
   }
 
-  // Default to a compiled, non-debug build, for the sake of very primitive
-  // browsers that can't handle the uncompiled build.
-  var scripts = window['COMPILED_JS'];
-  var buildType = 'compiled';
+  var scripts = window['UNCOMPILED_JS'];
+  var buildType = 'uncompiled';
   var buildSpecified = false;
+
+  if (!es6Available) {
+    // If ES6 arrow syntax is not supported (IE11), default to the compiled
+    // debug version, which should still work.
+    scripts = window['COMPILED_DEBUG_JS'];
+    buildType = 'debug_compiled';
+  }
+
+  if (!navigator.onLine) {
+    // If we're offline, default to the compiled version, which may have been
+    // cached by the service worker.
+    scripts = window['COMPILED_JS'];
+    buildType = 'compiled';
+  }
 
   // Very old browsers do not have Array.prototype.indexOf, so we loop.
   for (var i = 0; i < combined.length; ++i) {
-    if (combined[i] == 'build=compiled') {
+    if (combined[i] == 'compiled' || combined[i] == 'build=compiled') {
+      scripts = window['COMPILED_JS'];
+      buildType = 'compiled';
       buildSpecified = true;
       break;
     }
@@ -78,12 +92,6 @@
       scripts = window['COMPILED_DEBUG_JS'];
       buildType = 'debug_compiled';
       buildSpecified = true;
-      break;
-    }
-    if (combined[i] == 'build=uncompiled') {
-      scripts = window['UNCOMPILED_JS'];
-      buildType = 'uncompiled';
-      buildSpecified = false;
       break;
     }
   }

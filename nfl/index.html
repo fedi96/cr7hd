@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!--
+ Copyright 2016 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -11,21 +26,50 @@
 
     <title>Shaka Player Demo</title>
 
-    <link rel="manifest" href="https://shaka-player-demo.appspot.com/demo/app_manifest.json">
-    <link rel="icon" href="https://shaka-player-demo.appspot.com/demo/favicon.ico">
-    <link rel="stylesheet" href="https://shaka-player-demo.appspot.com/demo/demo.css">
-    <link rel="stylesheet" href="https://shaka-player-demo.appspot.com/ui/controls.css">
+    <link rel="manifest" href="app_manifest.json">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="demo.css">
+    <link rel="stylesheet" href="common/controls.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     <script defer src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-    <script defer src="mux.js"></script>
-    <script defer src="promise.min.js"></script>
+    <!-- transmuxing support is enabled by including this: -->
+    <script defer src="../node_modules/mux.js/dist/mux.js"></script>
+    <!-- IE11 support is enabled by including this: -->
+    <script defer src="../node_modules/es6-promise-polyfill/promise.min.js"></script>
+
     <script>
 COMPILED_JS = [
-  'shaka-player.ui.js',
-  'demo.compiled.js',
+  // The compiled library.
+  '../dist/shaka-player.compiled.js',
+  // The compiled demo.
+  '../dist/demo.compiled.js'
+];
+COMPILED_DEBUG_JS = [
+  // The compiled library, debug mode.
+  '../dist/shaka-player.compiled.debug.js',
+  // The compiled demo.
+  '../dist/demo.compiled.debug.js'
+];
+UNCOMPILED_JS = [
+  // Bootstrap the Shaka Player library through the Closure library.
+  '../third_party/closure/goog/base.js',
+  '../dist/deps.js',
+  // This file contains goog.require calls for all exported library classes.
+  '../shaka-player.uncompiled.js',
+  // These are the individual parts of the demo app.
+  'common/assets.js',
+  'common/controls.js',
+  'common/demo_utils.js',
+  'main.js',
+  'asset_section.js',
+  'configuration_section.js',
+  'info_section.js',
+  'log_section.js',
+  'offline_section.js'
 ];
     </script>
 
@@ -85,9 +129,32 @@ COMPILED_JS = [
         <div id="errorDisplayCloseButton">x</div>
         <a id="errorDisplayLink" href="#"></a>
       </div>
-
-      <div data-shaka-player-container data-shaka-player-cast-receiver-id="A15A181D">
-        <video autoplay data-shaka-player id="video"></video>
+      <div id="videoContainer" class="overlay-parent">
+        <video id="video" autoplay></video>
+        <div id="giantPlayButtonContainer" class="overlay">
+          <button id="giantPlayButton" class="material-icons">play_arrow</button>
+        </div>
+        <div id="bufferingSpinner" class="overlay">
+          <svg class="spinnerSvg" viewBox="25 25 50 50">
+            <circle class="spinnerPath" cx="50" cy="50" r="20"
+                    fill="none" stroke-width="2" stroke-miterlimit="10" />
+          </svg>
+        </div>
+        <div id="castReceiverName" class="overlay"></div>
+        <div id="controlsContainer" class="overlay"><div id="controls">
+          <button id="playPauseButton" class="material-icons">play_arrow</button>
+          <label for="seekBar" class="for-screen-readers">seek</label>
+          <input id="seekBar" type="range" step="any" min="0" max="1" value="0">
+          <button id="rewindButton" class="material-icons">fast_rewind</button>
+          <div id="currentTime">0:00</div>
+          <button id="fastForwardButton" class="material-icons">fast_forward</button>
+          <button id="muteButton" class="material-icons">volume_up</button>
+          <label for="volumeBar" class="for-screen-readers">volume</label>
+          <input id="volumeBar" type="range" step="any" min="0" max="1" value="0">
+          <button id="castButton" class="material-icons">cast</button>
+          <button id="captionButton" class="material-icons">closed_caption</button>
+          <button id="fullscreenButton" class="material-icons">fullscreen</button>
+        </div></div>
       </div>
 
       <details id="logSection">
@@ -158,7 +225,7 @@ COMPILED_JS = [
           <label for="availabilityWindowOverride">Availability Window Override:</label>
           <input id="availabilityWindowOverride" type="number" step="30" min="0">
         </div>
-        <datalist id="robustnessSuggestions"></datalist>
+	<datalist id="robustnessSuggestions"></datalist>
       </details>
 
       <details class="input">
