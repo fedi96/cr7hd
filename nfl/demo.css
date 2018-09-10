@@ -20,9 +20,6 @@ html {
 }
 
 body {
-  /* This is explicit because Chromecast has a different default (black). */
-  background-color: white;
-
   margin: 0.5em;
   padding: 0.5em 1em;
 
@@ -32,18 +29,12 @@ body {
 }
 
 body.noinput {
-  /* noinput mode. */
-
-  /* Add some additional padding so that TV overscan doesn't cut off the version
-   * number or other information we might need. */
-  padding: 2.5em 2em;
-
-  /* Constrain the body to its size minus margin and padding, so that nested
-   * elements can constrain to the body. */
+  /* noinput mode: constrain the body to its size minus margin and padding, so
+     that nested elements can constrain to body */
   width: 100%;
-  width: calc(100% - 4em);
+  width: calc(100% - 3em);
   height: 100%;
-  height: calc(100% - 5em);
+  height: calc(100% - 2em);
 }
 
 a {
@@ -105,12 +96,10 @@ h1 {
   padding: 0 0 0.2em 0;
 }
 
-input[type=number],
 input[type=text] {
   font-family: Roboto, sans-serif;
   font-size: 0.9em;
   padding: 1px 2px 3px 6px;
-  height: 19px;
 }
 
 label, .label {
@@ -360,7 +349,6 @@ summary {
     font-size: 1.4em;
   }
 
-  input[type=number],
   input[type=text] {
     font-size: 0.8em;
   }
@@ -387,3 +375,25 @@ summary {
     padding: 5px 0 7px 0;
   }
 }
+
+/*
+     FILE ARCHIVED ON 07:26:08 Mar 04, 2018 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 19:03:41 Sep 10, 2018.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  LoadShardBlock: 284.043 (3)
+  esindex: 0.008
+  captures_list: 307.69
+  CDXLines.iter: 17.951 (3)
+  PetaboxLoader3.datanode: 262.383 (4)
+  exclusion.robots: 0.216
+  exclusion.robots.policy: 0.204
+  RedisCDXSource: 0.933
+  PetaboxLoader3.resolve: 82.73 (3)
+  load_resource: 93.076
+*/
