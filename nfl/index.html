@@ -1,4 +1,19 @@
 <!DOCTYPE html>
+<!--
+ Copyright 2016 Google Inc.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -12,54 +27,152 @@
     <title>Shaka Player Demo</title>
 
     <link rel="manifest" href="app_manifest.json">
-    <link rel="icon" href="favicon.ico">
-    <link rel="stylesheet" href="demo.css">
-    <link rel="stylesheet" href="common/controls.css">
+    <link rel="icon" href="https://shaka-player-demo.appspot.com/demo/favicon.ico">
+    <link rel="stylesheet" href="https://shaka-player-demo.appspot.com/demo/demo.css">
+    <link rel="stylesheet" href="https://shaka-player-demo.appspot.com/ui/controls.css">
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <script defer src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
-    <!-- transmuxing support is enabled by including this: -->
-    <script defer src="mux.js"></script>
-    <!-- IE11 support is enabled by including this: -->
-    <script defer src="promise.min.js"></script>
+
+    <script defer src="https://shaka-player-demo.appspot.com/node_modules/mux.js/dist/mux.js"></script>
+
+    <script defer src="https://shaka-player-demo.appspot.com/node_modules/es6-promise-polyfill/promise.min.js"></script>
 
     <script>
 COMPILED_JS = [
-  // The compiled library.
-  'shaka-player.ui.js',
-  // The compiled demo.
-  'demo.compiled.js'
+  'https://shaka-player-demo.appspot.com/dist/shaka-player.ui.js',
+  'https://shaka-player-demo.appspot.com/dist/demo.compiled.js',
 ];
 COMPILED_DEBUG_JS = [
-  // The compiled library, debug mode.
-  'dist/shaka-player.compiled.debug.js',
-  // The compiled demo.
-  'dist/demo.compiled.debug.js'
+  'https://shaka-player-demo.appspot.com/dist/shaka-player.ui.debug.js',
+  'https://shaka-player-demo.appspot.com/dist/demo.compiled.debug.js',
 ];
 UNCOMPILED_JS = [
-  // Bootstrap the Shaka Player library through the Closure library.
-  '../third_party/closure/goog/base.js',
-  '../dist/deps.js',
-  // This file contains goog.require calls for all exported library classes.
-  '../shaka-player.uncompiled.js',
-  // These are the individual parts of the demo app.
-  'common/assets.js',
-  'common/controls.js',
-  'common/demo_utils.js',
-  'main.js',
-  'asset_section.js',
-  'configuration_section.js',
-  'info_section.js',
-  'log_section.js',
-  'offline_section.js'
+
+  'https://shaka-player-demo.appspot.com/third_party/closure/goog/base.js',
+  'https://shaka-player-demo.appspot.com/dist/deps.js',
+
+  'https://shaka-player-demo.appspot.com/shaka-player.uncompiled.js',
+
+  'https://shaka-player-demo.appspot.com/shaka-ui.uncompiled.js',
+
+  'https://shaka-player-demo.appspot.com/demo/common/assets.js',
+  'https://shaka-player-demo.appspot.com/demo/common/demo_utils.js',
+  'https://shaka-player-demo.appspot.com/demo/main.js',
+  'https://shaka-player-demo.appspot.com/demo/asset_section.js',
+  'https://shaka-player-demo.appspot.com/demo/configuration_section.js',
+  'https://shaka-player-demo.appspot.com/demo/info_section.js',
+  'https://shaka-player-demo.appspot.com/demo/log_section.js',
+  'https://shaka-player-demo.appspot.com/demo/offline_section.js',
 ];
     </script>
 
-    <!-- Load the compiled or uncompiled version of the code. -->
-    <script defer src="load.js"></script>
+    <script>
+    /**
+ * @license
+ * Copyright 2016 Google Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+/**
+ * Loads both library and application sources.  Chooses compiled or debug
+ * version of the sources based on the presence or absence of the URL parameter
+ * "compiled".  Uses the global arrays COMPILED_JS, COMPILED_DEBUG_JS, and
+ * UNCOMPILED_JS, defined by the application in advance.
+ *
+ * This dynamic loading process is not necessary in a production environment,
+ * but simplifies the process of switching between compiled and uncompiled
+ * mode during development.
+ */
+(function() {  // anonymous namespace
+  // The URL of the page itself, without URL fragments or search strings.
+  function loadRelativeScript(src) {
+    importScript(src);
+  }
+
+  function importScript(src) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = src;
+    script.defer = true;
+    // Setting async = false is important to make sure the script is imported
+    // before the 'load' event fires.
+    script.async = false;
+    document.head.appendChild(script);
+  }
+  window.CLOSURE_IMPORT_SCRIPT = importScript;
+
+  var fields = location.search.substr(1);
+  fields = fields ? fields.split(';') : [];
+  var fragments = location.hash.substr(1);
+  fragments = fragments ? fragments.split(';') : [];
+  var combined = fields.concat(fragments);
+
+  // Check if ES6 is usable by evaluating arrow function syntax.
+  var es6Available = true;
+  try {
+    eval('()=>{}');
+  } catch (e) {
+    es6Available = false;
+  }
+
+  // Default to a compiled, non-debug build, for the sake of very primitive
+  // browsers that can't handle the uncompiled build.
+  var scripts = window['COMPILED_JS'];
+  var buildType = 'compiled';
+  var buildSpecified = false;
+
+  // Very old browsers do not have Array.prototype.indexOf, so we loop.
+  for (var i = 0; i < combined.length; ++i) {
+    if (combined[i] == 'build=compiled') {
+      buildSpecified = true;
+      break;
+    }
+    if (combined[i] == 'build=debug_compiled') {
+      scripts = window['COMPILED_DEBUG_JS'];
+      buildType = 'debug_compiled';
+      buildSpecified = true;
+      break;
+    }
+    if (combined[i] == 'build=uncompiled') {
+      scripts = window['UNCOMPILED_JS'];
+      buildType = 'uncompiled';
+      buildSpecified = false;
+      break;
+    }
+  }
+
+  // If no build was specified in the URL, update the fragment with the default
+  // we chose.
+  if (!buildSpecified) {
+    if (location.hash.length) {
+      location.hash += ';';
+    }
+    location.hash += 'build=' + buildType;
+  }
+
+  // The application must define its list of compiled and uncompiled sources
+  // before including this loader.  The URLs should be relative to the page.
+  for (var j = 0; j < scripts.length; ++j) {
+    loadRelativeScript(scripts[j]);
+  }
+})();  // anonymous namespace
+    </script>
   </head>
   <body>
     <div id="container">
@@ -114,32 +227,9 @@ UNCOMPILED_JS = [
         <div id="errorDisplayCloseButton">x</div>
         <a id="errorDisplayLink" href="#"></a>
       </div>
-      <div id="videoContainer" class="overlay-parent">
-        <video id="video" autoplay></video>
-        <div id="giantPlayButtonContainer" class="overlay">
-          <button id="giantPlayButton" class="material-icons">play_arrow</button>
-        </div>
-        <div id="bufferingSpinner" class="overlay">
-          <svg class="spinnerSvg" viewBox="25 25 50 50">
-            <circle class="spinnerPath" cx="50" cy="50" r="20"
-                    fill="none" stroke-width="2" stroke-miterlimit="10" />
-          </svg>
-        </div>
-        <div id="castReceiverName" class="overlay"></div>
-        <div id="controlsContainer" class="overlay"><div id="controls">
-          <button id="playPauseButton" class="material-icons">play_arrow</button>
-          <label for="seekBar" class="for-screen-readers">seek</label>
-          <input id="seekBar" type="range" step="any" min="0" max="1" value="0">
-          <button id="rewindButton" class="material-icons">fast_rewind</button>
-          <div id="currentTime">0:00</div>
-          <button id="fastForwardButton" class="material-icons">fast_forward</button>
-          <button id="muteButton" class="material-icons">volume_up</button>
-          <label for="volumeBar" class="for-screen-readers">volume</label>
-          <input id="volumeBar" type="range" step="any" min="0" max="1" value="0">
-          <button id="castButton" class="material-icons">cast</button>
-          <button id="captionButton" class="material-icons">closed_caption</button>
-          <button id="fullscreenButton" class="material-icons">fullscreen</button>
-        </div></div>
+
+      <div data-shaka-player-container data-shaka-player-cast-receiver-id="A15A181D">
+        <video autoplay data-shaka-player id="video"></video>
       </div>
 
       <details id="logSection">
@@ -210,7 +300,7 @@ UNCOMPILED_JS = [
           <label for="availabilityWindowOverride">Availability Window Override:</label>
           <input id="availabilityWindowOverride" type="number" step="30" min="0">
         </div>
-	<datalist id="robustnessSuggestions"></datalist>
+        <datalist id="robustnessSuggestions"></datalist>
       </details>
 
       <details class="input">
