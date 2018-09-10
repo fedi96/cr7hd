@@ -165,10 +165,60 @@ div#container {
     max-width: 100%;
     margin: 0;
 }
+     .input{display:none;}
    </style>
   </head>
   <body>
     <div id="container">
+      <div class="input">
+        <p id="compiled_links">
+          <a href="#" id="uncompiled_link">uncompiled</a> |
+          <a href="#" id="debug_compiled_link">compiled (debug)</a> |
+          <a href="#" id="compiled_link">compiled (release)</a>
+        </p>
+        <p>This is a demo of Google's Shaka Player, a JavaScript library for
+           adaptive video streaming.</p>
+
+        <p>Choose an asset and tap <strong>Load</strong>.
+           (On Android, you may also need to press the play button on the
+            video.)</p>
+
+        <p class="links">
+          <a href="../docs/api/index.html">Documentation</a> |
+          <a href="https://github.com/google/shaka-player">Repo</a> |
+          <a href="https://www.npmjs.com/package/shaka-player">NPM</a> |
+          <a href="https://cdnjs.com/libraries/shaka-player">CDNJS</a>
+        </p>
+
+        <div class="flex">
+          <label for="assetList">Asset:</label>
+          <select id="assetList" class="flex-grow"></select>
+        </div>
+        <div id="customAsset">
+          <div class="flex">
+            <label for="manifestInput">Custom manifest:</label>
+            <input id="manifestInput" type="text" class="flex-grow">
+          </div>
+          <div class="flex">
+            <label for="licenseServerInput">Custom license server:</label>
+            <input id="licenseServerInput" type="text" class="flex-grow">
+          </div>
+          <div class="flex">
+            <label for="certificateInput">Custom license certificate URL:</label>
+            <input id="certificateInput" type="text" class="flex-grow">
+          </div>
+        </div>
+
+        <div>
+          <button id="loadButton">Load</button>
+          <button id="unloadButton">Unload</button>
+        </div>
+      </div>
+
+      <div id="errorDisplay">
+        <div id="errorDisplayCloseButton">x</div>
+        <a id="errorDisplayLink" href="#"></a>
+      </div>
       <div data-shaka-player-container data-shaka-player-cast-receiver-id="A15A181D">
         <video autoplay data-shaka-player id="video"></video>
      </div>
